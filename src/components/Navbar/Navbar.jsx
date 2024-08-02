@@ -28,9 +28,9 @@ const Navbar = () => {
         </div>
       
         <div className="hidden text-[16px] md:flex items-center gap-[24px]">
-          <Link href="/about-us" className={`py-2 px-3   text-white ${pathname == '/about-us' ? 'border-b-2 border-[#FF7003]' :''}`}>Services</Link>
-          <Link href="/vip" className={`py-2 px-3   text-white ${pathname == '/vip' ? 'border-b-2 border-[#FF7003]' :''}`}>Why</Link>
-          <Link href="/contact-us" className={`py-2 px-3   text-white ${pathname == '/contact-us' ? 'border-b-2 border-[#FF7003]' :''}`}>Process</Link>
+          <Link href="/services" className={`py-2 px-3   text-white ${pathname == '/services' ? 'border-b-2 border-[#FF7003]' :''}`}>Services</Link>
+          <Link href="/why" className={`py-2 px-3   text-white ${pathname == '/why' ? 'border-b-2 border-[#FF7003]' :''}`}>Why</Link>
+          <Link href="/process" className={`py-2 px-3   text-white ${pathname == '/process' ? 'border-b-2 border-[#FF7003]' :''}`}>Process</Link>
           <Link href="/contact-us" className={`py-2 px-3   text-white ${pathname == '/contact-us' ? 'border-b-2 border-[#FF7003]' :''}`}>Contact</Link>
 
         <div className="">
