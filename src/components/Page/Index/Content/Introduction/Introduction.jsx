@@ -15,14 +15,14 @@ const Introduction = () => {
 
     <div className="inside_sidespace">
         
-      {/* <section
-        className="w-full bg-no-repeat bg-center bg-cover h-[200px] sm:h-[756px] z-10"
+      <section
+        className="absolute w-full bg-no-repeat bg-center bg-cover h-[756px] z-10"
         style={{
           backgroundImage: "url('/images/bg.svg')",
         }}
       >
         
-      </section> */}
+      </section>
 
       {/* <Image width={886} height={886} src='/images/bg.svg' className="absolute" style={{
           top:'26%',
