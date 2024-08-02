@@ -42,7 +42,7 @@ const Insights = () => {
       <Blogs/>
       <Image style={{
           top:'50%',
-          left:'50%',
+          left:'49%',
           transform:'translate(-50%,-50%)'
           
         }} className="absolute animate-pulse z-[-1]" width={168} height={168} src='/images/icons/star2.svg' alt="gradient image"/>
