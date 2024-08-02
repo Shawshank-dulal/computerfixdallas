@@ -16,7 +16,7 @@ const Introduction = () => {
     <div className="inside_sidespace">
         
       <section
-        className="absolute w-full bg-no-repeat bg-center bg-cover h-[756px] z-10"
+        className="absolute w-full bg-no-repeat bg-center bg-cover h-[756px] z-[-10]"
         style={{
           backgroundImage: "url('/images/bg.svg')",
         }}
