@@ -23,14 +23,14 @@ const Introduction = () => {
       >
         
       </section> */}
-      <div className="absolute" style={{
-          top:'28%',
+
+      {/* <Image width={886} height={886} src='/images/bg.svg' className="absolute" style={{
+          top:'26%',
           left:'50%',
           transform:'translate(-50%,-50%)'
           
-        }}>
-      <Image width={1996} height={1086} src='/images/bg.svg' alt="vector"/>
-      </div>
+        }} alt="vector"/> */}
+
       
       <div className="main_container  text-center flex flex-col justify-center items-center h-full pt-[12rem] pb-20">
         <div className="flex flex-col justify-center items-center">

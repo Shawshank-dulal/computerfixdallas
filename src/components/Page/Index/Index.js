@@ -6,12 +6,14 @@ import Why from "./Content/Why/Why";
 import Process from "./Content/Process/Process";
 import Insights from "./Content/Insights/Insights";
 import Faq from "./Content/Faq/Faq";
+import ImageSlider from "./Content/ImageSlider/ImageSlider";
 
 
 const Index = () => {
   return (
    <div>
     <Introduction/>
+    <ImageSlider/>
     <Services/>
     <Specification/>
     <Why/>
