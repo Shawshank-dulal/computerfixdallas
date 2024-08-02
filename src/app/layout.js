@@ -9,7 +9,7 @@ export const metadata = {
     default: "Computer Fix Dallas",
   },
   description:
-    "Leveraging Data-Driven Strategies for Superior Sales, Operations, Marketing, and Supply Chain Management. Empowering Businesses with Customized Solutions and Industry Expertise for Measurable Growth.",
+    "Experience unparalleled expertise and swift service for all your computer repair needs. Our seasoned technicians are committed to getting your devices up and running efficiently and affordably, ensuring minimal downtime and maximum satisfaction.",
   generator: "Computer Fix Dallas",
   applicationName: "Computer Fix Dallas",
   referrer: "origin-when-cross-origin",
@@ -35,11 +35,11 @@ export const metadata = {
   openGraph: {
     title: "Computer Fix Dallas",
     description:
-      "Leveraging Data-Driven Strategies for Superior Sales, Operations, Marketing, and Supply Chain Management. Empowering Businesses with Customized Solutions and Industry Expertise for Measurable Growth.",
+      "Experience unparalleled expertise and swift service for all your computer repair needs. Our seasoned technicians are committed to getting your devices up and running efficiently and affordably, ensuring minimal downtime and maximum satisfaction.",
     url: "https://Computerfixdallas.vercel.app/",
     siteName: "Computer Fix Dallas",
     images: {
-      url: "https://Computerfixdallas.vercel.app/Dzn2.png",
+      url: "https://Computerfixdallas.vercel.app/theme.png",
       width: 200,
       height: 200,
       alt: "Computer Fix Dallass",
@@ -51,10 +51,10 @@ export const metadata = {
     card: "Computer Fix Dallas",
     title: "Computer Fix Dallas",
     description:
-      "Leveraging Data-Driven Strategies for Superior Sales, Operations, Marketing, and Supply Chain Management. Empowering Businesses with Customized Solutions and Industry Expertise for Measurable Growth.",
+      "Experience unparalleled expertise and swift service for all your computer repair needs. Our seasoned technicians are committed to getting your devices up and running efficiently and affordably, ensuring minimal downtime and maximum satisfaction.",
     creator: "Computer Fix Dallas",
     images: {
-      url: "https://Computerfixdallas.vercel.app/Dzn2.png",
+      url: "https://Computerfixdallas.vercel.app/theme.png",
       alt: "Computer Fix Dallas",
     },
   },
