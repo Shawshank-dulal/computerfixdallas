@@ -4,6 +4,7 @@ import Services from "./Content/Services/Services";
 import Specification from "./Content/Specification/Specification";
 import Why from "./Content/Why/Why";
 import Process from "./Content/Process/Process";
+import Insights from "./Content/Insights/Insights";
 
 
 const Index = () => {
@@ -14,6 +15,7 @@ const Index = () => {
     <Specification/>
     <Why/>
     <Process/>
+    <Insights/>
    </div>
   );
 };
