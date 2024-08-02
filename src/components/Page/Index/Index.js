@@ -5,6 +5,7 @@ import Specification from "./Content/Specification/Specification";
 import Why from "./Content/Why/Why";
 import Process from "./Content/Process/Process";
 import Insights from "./Content/Insights/Insights";
+import Faq from "./Content/Faq/Faq";
 
 
 const Index = () => {
@@ -16,6 +17,7 @@ const Index = () => {
     <Why/>
     <Process/>
     <Insights/>
+    <Faq/>
    </div>
   );
 };

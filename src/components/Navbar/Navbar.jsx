@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <nav className="absolute w-full">
-    <div className="main_container2 inside_sidespace mx-auto pt-[10px]">
+    <div className="main_container2 inside_sidespace mx-auto pt-[20px]">
       <div className="flex justify-between items-center">
         <div className="flex space-x-4">
           <div>
@@ -28,13 +28,13 @@ const Navbar = () => {
         </div>
       
         <div className="hidden text-[16px] md:flex items-center gap-[24px]">
-          <Link href="/about-us" className={`py-2 px-3   text-white ${pathname == '/about-us' ? 'border-b-2 border-[#da1d8b]' :''}`}>Services</Link>
-          <Link href="/vip" className={`py-2 px-3   text-white ${pathname == '/vip' ? 'border-b-2 border-[#da1d8b]' :''}`}>Why</Link>
-          <Link href="/contact-us" className={`py-2 px-3   text-white ${pathname == '/contact-us' ? 'border-b-2 border-[#da1d8b]' :''}`}>Process</Link>
-          <Link href="/contact-us" className={`py-2 px-3   text-white ${pathname == '/contact-us' ? 'border-b-2 border-[#da1d8b]' :''}`}>Contact</Link>
+          <Link href="/about-us" className={`py-2 px-3   text-white ${pathname == '/about-us' ? 'border-b-2 border-[#FF7003]' :''}`}>Services</Link>
+          <Link href="/vip" className={`py-2 px-3   text-white ${pathname == '/vip' ? 'border-b-2 border-[#FF7003]' :''}`}>Why</Link>
+          <Link href="/contact-us" className={`py-2 px-3   text-white ${pathname == '/contact-us' ? 'border-b-2 border-[#FF7003]' :''}`}>Process</Link>
+          <Link href="/contact-us" className={`py-2 px-3   text-white ${pathname == '/contact-us' ? 'border-b-2 border-[#FF7003]' :''}`}>Contact</Link>
 
         <div className="">
-        <Link href="/book-a-call" className="py-2 px-3 rounded-[52px] border border-[#FF70030D] text-white bg-[#D15A001F]">GET FREE ESTIMATION</Link>
+        <Link href="/book-a-call" className="py-2 px-3 text-[14px] rounded-[52px] border border-[#FF70030D] text-white bg-[#D15A001F]">GET FREE ESTIMATION</Link>
 
         </div>
         
@@ -56,7 +56,7 @@ const Navbar = () => {
           <Link href="/vip" onClick={toggleMenu}  className="py-2 px-3   block text-white">Why</Link>
           <Link href="/contact-us" onClick={toggleMenu} className="py-2 px-3   block text-white">Process</Link>
           <Link href="/contact-us" onClick={toggleMenu} className="py-2 px-3   block text-white">Contact</Link>
-          <Link href="/book-a-call" onClick={toggleMenu} className="max-w-fit py-2 px-3 rounded-[2px] book_a_call_btn border border-[#DA1D8B57] text-white">GET FREE ESTIMATION</Link>
+          <Link href="/book-a-call" onClick={toggleMenu} className="max-w-fit py-2 px-3 rounded-[2px] book_a_call_btn border border-[#FF700357] text-white">GET FREE ESTIMATION</Link>
     </div>
      
   </nav>

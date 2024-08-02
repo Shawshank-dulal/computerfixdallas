@@ -5,6 +5,7 @@ import { useInView } from "framer-motion";
 import {  container, container2,container3, container4, items } from "@/components/Animation/Motion/MotionFramer";
 
 import { FiPhone } from "react-icons/fi";
+import Image from "next/image";
 const Introduction = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -14,13 +15,24 @@ const Introduction = () => {
 
     <div className="inside_sidespace">
         
-      <section
+      {/* <section
         className="w-full bg-no-repeat bg-center bg-cover h-[200px] sm:h-[756px] z-10"
         style={{
           backgroundImage: "url('/images/bg.svg')",
         }}
       >
-        <div className="main_container  text-center flex flex-col justify-center items-center h-full">
+        
+      </section> */}
+      <div className="absolute" style={{
+          top:'28%',
+          left:'50%',
+          transform:'translate(-50%,-50%)'
+          
+        }}>
+      <Image width={1996} height={1086} src='/images/bg.svg' alt="vector"/>
+      </div>
+      
+      <div className="main_container  text-center flex flex-col justify-center items-center h-full pt-[12rem] pb-20">
         <div className="flex flex-col justify-center items-center">
           <motion.ul
             ref={ref}
@@ -76,7 +88,6 @@ const Introduction = () => {
         
         </div>
       </div>
-      </section>
      
     </div>
     </>

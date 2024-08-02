@@ -10,7 +10,7 @@ const Services = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <div className="main_container pb-20">
+    <div className="main_container py-20">
       <div className="inside_sidespace">
       <motion.ul
             ref={ref}
