@@ -1,0 +1,22 @@
+<svg width="3585" height="1368" viewBox="0 0 3585 1368" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_905_42" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="3585" height="1368">
+<rect width="3585" height="1368" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_905_42)">
+<g filter="url(#filter0_f_905_42)">
+<circle cx="1793" cy="1" r="418" fill="#4A2E19"/>
+</g>
+<circle cx="1793" cy="1.00002" r="175.108" stroke="#4A2E19" stroke-width="1.6139"/>
+<circle cx="1793" cy="1.00002" r="223.525" stroke="#4A2E19" stroke-width="1.6139"/>
+<circle cx="1793" cy="1" r="271.942" stroke="#4A2E19" stroke-width="1.6139"/>
+<circle cx="1793" cy="1" r="320.359" stroke="#4A2E19" stroke-width="1.6139"/>
+<circle cx="1793" cy="1" r="368.776" stroke="#4A2E19" stroke-width="1.6139"/>
+</g>
+<defs>
+<filter id="filter0_f_905_42" x="939.427" y="-852.573" width="1707.15" height="1707.15" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="217.786" result="effect1_foregroundBlur_905_42"/>
+</filter>
+</defs>
+</svg>
