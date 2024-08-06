@@ -1,10 +1,12 @@
 import ContactUs from '@/components/Page/ContactUs/ContactUs'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 const page = () => {
   return (
     <div>
-        <ContactUs/>
+      <Suspense>
+      <ContactUs/>
+      </Suspense>
     </div>
   )
 }

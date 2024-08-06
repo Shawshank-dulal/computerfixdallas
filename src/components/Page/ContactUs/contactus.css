@@ -6,7 +6,7 @@ input {
   all: unset;
 }
 
-.TabsRoot1 {
+.TabsRoot4 {
   display: flex;
   flex-direction: column;
 
@@ -14,13 +14,14 @@ input {
   /* box-shadow: 0 2px 10px var(--black-a4); */
 }
 
-.TabsList1{
-  /* flex-shrink: 0;
-  display: flex; */
-  /* border-bottom: 1px solid #FF7003; */
+.TabsList4{
+  display: flex;
+  max-width: fit-content;
+  text-wrap: nowrap;
+  gap:32px;
 }
 
-.TabsTrigger1 {
+.TabsTrigger4 {
   font-family: inherit;
   /* background-color: white; */
   /* padding: 0 10px; */
@@ -36,27 +37,20 @@ input {
   font-weight: 600;
 
 }
-.TabsTrigger1:first-child {
-  border-top-left-radius: 6px;
-  margin-right: 1rem;
-}
-.TabsTrigger1:last-child {
-  border-top-right-radius: 6px;
-  margin-left: 1rem;
-}
-.TabsTrigger1:hover {
+
+.TabsTrigger4:hover {
   color: #FF7003;
 }
-.TabsTrigger1[data-state='active'] {
+.TabsTrigger4[data-state='active'] {
   color: #FF7003;
   border-bottom: 4px solid #FF7003;
 }
-.TabsTrigger1:focus {
+.TabsTrigger4:focus {
   position: relative;
   /* box-shadow: 0 0 0 2px black; */
 }
 
-.TabsContent1 {
+.TabsContent4 {
   flex-grow: 1;
   padding: 20px 0;
   /* background-color: white; */
@@ -71,7 +65,7 @@ input {
 }
 
 
-.TabsContent {
+.TabsContent4 {
   flex-grow: 1;
   padding: 20px 0;
   /* background-color: white; */
@@ -80,7 +74,7 @@ input {
   outline: none;
   margin-top: 1.5rem;
 }
-.TabsContent:focus {
+.TabsContent4:focus {
   box-shadow: 0 0 0 2px black;
 }
 

@@ -80,21 +80,21 @@ const MessageBox = ({ selectTab }) => {
   };
 
   return (
-    <Tabs.Root className="TabsRoot1 " defaultValue={`${selectTab}`}>
+    <Tabs.Root className="TabsRoot4 " defaultValue={`${selectTab}`}>
       <Tabs.List
-        className="TabsList1 text-[24px] md:text-[32px]"
+        className="TabsList4 text-[24px] md:text-[32px]"
         aria-label="Manage your account"
       >
-        <Tabs.Trigger className="TabsTrigger1 " value="message">
+        <Tabs.Trigger className="TabsTrigger4 " value="message">
           Message
         </Tabs.Trigger>
-        <Tabs.Trigger className="TabsTrigger1" value="call">
+        <Tabs.Trigger className="TabsTrigger4" value="call">
           Book a Call
         </Tabs.Trigger>
       </Tabs.List>
 
       <Tabs.Content
-        className="TabsContent1 flex justify-between flex-wrap gap-5 md:flex-nowrap"
+        className="TabsContent4 flex justify-between flex-wrap gap-5 md:flex-nowrap"
         value="message"
       >
             <div className="">
@@ -314,7 +314,7 @@ const MessageBox = ({ selectTab }) => {
     
       </Tabs.Content>
 
-      <Tabs.Content className="TabsContent2" value="call">
+      <Tabs.Content className="TabsContent4" value="call">
         <Calendar />
       </Tabs.Content>
     </Tabs.Root>

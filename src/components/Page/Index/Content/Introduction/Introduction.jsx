@@ -6,6 +6,7 @@ import {  container, container2,container3, container4, items } from "@/componen
 
 import { FiPhone } from "react-icons/fi";
 import Image from "next/image";
+import Link from "next/link";
 const Introduction = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -65,7 +66,7 @@ const Introduction = () => {
           >
             <motion.li variants={items}>
           <div className="mt-6 flex gap-6 items-center text-[16px]">
-            <button
+            <Link href='/contact-us?action=call'
               className="rounded-[52px] px-[20px] py-[10px]"
               style={{
                 background: "linear-gradient(180deg, #D15A00 0%, #924104 134.15%)"
@@ -73,8 +74,8 @@ const Introduction = () => {
               }}
             >
               Book a free Call
-            </button>
-            <button>Contact Us</button>
+            </Link>
+            <Link href='/contact-us?action=message'>Contact Us</Link>
           </div>
           </motion.li>
           </motion.ul>
