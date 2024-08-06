@@ -29,7 +29,7 @@ const Navbar = () => {
       
         <div className="hidden text-[16px] md:flex items-center gap-[24px]">
           <Link href="/services" className={`py-2 px-3   text-white ${pathname == '/services' ? 'border-b-2 border-[#FF7003]' :''}`}>Services</Link>
-          <Link href="/blogs" className={`py-2 px-3   text-white ${pathname == '/why' ? 'border-b-2 border-[#FF7003]' :''}`}>Repair Guide</Link>
+          <Link href="/blogs" className={`py-2 px-3   text-white ${pathname == '/blogs' ? 'border-b-2 border-[#FF7003]' :''}`}>Repair Guide</Link>
           {/* <Link href="/process" className={`py-2 px-3   text-white ${pathname == '/process' ? 'border-b-2 border-[#FF7003]' :''}`}>Process</Link> */}
           <Link href="/contact-us?action=message" className={`py-2 px-3   text-white ${pathname == '/contact-us' ? 'border-b-2 border-[#FF7003]' :''}`}>Contact</Link>
 
