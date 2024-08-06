@@ -32,7 +32,7 @@ const Services = () => {
             animate={isInView ? "visible" : "hidden"}
           >
             <motion.li variants={items}>
-        <p className="text-[48px] mt-3 font-medium max-w-[653px] leading-[2.85rem] tracking-tight">
+        <p className="text-[32px] sm:text-[48px] mt-3 font-medium max-w-[653px] leading-[2.85rem] tracking-tight">
           Comprehensive, Data-Driven Solutions for Your Business Needs
         </p>
         </motion.li>

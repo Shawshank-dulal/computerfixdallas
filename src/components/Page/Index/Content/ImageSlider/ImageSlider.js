@@ -6,15 +6,15 @@ import Marquee from "react-fast-marquee";
 const ImageSlider = () => {
   return (
     <div>
-      <Marquee className="">
+      <Marquee  className="">
         {ImageSliderData.map((item, index) => {
-          return <Image className="mx-3" key={index} width={200} height={200} src={item.image} alt="sliderImage" />;
+          return <Image className="mx-3 hover:scale-110 transition-all" key={index} width={200} height={200} src={item.image} alt="sliderImage" />;
         })}
       </Marquee>
 
       <Marquee direction="right" className="my-10">
         {ImageSliderData.map((item, index) => {
-          return <Image className="mx-3" key={index} width={200} height={200} src={item.image} alt="sliderImage" />;
+          return <Image className="mx-3 hover:scale-110 transition-all" key={index} width={200} height={200} src={item.image} alt="sliderImage" />;
         })}
       </Marquee>
     </div>

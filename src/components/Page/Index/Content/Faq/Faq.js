@@ -22,7 +22,7 @@ const Faq = () => {
       id="faqs"
       className=" inside_sidespace flex flex-col justify-center items-center w-full"
     >
-      {/* <div className="second_background"></div> */}
+
 
       <div>
         <motion.ul

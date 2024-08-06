@@ -3,7 +3,7 @@ import React from "react";
 
 const Blogs = () => {
   return (
-    <div className="grid lg:grid-cols-2 gap-5 gap-y-10 mt-10">
+    <div className="grid lg:grid-cols-2 gap-5 gap-y-10 ">
       {BlogsData.map((item, index) => {
         return (
           <div key={index} className=" flex flex-wrap sm:flex-nowrap gap-4">

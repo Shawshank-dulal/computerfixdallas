@@ -6,7 +6,7 @@ import { FaqData } from '@/db/FaqData';
 import { FaAngleDown } from 'react-icons/fa';
 const FaqContent = () => {
   return (
-    <Accordion.Root className="AccordionRoot mt-[1.5rem] md:mt-[2rem]" type="single" defaultValue="item-1" collapsible>
+    <Accordion.Root className="AccordionRoot  mt-[1.5rem] md:mt-[2rem]" type="single" defaultValue="item-1" collapsible>
     {FaqData.map((item,index)=>{
       return(
        

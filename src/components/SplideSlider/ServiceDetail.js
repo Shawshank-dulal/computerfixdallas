@@ -7,7 +7,7 @@ import Link from "next/link";
 
 import { WhyData } from "@/db/WhyData";
 
-const ServiceDetail = ({item}) => {
+const ServiceDetail = ({ item }) => {
   const splideOptions = {
     type: "loop",
     perPage: 4,
@@ -34,49 +34,39 @@ const ServiceDetail = ({item}) => {
       },
       1125: {
         perPage: 3,
-      
       },
       576: {
-        perPage: 2,
-          padding: 0,
+        perPage: 1,
+        padding: 0,
       },
     },
   };
   return (
     <div className="mx-auto overflow-hidden mt-14">
       <Splide options={splideOptions}>
-        {WhyData.map((item,index)=>{
-          return(
-<SplideSlide key={index} className="md:max-w-[1010px] ">
-<div >
-                 
-                    <div className=" blogs_product_container">
-                      <div
-                        className="min-h-[292px]  relative bg-no-repeat bg-cover rounded-lg flex flex-col  justify-end"
-                        style={{
-                          backgroundImage: `url(${item.image})`,
-                        }}
-                      >
-                        <div className=" bg-[#100600d5] text-[16px] h-full px-[15px] py-[11px] m-2 rounded-[8px]">
-                          <p className="  font-medium text-[#FF6E00]">
-                            {item.title}
-                          </p>
-                          <p>{item.description}</p>
-                      
-                        </div>
-                      </div>
-
-                     
+        {WhyData.map((item, index) => {
+          return (
+            <SplideSlide key={index} className="md:max-w-[1010px] ">
+              <div>
+                <div className=" blogs_product_container">
+                  <div
+                    className="min-h-[292px]  relative bg-no-repeat bg-cover rounded-lg flex flex-col  justify-end"
+                    style={{
+                      backgroundImage: `url(${item.image})`,
+                    }}
+                  >
+                    <div className=" bg-[#100600d5] text-[16px] h-full px-[15px] py-[11px] m-2 rounded-[8px]">
+                      <p className="  font-medium text-[#FF6E00]">
+                        {item.title}
+                      </p>
+                      <p>{item.description}</p>
                     </div>
-                
+                  </div>
                 </div>
-         
-        </SplideSlide>
-          )
+              </div>
+            </SplideSlide>
+          );
         })}
-        
-
-    
       </Splide>
     </div>
   );
