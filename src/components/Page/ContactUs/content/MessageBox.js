@@ -98,7 +98,7 @@ const MessageBox = ({ selectTab }) => {
         value="message"
       >
             <div className="">
-          <span className="text-[24px] font-semibold uppercase">
+          <span className="text-[28px] font-semibold uppercase">
             Get in touch
           </span>
           <p className="text-[#afafaf] my-3 text-[14px] max-w-[385px]">
