@@ -1,4 +1,5 @@
 import { BlogsData } from "@/db/BlogsData";
+import Link from "next/link";
 import React from "react";
 
 const Blogs = () => {
@@ -6,6 +7,7 @@ const Blogs = () => {
     <div className="grid lg:grid-cols-2 gap-5 gap-y-10 ">
       {BlogsData.map((item, index) => {
         return (
+         <Link href={`/blogs/ultimate-machine-${index}`}>
           <div key={index} className=" flex flex-wrap sm:flex-nowrap gap-4">
             <div
               className="min-w-[255px] min-h-[174px]  relative bg-no-repeat bg-cover rounded-[18px]"
@@ -28,7 +30,7 @@ const Blogs = () => {
               </p>
               <p className="text-[#FF7003] mt-[14px]">Read More</p>
             </div>
-          </div>
+          </div></Link>
         );
       })}
     </div>
