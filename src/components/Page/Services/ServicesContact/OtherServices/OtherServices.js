@@ -5,7 +5,7 @@ import React from 'react'
 const lastThreeSpecs = ComputerSpec.slice(-3);
 const OtherServices = () => {
   return (
-    <div className='pt-20 pb-14'>
+    <div className=' pb-14'>
         <p className='text-[#FF7003] font-semibold text-[20px] mb-5'>Recommended Services</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  align-middle place-content-between gap-[32px] gap-y-[60px]">
         {lastThreeSpecs.map((item, index) => {
