@@ -16,7 +16,7 @@ const Navbar = () => {
   
 
   return (
-    <nav className="absolute w-full">
+    <nav className="absolute w-full z-[100]">
     <div className="main_container2 inside_sidespace mx-auto pt-[20px]">
       <div className="flex justify-between items-center">
         <div className="flex space-x-4">

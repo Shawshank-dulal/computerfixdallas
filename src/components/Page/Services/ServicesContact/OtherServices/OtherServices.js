@@ -1,17 +1,17 @@
-import React from "react";
-import * as Tabs from "@radix-ui/react-tabs";
-import Image from "next/image";
-import { ComputerSpec } from "@/db/Spec";
-import Link from "next/link";
-import "../style.css";
-const ComputerTab = () => {
+import { ComputerSpec } from '@/db/Spec';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react'
+const lastThreeSpecs = ComputerSpec.slice(-3);
+const OtherServices = () => {
   return (
-    <Tabs.Content className="TabsContent1" value="computer">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  align-middle place-content-between gap-[32px] gap-y-[60px]">
-        {ComputerSpec.map((item, index) => {
+    <div className='pt-20 pb-14'>
+        <p className='text-[#FF7003] font-semibold text-[20px] mb-5'>Recommended Services</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  align-middle place-content-between gap-[32px] gap-y-[60px]">
+        {lastThreeSpecs.map((item, index) => {
           return (
             <div key={index} className="flex flex-col ">
-                <div className='w-[50px] h-[50px]'>
+              <div className='w-[50px] h-[50px]'>
               <Image width={50} height={50} src={item.image} alt="specific" />
               </div>
               <div className="inline-flex items-center gap-[10px] mt-[19px]">
@@ -37,8 +37,8 @@ const ComputerTab = () => {
           );
         })}
       </div>
-    </Tabs.Content>
-  );
-};
+    </div>
+  )
+}
 
-export default ComputerTab;
+export default OtherServices

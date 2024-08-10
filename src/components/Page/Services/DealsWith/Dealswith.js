@@ -4,7 +4,7 @@ import './style.css'
 import ComputerTab from './ContentTab/ComputerTab';
 const Dealswith = () => {
   return (
-    <Tabs.Root className="main_container inside_sidespace TabsRoot22 mt-8 md:mt-4" defaultValue='computer'>
+    <Tabs.Root className="main_container inside_sidespace TabsRoot22 mt-8 md:mt-4 " defaultValue='computer'>
     <Tabs.List
       className="TabsList22 mb-24"
       aria-label="Manage your account"

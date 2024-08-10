@@ -167,3 +167,13 @@ body {
     /* padding-right: 1rem; */
   }
 }
+
+
+.dallas_services_description{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4; /* Show ellipsis after 3 lines */
+
+}

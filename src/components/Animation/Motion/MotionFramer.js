@@ -5,7 +5,7 @@ export const container = {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.3,
+        delayChildren: 0.2,
       },
     },
   };
@@ -15,7 +15,7 @@ export const container = {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.4,
+        delayChildren: 0.3,
       },
     },
   };
@@ -25,7 +25,7 @@ export const container = {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.5,
+        delayChildren: 0.4,
         staggerDirection: -1
       }
     }
@@ -36,7 +36,7 @@ export const container = {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.8,
+        delayChildren: 0.6,
         staggerDirection: -1
       }
     }
