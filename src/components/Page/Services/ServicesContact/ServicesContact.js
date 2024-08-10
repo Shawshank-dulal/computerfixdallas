@@ -11,7 +11,7 @@ const ServicesContact = ({serviceSlug}) => {
         className=" w-full bg-no-repeat bg-center  bg-cover h-[500px] z-[-100] overflow-hidden"
         style={{
           backgroundImage: "url('/images/bg/1.svg')",
-          boxShadow: "rgba(0, 0, 0, 0.55) 0px -100px 36px -28px inset"
+          boxShadow: "rgba(0, 0, 0, 0.65) 0px -100px 26px -8px inset"
         }}
       ></div>
 
