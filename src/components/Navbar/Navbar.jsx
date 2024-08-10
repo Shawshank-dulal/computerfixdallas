@@ -52,7 +52,7 @@ const Navbar = () => {
       </div>
     </div>
     <div className={`mobile-menu text-[16px] md:hidden py-4 shadow-xl bg-[#000] ${isOpen ? 'flex flex-col gap-2' : 'hidden'}`}>
-    <Link href="/about-us" onClick={toggleMenu} className="py-2 px-3   block text-white">Services</Link>
+    <Link href="/services" onClick={toggleMenu} className="py-2 px-3   block text-white">Services</Link>
           <Link href="/blogs" onClick={toggleMenu}  className="py-2 px-3   block text-white">Repair Guide</Link>
           {/* <Link href="/process" onClick={toggleMenu} className="py-2 px-3   block text-white">Process</Link> */}
           <Link href="/contact-us?action=message" onClick={toggleMenu} className="py-2 px-3   block text-white">Contact</Link>
