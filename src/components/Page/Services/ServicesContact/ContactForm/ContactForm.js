@@ -78,7 +78,7 @@ const ContactForm = ({serviceSlug}) => {
     <div>
            {!loading ? (
           <>
-            <Form.Root className="FormRoot1 max-w-[650px] pb-10 md:pb-0 md:mt-4" onSubmit={handleSubmit}>
+            <Form.Root className="FormRoot1 max-w-[650px] pb-16 md:pb-0 md:mt-4" onSubmit={handleSubmit}>
               <Form.Field className="FormField1" name="full name">
                 <div
                   style={{
