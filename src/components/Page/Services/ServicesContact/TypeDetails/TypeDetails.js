@@ -5,7 +5,7 @@ import React from 'react'
 const TypeDetails = ({serviceSlug}) => {
 
   return (
-    <div className='relative top-[-6.99rem] md:max-w-[550px]'>
+    <div className='relative top-[-12.5rem] md:max-w-[550px]'>
         {ComputerSpec.filter(item=>item.slug === serviceSlug).map((item2,index2)=>{
             return(
                 <div key={index2} className="flex flex-col ">
@@ -20,7 +20,11 @@ const TypeDetails = ({serviceSlug}) => {
                     ""
                   )}
                 </div>
-                <p className="text-[#cfcfcf]  mt-[12px] text-[16px] tracking-[0.32px] leading-snug">
+                <p className="text-[#ffffff]  mt-[10px] text-[16px] tracking-[0.32px] leading-snug">
+                  {item2.shortdescription}
+                </p>
+
+                <p className="text-[#cfcfcf]  mt-[32px] text-[16px] tracking-[0.32px] leading-snug">
                   {item2.description}
                 </p>
                

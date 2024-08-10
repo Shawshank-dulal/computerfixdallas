@@ -8,9 +8,10 @@ const ServicesContact = ({serviceSlug}) => {
   return (
     <div>
       <div
-        className=" w-full bg-no-repeat bg-center shadow-2xl drop-shadow-2xl  bg-cover h-[500px] z-[-100] overflow-hidden"
+        className=" w-full bg-no-repeat bg-center  bg-cover h-[500px] z-[-100] overflow-hidden"
         style={{
           backgroundImage: "url('/images/bg/1.svg')",
+          boxShadow: "rgba(0, 0, 0, 0.55) 0px -100px 36px -28px inset"
         }}
       ></div>
 
