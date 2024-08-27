@@ -1,10 +1,12 @@
 import BlogDetails from '@/components/Page/BlogPage/BlogDetails/BlogDetails'
 import React from 'react'
 
-const page = () => {
+const page = ({params}) => {
+  const blogslug=params.slug
+  console.log("Blogs",blogslug)
   return (
     <div>
-        <BlogDetails/>
+        <BlogDetails blogslug={blogslug}/>
     </div>
   )
 }

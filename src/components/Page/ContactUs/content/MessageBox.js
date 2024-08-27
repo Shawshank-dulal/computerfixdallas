@@ -116,7 +116,7 @@ const MessageBox = ({ selectTab }) => {
             </div>
             <div className="flex items-center gap-2 mt-2">
               <MdOutlinePhoneInTalk className="text-[18px] text-[#FF7003]" />
-              <p>+1 1234567890</p>
+              <p>+1 469-353-9236</p>
             </div>
             <div className="flex items-center gap-2 mt-2 ">
               <MdOutlineLocationOn className="text-[20px] text-[#FF7003]" />
@@ -125,7 +125,7 @@ const MessageBox = ({ selectTab }) => {
                 target="_blank"
                 href="https://maps.app.goo.gl/av3ZSq2PMVLZfdsX7"
               >
-                Trinity Groves, Dallas, Texas
+                8500 N Stemmons Fwy Suite 5038  Dallas Texas 75247
               </Link>
             </div>
           </div>

@@ -1,13 +1,30 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import Image from "next/image";
-
-import Link from "next/link";
-
 import { WhyData } from "@/db/WhyData";
+import { fetchWhyContents } from "@/utils/whycontents";
+import config from "@/config";
 
 const ServiceDetail = ({ item }) => {
+  const [contents,setContents]=useState([])
+  useEffect(()=>{
+ const fetchWhyContents = async () => {
+      try {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/whycontents`);
+        const whydata = await res.json();
+ 
+        const info=whydata.whycontents.data
+        setContents(info)
+        console.log("info",info);
+        return data;
+      } catch (error) {
+        console.error("Failed to fetch whycontents:", error);
+      }
+    };
+
+    fetchWhyContents()
+  },[])
   const splideOptions = {
     type: "loop",
     perPage: 4,
@@ -44,7 +61,8 @@ const ServiceDetail = ({ item }) => {
   return (
     <div className="mx-auto overflow-hidden mt-14">
       <Splide options={splideOptions}>
-        {WhyData.map((item, index) => {
+
+        {contents.map((item, index) => {
           return (
             <SplideSlide key={index} className="md:max-w-[1010px] ">
               <div>
@@ -52,14 +70,14 @@ const ServiceDetail = ({ item }) => {
                   <div
                     className="min-h-[292px]  relative bg-no-repeat bg-cover rounded-lg flex flex-col  justify-end"
                     style={{
-                      backgroundImage: `url(${item.image})`,
+                      backgroundImage: `url(${config.api}${item.attributes.image.data.attributes.url})`,
                     }}
                   >
                     <div className=" bg-[#100600d5] text-[16px] h-full px-[15px] py-[11px] m-2 rounded-[8px]">
                       <p className="  font-medium text-[#FF6E00]">
-                        {item.title}
+                      {item.attributes.title}
                       </p>
-                      <p>{item.description}</p>
+                      <p> {item.attributes.summary}</p>
                     </div>
                   </div>
                 </div>

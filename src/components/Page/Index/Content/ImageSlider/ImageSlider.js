@@ -1,20 +1,23 @@
-import { ImageSliderData } from "@/db/ImageSlider";
+import config from "@/config";
+import { fetchHomeSlider } from "@/utils/homeslider";
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
 
-const ImageSlider = () => {
+const ImageSlider = async() => {
+  const fetchData=await fetchHomeSlider()
+  const data=fetchData.homeslider.data
   return (
     <div className="">
       <Marquee  className="">
-        {ImageSliderData.map((item, index) => {
-          return <Image className="mx-3 hover:scale-110 transition-all" key={index} width={200} height={200} src={item.image} alt="sliderImage" />;
+        {data.map((item, index) => {
+          return <Image className="mx-3 hover:scale-110 transition-all" key={index} width={200} height={200} src={`${config.api}${item.attributes.image.data.attributes.url}`} alt="sliderImage" />;
         })}
       </Marquee>
 
       <Marquee direction="right" className="my-10">
-        {ImageSliderData.map((item, index) => {
-          return <Image className="mx-3 hover:scale-110 transition-all" key={index} width={200} height={200} src={item.image} alt="sliderImage" />;
+        {data.map((item, index) => {
+          return <Image className="mx-3 hover:scale-110 transition-all" key={index} width={200} height={200} src={`${config.api}${item.attributes.image.data.attributes.url}`} alt="sliderImage" />;
         })}
       </Marquee>
     </div>
