@@ -21,8 +21,9 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         <div className="flex space-x-4">
           <div>
-            <Link href='/'>
-                <Image priority={true} className="w-[100px] h-auto" width={100} height={24.38} src='/images/logo/logo.svg' alt="Navbar_logo"/>
+            <Link href='/' className="font-semibold text-[22px]">
+                {/* <Image priority={true} className="w-[100px] h-auto" width={100} height={24.38} src='/images/logo/logo.svg' alt="Navbar_logo"/> */}
+              ProTech<span className="text-[#c05301]">Fix</span>
             </Link>
           </div>
         </div>
