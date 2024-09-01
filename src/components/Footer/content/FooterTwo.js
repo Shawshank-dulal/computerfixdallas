@@ -6,7 +6,8 @@ const FooterTwo = () => {
     <div className='flex justify-between text-[14px]'>
         <div className='flex gap-3'>
             {/* <p>Terms of Services</p> */}
-            <Link href='/privacy'>Terms & Privacy</Link>
+            <Link href='/terms-conditions'>Terms of Services</Link>
+            <Link href='/privacy'>Privacy</Link>
         </div>
         <div>
             <p>@2024 ComputerFixDallas</p>

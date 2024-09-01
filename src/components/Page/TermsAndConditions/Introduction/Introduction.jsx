@@ -45,7 +45,7 @@ const Introduction = ({updatedDate}) => {
             >
               <motion.li variants={items}>
                 <p className="font-medium  leading-[2.98rem] text-[32px] sm:text-[48px] tracking-tight">
-                  Privacy and Policy
+                Terms And Conditions
                 </p>
               </motion.li>
             </motion.ul>
