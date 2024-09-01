@@ -39,13 +39,13 @@ const Specification = async() => {
         </Tabs.List>
         
         <Tabs.Content className="TabsContent1" value="Computer">
-        {services.map((item,index)=>{
+        {/* {services.map((item,index)=>{
           return(
             <div>
               {item.attributes.tabcategory.data === null ? "no data" : item.attributes.tabcategory.data.attributes.title}
             </div>
           )
-        })}
+        })} */}
              {/* {item.attributes.tab_category.data.map((item2,index)=>{
                   return(
                     <p>aaaaa</p>

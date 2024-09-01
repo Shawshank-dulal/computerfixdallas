@@ -21,7 +21,7 @@ const ComputerTab = async() => {
                     <p>aaaaa</p>
                   )
                 })} */}
-                <p>{item.attributes.tab_category ? item.attributes.tab_category.title : 'no'}</p>
+                {/* <p>{item.attributes.tab_category ? item.attributes.tab_category.title : 'no'}</p> */}
             </div>
             )
         })}
