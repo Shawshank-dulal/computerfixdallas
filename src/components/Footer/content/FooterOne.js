@@ -21,9 +21,8 @@ const FooterOne = () => {
     </div>
     <div className="hidden text-[14px] md:flex items-center gap-[16px]">
       <Link href="/services">Services</Link>
-      <Link href="/why">Why</Link>
-      <Link href="/process">Process</Link>
-      <Link href="/contact-us">Contact</Link>
+      <Link href="/blogs">Repair Guide</Link>
+      <Link href="/contact-us?action=message">Contact</Link>
     </div>
     <div className="flex gap-3 text-[18px]">
       <SlSocialFacebook />
