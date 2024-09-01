@@ -41,7 +41,7 @@ const Specification = async() => {
         </Tabs.List>
         {tabcategories.map((item,index)=>{
             return(
-        <Tabs.Content className="TabsContent1" value={item.attributes.title}>
+        <Tabs.Content key={index} className="TabsContent1" value={item.attributes.title}>
               <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 align-middle place-content-between text-center gap-[28px] '>
 
           {services.filter(item3=>item3.attributes.tabcategory.data?.attributes?.title === item.attributes.title).map((item2,index)=>{
@@ -49,7 +49,7 @@ const Specification = async() => {
             <div key={index} className='flex flex-col items-center'>
                 <Image width={50} height={50} src={`${config.api}${item2.attributes.image.data.attributes.url}`} alt='specific'/>
                 <p className='text-[14px] mt-[16px] text-[#FFE7D4]'>{item2.attributes.title}</p>
-                {item2.attributes.tabcategory.data === null ? "no data" : item2.attributes.tabcategory.data.attributes.title}         
+                {/* {item2.attributes.tabcategory.data === null ? "no data" : item2.attributes.tabcategory.data.attributes.title}          */}
             </div>
           
           )
