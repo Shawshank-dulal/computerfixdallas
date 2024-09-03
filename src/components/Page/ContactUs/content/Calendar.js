@@ -15,7 +15,7 @@ const Calendar = () => {
   return (
     <>
      <Cal 
-    calLink="ww/15min"
+    calLink="npanthi/15min"
     style={{maxWidth:"900px",minHeight:"490px",overflow:"auto"}}
     config={{layout: 'month_view'}}
   
