@@ -9,6 +9,9 @@ import { fetchblogs } from "@/utils/blogs";
 const BlogDetails = async ({blogslug}) => {
   const fetchData = await fetchblogs();
   const data = fetchData.blogs.data;
+  if(!data){
+    <p>No data</p>
+  }
   return (
     <div>
       {data
