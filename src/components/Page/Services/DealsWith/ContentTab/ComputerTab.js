@@ -9,12 +9,16 @@ import { fetchServices } from "@/utils/services";
 
 const ComputerTab = async () => {
   const servicesData = await fetchServices();
-  const services=servicesData.services.data
-  console.log(servicesData.services);
+  const services=servicesData?.services?.data
+  // console.log(servicesData.services);
+
+  if(!services){
+    <p>No data</p>
+  }
   return (
     <Tabs.Content className="TabsContent1" value="computer">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  align-middle place-content-between gap-[32px] gap-y-[60px]">
-        {services.map((item, index) => {
+        {services && services.map((item, index) => {
           return (
             <div key={index} className="flex flex-col ">
               <div className="w-[50px] h-[50px]">
