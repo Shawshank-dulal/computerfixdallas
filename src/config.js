@@ -1,5 +1,6 @@
 const config={
-    api:'http://127.0.0.1:1337'
+    api:'https://admin.didthatwithai.com'
 }
+
 
 export default config;
