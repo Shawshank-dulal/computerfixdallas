@@ -8,3 +8,4 @@ export const fetchHomeSlider = async () => {
       console.error("Failed to fetch faqs:", error);
     }
   };
+  
