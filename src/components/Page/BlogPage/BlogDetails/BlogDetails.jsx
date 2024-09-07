@@ -14,7 +14,7 @@ const BlogDetails = async ({blogslug}) => {
   }
   return (
     <div>
-      {data
+      {data && data
         .filter((item) => item.attributes.slug === blogslug)
         .map((item2, index2) => {
           return (

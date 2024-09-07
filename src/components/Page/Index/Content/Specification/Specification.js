@@ -9,14 +9,19 @@ import config from "@/config";
 
 const Specification = async() => {
   const tabcategoriesData=await fetchTabCategroies()
-  const tabcategories=tabcategoriesData.tabcategories.data
+  const tabcategories=tabcategoriesData?.tabcategories?.data
   console.log("New tab data",tabcategories)
 
   const servicesData = await fetchServices();
-  const services=servicesData.services.data
+  const services=servicesData?.services?.data
+
+  if(!tabcategories || !services){
+    <p>No data</p>
+  }
   return (
     <div className="main_container inside_sidespace  py-20">
-      <Tabs.Root className="TabsRoot1 mt-8 md:mt-0" defaultValue={tabcategories[0].attributes.title}>
+      {tabcategories && services ?
+      <Tabs.Root className="TabsRoot1 mt-8 md:mt-0" defaultValue={tabcategories[0].attributes?.title}>
         <Tabs.List className="TabsList1 " aria-label="Manage your account">
         {tabcategories.map((item,index)=>{
             return(
@@ -26,18 +31,6 @@ const Specification = async() => {
 
             )
           })}
-          {/* <Tabs.Trigger className="TabsTrigger1 " value="computer">
-            Computer
-          </Tabs.Trigger>
-          <Tabs.Trigger className="TabsTrigger1 " value="macbook">
-            Macbook
-          </Tabs.Trigger>
-          <Tabs.Trigger className="TabsTrigger1 " value="imac">
-            iMac
-          </Tabs.Trigger>
-          <Tabs.Trigger className="TabsTrigger1" value="iphone">
-            iPhone
-          </Tabs.Trigger> */}
         </Tabs.List>
         {tabcategories.map((item,index)=>{
             return(
@@ -56,19 +49,6 @@ const Specification = async() => {
         })}
         </div>
 
-        {/* {services.map((item2,index)=>{
-          return(
-            <div>
-              {item2.attributes.tabcategory.data === null ? "no data" : item2.attributes.tabcategory.data.attributes.title}
-            </div>
-          )
-        })} */}
-             {/* {item.attributes.tab_category.data.map((item2,index)=>{
-                  return(
-                    <p>aaaaa</p>
-                  )
-                })} */}
-        {/* <ComputerTab /> */}
         </Tabs.Content>
             )})}
         <Tabs.Content className="TabsContent1" value="macbook">
@@ -80,7 +60,7 @@ const Specification = async() => {
         <Tabs.Content className="TabsContent1" value="iphone">
           <p className="text-[32px]">Coming Soon...</p>
         </Tabs.Content>
-      </Tabs.Root>
+      </Tabs.Root>:'No data'}
     </div>
   );
 };

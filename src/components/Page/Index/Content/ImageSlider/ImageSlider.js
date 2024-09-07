@@ -6,17 +6,21 @@ import Marquee from "react-fast-marquee";
 
 const ImageSlider = async() => {
   const fetchData=await fetchHomeSlider()
-  const data=fetchData.homeslider.data
+  const data=fetchData?.homeslider?.data
+
+  if(!data){
+    <p>No data</p>
+  }
   return (
     <div className="">
       <Marquee  className="">
-        {data.map((item, index) => {
+        {data && data.map((item, index) => {
           return <Image className="mx-3 hover:scale-110 transition-all" key={index} width={200} height={200} src={`${config.api}${item.attributes.image.data.attributes.url}`} alt="sliderImage" />;
         })}
       </Marquee>
 
       <Marquee direction="right" className="my-10">
-        {data.map((item, index) => {
+        {data && data.map((item, index) => {
           return <Image className="mx-3 hover:scale-110 transition-all" key={index} width={200} height={200} src={`${config.api}${item.attributes.image.data.attributes.url}`} alt="sliderImage" />;
         })}
       </Marquee>
