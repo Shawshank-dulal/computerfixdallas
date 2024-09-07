@@ -22,6 +22,7 @@ const FooterOne = () => {
     <div className="hidden text-[14px] md:flex items-center gap-[16px]">
       <Link href="/services">Services</Link>
       <Link href="/blogs">Repair Guide</Link>
+      <Link href="/about-us">About Us</Link>
       <Link href="/contact-us?action=message">Contact</Link>
     </div>
     <div className="flex gap-3 text-[18px]">

@@ -7,11 +7,15 @@ import { fetchfaqs } from '@/utils/faqs';
 
 const FaqContent = async() => {
   const faqsData=await fetchfaqs()
-  const allFaqs=faqsData.faqs.data
+  const allFaqs=faqsData?.faqs?.data
   console.log('new data',faqsData)
+
+  if(!allFaqs){
+    <p>No data</p>
+  }
   return (
     <Accordion.Root className="AccordionRoot  mt-[1.5rem] md:mt-[2rem]" type="single" defaultValue="item-1" collapsible>
-    {allFaqs.map((item,index)=>{
+    {allFaqs && allFaqs.map((item,index)=>{
       return(
        
         <Accordion.Item key={index} className="AccordionItem" value={`item-${item.id}`}>

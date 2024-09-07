@@ -6,11 +6,14 @@ import { fetchTermsPolicy } from "@/utils/termspolicy";
 const TermsAndConditions = async () => {
   const termsData = await fetchTermsPolicy();
   console.log(termsData);
-  const updatedDate = termsData.termspolicy.data.attributes.updatedAt;
+  const updatedDate = termsData?.termspolicy?.data?.attributes?.updatedAt;
   console.log("latest info",updatedDate)
 
-  const policyData2 = termsData.termspolicy.data.attributes.content;
+  const policyData2 = termsData?.termspolicy?.data?.attributes?.content;
   // console.log("latest info", policyData2);
+  if(!updatedDate || !policyData2){
+    <p>No data</p>
+  }
   return (
     <div>
       <div>

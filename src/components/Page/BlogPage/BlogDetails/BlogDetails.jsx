@@ -9,9 +9,12 @@ import { fetchblogs } from "@/utils/blogs";
 const BlogDetails = async ({blogslug}) => {
   const fetchData = await fetchblogs();
   const data = fetchData.blogs.data;
+  if(!data){
+    <p>No data</p>
+  }
   return (
     <div>
-      {data
+      {data && data
         .filter((item) => item.attributes.slug === blogslug)
         .map((item2, index2) => {
           return (

@@ -7,6 +7,9 @@ import React from "react";
 const TypeDetails = async ({ serviceSlug }) => {
   const servicesData = await fetchServices();
   const services = servicesData.services.data;
+  if(!services){
+    <p>No data</p>
+  }
   return (
     <div className="relative top-[-12.5rem] md:max-w-[550px]">
       {services

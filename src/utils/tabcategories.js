@@ -1,6 +1,10 @@
 export const fetchTabCategroies = async () => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/tabcategories`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/tabcategories`, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
       const data = await res.json();
       console.log(data);
       return data;

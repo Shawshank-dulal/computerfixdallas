@@ -10,6 +10,10 @@ const OtherServices = async () => {
   const services = servicesData.services.data;
   console.log(servicesData.services);
   const lastThreeSpecs = services.slice(-3);
+
+  if(!services){
+    <p>No data</p>
+  }
   return (
     <div className=" pb-14">
       <p className="text-[#FF7003] font-semibold text-[20px] mb-5">
