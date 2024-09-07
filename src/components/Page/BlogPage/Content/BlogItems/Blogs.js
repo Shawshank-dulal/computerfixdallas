@@ -6,7 +6,7 @@ import React from "react";
 
 const Blogs = async() => {
   const fetchData=await fetchblogs()
-  const data=fetchData?.blogs?.data
+  const data=fetchData.blogs.data
   console.log(data)
  
   return (
