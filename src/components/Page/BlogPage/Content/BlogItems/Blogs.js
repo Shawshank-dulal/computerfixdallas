@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Blogs = async() => {
   const fetchedData=await fetchblogs()
-  const newData=fetchedData.blogs.data
+  const newData=fetchedData?.blogs?.data
  
   return (
    <div>
