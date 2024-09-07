@@ -1,6 +1,10 @@
 export const fetchServices = async () => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/services`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/services`, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
       const data = await res.json();
       console.log(data);
       return data;
