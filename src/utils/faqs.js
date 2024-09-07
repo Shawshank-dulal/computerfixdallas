@@ -8,3 +8,4 @@ export const fetchfaqs = async () => {
       console.error("Failed to fetch faqs:", error);
     }
   };
+  
