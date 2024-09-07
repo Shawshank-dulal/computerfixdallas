@@ -7,7 +7,7 @@ import React from "react";
 const Blogs = async() => {
   const fetchData=await fetchblogs()
   const data=fetchData?.blogs?.data
-
+  console.log(data)
  
   return (
     <div className="grid lg:grid-cols-2 gap-5 gap-y-10 ">
