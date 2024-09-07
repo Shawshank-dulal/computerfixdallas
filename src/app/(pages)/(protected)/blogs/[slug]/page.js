@@ -6,7 +6,7 @@ const page = ({params}) => {
   console.log("Blogs",blogslug)
   return (
     <div>
-        <BlogDetails blogslug={blogslug}/>
+        {/* <BlogDetails blogslug={blogslug}/> */}
     </div>
   )
 }
