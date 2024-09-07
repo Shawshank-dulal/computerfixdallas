@@ -1,34 +1,17 @@
-"use client"
 import config from "@/config";
 import { BlogsData } from "@/db/BlogsData";
 import { fetchblogs } from "@/utils/blogs";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
 
-const Blogs = () => {
-  const [blogsList,setBlogsList]=useState()
-  const fetchblogs = async () => {
-    try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/blogs`, {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      const data = await res.json();
-      console.log(data);
-      setBlogsList(data.blogs.data)
-    } catch (error) {
-      console.error("Failed to fetch blogs:", error);
-    }
-  };
 
-  useEffect(()=>{
-    fetchblogs()
-  },[])
+const Blogs = async() => {
+  const fetchedData=await fetchblogs()
+  const newData=fetchedData?.blogs?.data
+ 
   return (
    <div>
-    {blogsList ?  <div className="grid lg:grid-cols-2 gap-5 gap-y-10 ">
-      {blogsList.map((item, index) => {
+    {newData ?  <div className="grid lg:grid-cols-2 gap-5 gap-y-10 ">
+      {newData.map((item, index) => {
         return (
          <Link href={`/blogs/${item.attributes.slug}`}>
           <div key={index} className=" flex flex-wrap sm:flex-nowrap gap-4">
