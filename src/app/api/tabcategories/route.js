@@ -5,13 +5,13 @@ export async function GET(request) {
   try {
     const reqOptions = {
       headers: {
-        Authorization: `Bearer ${process.env.API_TOKEN}`,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
       },
       next: { revalidate: 50 }, // Revalidate the cache every 50 seconds
     };
 
     const response = await fetch(
-      `${config.api}/api/tabcategories?populate=*`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/tabcategories?populate=*`,
       reqOptions
     );
 
