@@ -6,7 +6,7 @@ const page = ({params}) => {
       console.log("data",serviceSlug)
   return (
     <div>
-      {/* <ServicesContact serviceSlug={serviceSlug}/> */}
+      <ServicesContact serviceSlug={serviceSlug}/>
     </div>
   )
 }
