@@ -11,7 +11,7 @@ export async function GET(request) {
     };
 
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/whycontents?populate=*`,
+      `${config.api}/api/whycontents?populate=*`,
       reqOptions
     );
 

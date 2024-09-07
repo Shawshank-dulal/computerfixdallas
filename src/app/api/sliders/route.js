@@ -11,7 +11,7 @@ export async function GET(request) {
     };
 
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/sliders?populate=*`,
+      `${config.api}/api/sliders?populate=*`,
       reqOptions
     );
 
