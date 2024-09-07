@@ -10,8 +10,9 @@ const Blogs = async() => {
   console.log(data)
  
   return (
-    <div className="grid lg:grid-cols-2 gap-5 gap-y-10 ">
-      {data && data.map((item, index) => {
+   <div>
+    {data ?  <div className="grid lg:grid-cols-2 gap-5 gap-y-10 ">
+      {data.map((item, index) => {
         return (
          <Link href={`/blogs/${item.attributes.slug}`}>
           <div key={index} className=" flex flex-wrap sm:flex-nowrap gap-4">
@@ -40,6 +41,8 @@ const Blogs = async() => {
         );
       })}
     </div>
+    :'No data'}
+   </div>
   );
 };
 
