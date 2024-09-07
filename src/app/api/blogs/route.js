@@ -1,7 +1,7 @@
 import config from "@/config";
 import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(request) {
   try {
     const reqOptions = {
       headers: {
@@ -20,15 +20,15 @@ export async function GET() {
     }
 
     const blogs = await response.json();
-    console.log("Blogs list:", blogs);
+    console.log("blogs list:", blogs);
 
-    return NextResponse.json({ blogs }, { status: 200 }); // Return status 200 on success
+    return NextResponse.json({ blogs });
   } catch (error) {
     console.error("Error fetching data:", error.message);
 
     return NextResponse.json(
       { error: "Failed to fetch data" },
-      { status: 500 } // Return status 500 on server error
+      { status: 500 }
     );
   }
 }
