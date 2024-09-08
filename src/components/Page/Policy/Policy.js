@@ -12,16 +12,15 @@ const Policy = async () => {
   const policyData2 = termsData?.privacypolicy?.data?.attributes?.content;
   // console.log("latest info", policyData2);
 
-  if(!updatedDate || !policyData2){
-    <p>No data</p>
-  }
+
   return (
     <div>
+    
       <div>
         <Introduction updatedDate={updatedDate}/>
 
         <BriefDetails policyContent={policyData2} />
-      </div>
+      </div> 
     </div>
   );
 };

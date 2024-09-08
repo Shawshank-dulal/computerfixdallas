@@ -9,7 +9,7 @@ const Connect = async() => {
   console.log("Connect for about",fetchData)
   return (
     <div>
-    {fetchData ?       <div className="relative isolate -z-10">
+    {data ?       <div className="relative isolate -z-10">
       <svg className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-[#c95701] [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
         <defs>
           <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
