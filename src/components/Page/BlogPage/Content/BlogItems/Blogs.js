@@ -10,7 +10,7 @@ const Blogs = async() => {
  
   return (
    <div>
-    {newData ?  <div className="grid lg:grid-cols-2 gap-5 gap-y-10 ">
+ <div className="grid lg:grid-cols-2 gap-5 gap-y-10 ">
       {newData && newData.map((item, index) => {
         return (
          <div key={index}>
@@ -42,7 +42,7 @@ const Blogs = async() => {
         );
       })}
     </div>
-    :'No data'}
+   
    </div>
   );
 };
