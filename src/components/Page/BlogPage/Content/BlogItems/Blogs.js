@@ -11,7 +11,7 @@ const Blogs = async() => {
   return (
    <div>
     {newData ?  <div className="grid lg:grid-cols-2 gap-5 gap-y-10 ">
-      {newData.map((item, index) => {
+      {newData && newData.map((item, index) => {
         return (
          <div key={index}>
           <Link  href={`/blogs/${item.attributes.slug}`}>
