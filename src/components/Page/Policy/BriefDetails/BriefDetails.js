@@ -7,7 +7,7 @@ const BriefDetails = ({policyContent}) => {
 <div className='flex flex-col gap-2'>
                         
                  
-{policyContent.map((item,index)=>{
+{policyContent && policyContent.map((item,index)=>{
                           return(
                             <div key={index} >
                              {item.children.map((item2,index2)=>{
