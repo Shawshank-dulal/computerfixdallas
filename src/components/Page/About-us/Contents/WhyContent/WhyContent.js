@@ -14,7 +14,7 @@ const WhyContent = async() => {
         <p className="mt-6 text-lg leading-8 text-[#fff]">Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.</p>
       </div>
       <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        {items.map((item,index)=>{
+        {items && items.map((item,index)=>{
           return(
             <div key={index}>
           <dt className="font-semibold text-[#c95701]">{item.attributes.title}</dt>

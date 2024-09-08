@@ -9,7 +9,7 @@ const Connect = async() => {
   console.log("Connect for about",fetchData)
   return (
     <div>
-          <div className="relative isolate -z-10">
+    {fetchData ?       <div className="relative isolate -z-10">
       <svg className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-[#c95701] [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
         <defs>
           <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
@@ -28,8 +28,8 @@ const Connect = async() => {
         <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-              <h1 className="text-4xl font-bold tracking-tight text-[#c95701] sm:text-6xl">{fetchData.title}</h1>
-              <p className="relative mt-6 text-lg leading-8 text-[#fff] sm:max-w-md lg:max-w-none">{fetchData.description}</p>
+              <h1 className="text-4xl font-bold tracking-tight text-[#c95701] sm:text-6xl">{fetchData?.title}</h1>
+              <p className="relative mt-6 text-lg leading-8 text-[#fff] sm:max-w-md lg:max-w-none">{fetchData?.description}</p>
             </div>
             <div className="mt-14 hidden md:flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
               <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
@@ -63,7 +63,7 @@ const Connect = async() => {
           </div>
         </div>
       </div>
-    </div>
+    </div> : 'No data'}
     </div>
   )
 }

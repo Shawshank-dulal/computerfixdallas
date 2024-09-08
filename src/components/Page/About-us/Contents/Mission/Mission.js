@@ -8,7 +8,8 @@ const Mission = async() => {
   console.log("Connect for about",items)
   return (
     <div>
-       <div className="mx-auto ">
+   {items ? <div>
+    <div className="mx-auto ">
       <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
         <h2 className="text-3xl font-bold tracking-tight text-[#c95701] sm:text-4xl">{items.title}</h2>
         <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
@@ -53,6 +54,7 @@ const Mission = async() => {
     <div className="mt-20 md:mt-32">
       <Image width={1200} height={1200} src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80" alt="" className="aspect-[5/2] w-full object-cover rounded-xl xl:rounded-3xl"/>
     </div>
+    </div> : 'No data'}
     </div>
   )
 }
