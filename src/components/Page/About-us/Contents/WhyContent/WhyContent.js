@@ -3,7 +3,7 @@ import React from 'react'
 
 const WhyContent = async() => {
   const data=await fetchAboutWhy()
-  const items=data?.message?.data?.attributes
+  const items=data?.aboutwhy?.data
   console.log("Why for about",items)
   return (
     <div>
@@ -17,8 +17,8 @@ const WhyContent = async() => {
         {items.map((item,index)=>{
           return(
             <div key={index}>
-          <dt className="font-semibold text-[#c95701]">{item.title}</dt>
-          <dd className="mt-1 text-[#fff]">{item.description}</dd>
+          <dt className="font-semibold text-[#c95701]">{item.attributes.title}</dt>
+          <dd className="mt-1 text-[#fff]">{item.attributes.description}</dd>
         </div>
           )
         })}

@@ -1,6 +1,6 @@
 export const fetchAboutWhy = async () => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/aboutwhy`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/aboutwhycontents`, {
         headers: {
           'Content-Type': 'application/json'
         }
