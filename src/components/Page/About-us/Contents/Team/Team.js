@@ -5,7 +5,7 @@ import React from "react";
 
 const Team = async() => {
   const data=await fetchAboutMessage()
-  const items=data?.message?.data?.attributes
+  const items=data?.message?.data
   console.log("Message for about",items)
   return (
     <div className="py-20">
@@ -16,14 +16,14 @@ const Team = async() => {
 
       <div className="relative z-10">
         <h1 className="text-4xl md:text-5xl font-bold text-[#c95701] text-center mb-6">
-          {items.title}
+          {items?.attributes?.title}
         </h1>
 <div className="flex justify-center my-5">
-<Image width={350} height={350} src={`${config.api}${items.image.data[0].attributes.formats.thumbnail.url}`} alt="profile" className="  rounded-xl  shadow-lg"/>
+<Image width={350} height={350} src={`${config.api}${items?.attributes?.image?.data[0]?.attributes?.formats?.thumbnail?.url}`} alt="profile" className="  rounded-xl  shadow-lg"/>
 
 </div>
         <p className="text-lg text-gray-100 leading-relaxed text-center max-w-2xl mx-auto">
-{items.description}        </p>
+{items?.attributes?.description}        </p>
       </div>
 
       {/* Add a subtle animation to elements */}

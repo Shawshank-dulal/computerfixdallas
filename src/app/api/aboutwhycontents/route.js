@@ -11,7 +11,7 @@ export async function GET(request) {
     };
 
     const response = await fetch(
-      `${config.api}/api/aboutwhycontents?populate=*`,
+      `${config.api}/api/aboutwhycontents`,
       reqOptions
     );
 
@@ -20,6 +20,7 @@ export async function GET(request) {
     }
 
     const aboutwhy = await response.json();
+    
     console.log("aboutwhy list:", aboutwhy);
 
     return NextResponse.json({ aboutwhy });

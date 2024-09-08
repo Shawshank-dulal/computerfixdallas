@@ -11,7 +11,7 @@ export async function GET(request) {
     };
 
     const response = await fetch(
-      `${config.api}/api/faqs?populate=*`,
+      `${config.api}/api/faqs`,
       reqOptions
     );
 

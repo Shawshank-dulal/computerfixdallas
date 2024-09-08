@@ -17,8 +17,8 @@ const WhyContent = async() => {
         {items && items.map((item,index)=>{
           return(
             <div key={index}>
-          <dt className="font-semibold text-[#c95701]">{item.attributes.title}</dt>
-          <dd className="mt-1 text-[#fff]">{item.attributes.description}</dd>
+          <dt className="font-semibold text-[#c95701]">{item?.attributes?.title}</dt>
+          <dd className="mt-1 text-[#fff]">{item?.attributes?.description}</dd>
         </div>
           )
         })}

@@ -12,3 +12,4 @@ export const fetchAboutWhy = async () => {
       console.error("Failed to fetch AboutWhy:", error);
     }
   };
+  
