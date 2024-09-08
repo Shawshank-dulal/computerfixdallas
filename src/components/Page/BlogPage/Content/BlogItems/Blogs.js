@@ -13,8 +13,9 @@ const Blogs = async() => {
     {newData ?  <div className="grid lg:grid-cols-2 gap-5 gap-y-10 ">
       {newData.map((item, index) => {
         return (
-         <Link href={`/blogs/${item.attributes.slug}`}>
-          <div key={index} className=" flex flex-wrap sm:flex-nowrap gap-4">
+         <div key={index}>
+          <Link  href={`/blogs/${item.attributes.slug}`}>
+          <div  className=" flex flex-wrap sm:flex-nowrap gap-4">
             <div
               className="min-w-[255px] min-h-[174px]  relative bg-no-repeat bg-cover rounded-[18px]"
               style={{
@@ -37,6 +38,7 @@ const Blogs = async() => {
               <p className="text-[#FF7003] mt-[14px]">Read More</p>
             </div>
           </div></Link>
+         </div>
         );
       })}
     </div>

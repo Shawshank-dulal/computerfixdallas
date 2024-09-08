@@ -1,6 +1,6 @@
-export const fetchblogs = async () => {
+export const fetchAboutConnect = async () => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/blogs`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/connect`, {
         headers: {
           'Content-Type': 'application/json'
         }
@@ -9,7 +9,6 @@ export const fetchblogs = async () => {
       console.log(data);
       return data;
     } catch (error) {
-      console.error("Failed to fetch blogs:", error);
+      console.error("Failed to fetch AboutConnect:", error);
     }
   };
-  
