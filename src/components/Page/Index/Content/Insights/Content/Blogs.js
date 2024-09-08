@@ -7,15 +7,13 @@ import React from "react";
 const Blogs = async() => {
   const fetchData=await fetchblogs()
   const data=fetchData?.blogs?.data
-  if(!data){
-    <p>No data</p>
-  }
+
   return (
     <div className="grid lg:grid-cols-2 gap-5 gap-y-10 mt-10">
       {data && data.map((item, index) => {
         return (
-          <Link href={`/blogs/${item.attributes.slug}`}>
-          <div key={index} className=" flex flex-wrap sm:flex-nowrap gap-4">
+          <Link key={index}  href={`/blogs/${item.attributes.slug}`}>
+          <div className=" flex flex-wrap sm:flex-nowrap gap-4">
             <div
               className="min-w-[255px] min-h-[174px]  relative bg-no-repeat bg-cover rounded-[18px]"
               style={{

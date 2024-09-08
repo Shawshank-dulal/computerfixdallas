@@ -17,7 +17,7 @@ const Mission = async() => {
           {items && items.attributes.description.map((item2, index2) => {
   return (
     <div key={index2}>
-      {item2.children.map((item3, index3) => {
+      {item2 && item2.children.map((item3, index3) => {
         return (
           <p key={index3} className="text-[18px] leading-8 text-[#fff]">
             {item3.text}
