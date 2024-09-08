@@ -14,7 +14,7 @@ const Mission = async() => {
         <h2 className="text-3xl font-bold tracking-tight text-[#c95701] sm:text-4xl">{items.title}</h2>
         <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
           <div className="lg:w-full lg:max-w-2xl lg:flex-auto flex flex-col gap-3">
-          {items.description.map((item2, index2) => {
+          {items && items.description.map((item2, index2) => {
   return (
     <div key={index2}>
       {item2.children.map((item3, index3) => {
