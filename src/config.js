@@ -1,5 +1,5 @@
 const config={
-    api:'https://admin.didthatwithai.com'
+    api:'https://admin.computerfixdallas.com'
 }
 
 

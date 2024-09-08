@@ -1,10 +1,15 @@
+import config from "@/config";
+import { fetchAboutMessage } from "@/utils/about/about_message";
 import Image from "next/image";
 import React from "react";
 
-const Team = () => {
+const Team = async() => {
+  const data=await fetchAboutMessage()
+  const items=data?.message?.data?.attributes
+  console.log("Message for about",items)
   return (
     <div className="py-20">
-      {/* <h2 class="text-3xl font-bold tracking-tight text-[#c95701] sm:text-4xl">
+      {/* <h2 className="text-3xl font-bold tracking-tight text-[#c95701] sm:text-4xl">
         Message From The CEO
       </h2> */}
       <div className="relative overflow-hidden py-16 px-6 sm:px-12 md:px-24 lg:px-32">
@@ -13,15 +18,14 @@ const Team = () => {
 
       <div className="relative z-10">
         <h1 className="text-4xl md:text-5xl font-bold text-[#c95701] text-center mb-6">
-          Message from the CEO
+          {items.title}
         </h1>
 <div className="flex justify-center my-5">
-<Image width={350} height={350} src="/images/user/1.webp" alt="" class="  rounded-xl  shadow-lg"/>
+<Image width={350} height={350} src={`${config.api}${items.image.data[0].attributes.formats.thumbnail.url}`} alt="profile" className="  rounded-xl  shadow-lg"/>
 
 </div>
         <p className="text-lg text-gray-100 leading-relaxed text-center max-w-2xl mx-auto">
-          Dear customers and partners, we are thrilled to have you with us as we continue to innovate and provide exceptional services to meet your needs. Our commitment to excellence drives everything we do, and we are grateful for your trust in our company. We look forward to achieving greater heights together.
-        </p>
+{items.description}        </p>
       </div>
 
       {/* Add a subtle animation to elements */}
