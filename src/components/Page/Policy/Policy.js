@@ -17,11 +17,12 @@ const Policy = async () => {
   }
   return (
     <div>
+      {updatedDate && policyData2 ?
       <div>
         <Introduction updatedDate={updatedDate}/>
 
         <BriefDetails policyContent={policyData2} />
-      </div>
+      </div> :'No data'}
     </div>
   );
 };
