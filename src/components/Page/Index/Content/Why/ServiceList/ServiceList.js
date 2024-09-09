@@ -8,7 +8,7 @@ const ServiceList = async() => {
     console.log('Why content Details:',info)
   return (
     <div className='flex gap-4 lg:gap-6 flex-wrap mt-16'>
-      {info.map((item, index) => {
+      {info && info.map((item, index) => {
   return (
     <div key={index} className="md:max-w-[1010px] ">
       <div>
@@ -16,14 +16,14 @@ const ServiceList = async() => {
           <div
             className="min-h-[292px]  relative bg-no-repeat bg-cover rounded-lg flex flex-col  justify-end"
             style={{
-              backgroundImage: `url(${config.api}${item.attributes.image.data.attributes.url})`,
+              backgroundImage: `url(${config.api}${item?.attributes?.image?.data?.attributes?.url})`,
             }}
           >
             <div className=" bg-[#100600d5] text-[16px] h-full px-[15px] py-[11px] m-2 rounded-[8px]">
               <p className="  font-medium text-[#FF6E00]">
-              {item.attributes.title}
+              {item.attributes.title || ''}
               </p>
-              <p> {item.attributes.summary}</p>
+              <p> {item.attributes.summary || ''}</p>
             </div>
           </div>
         </div>
