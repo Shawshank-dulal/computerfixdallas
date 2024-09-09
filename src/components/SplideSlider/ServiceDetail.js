@@ -6,7 +6,7 @@ import { WhyData } from "@/db/WhyData";
 import { fetchWhyContents } from "@/utils/whycontents";
 import config from "@/config";
 
-const ServiceDetail = ({ item }) => {
+const ServiceDetail = () => {
   const [contents,setContents]=useState([])
   useEffect(()=>{
  const fetchWhyContents = async () => {

@@ -168,6 +168,15 @@ body {
   }
 }
 
+.dallas_services_title{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1; /* Show ellipsis after 3 lines */
+
+}
+
 
 .dallas_services_description{
   display: -webkit-box;

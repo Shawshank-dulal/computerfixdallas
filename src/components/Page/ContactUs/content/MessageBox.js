@@ -25,7 +25,7 @@ const MessageBox = ({ selectTab }) => {
         email: "",
         phoneNumber: "",
         company: "",
-        position: "",
+        // position: "",
         message: "",
       
       });
@@ -63,7 +63,7 @@ const MessageBox = ({ selectTab }) => {
           phoneNumber: "",
           email: "",
           company: "",
-          position: "",
+          // position: "",
           message: "",
         });
         setLoading(false)
@@ -90,7 +90,7 @@ const MessageBox = ({ selectTab }) => {
           Message
         </Tabs.Trigger>
         <Tabs.Trigger className="TabsTrigger4" value="call">
-          Book a Call
+        Book an Appointment
         </Tabs.Trigger>
       </Tabs.List>
 
@@ -414,6 +414,7 @@ const MessageBox = ({ selectTab }) => {
 
                 <PhoneInput
                   country={"us"}
+                  onlyCountries={['us']}
                   value={formData.phoneNumber}
                   name="phoneNumber"
                   onChange={handleChangePhone}
@@ -425,7 +426,7 @@ const MessageBox = ({ selectTab }) => {
 
             
 
-              <Form.Field className="FormField" name="Position">
+              {/* <Form.Field className="FormField" name="Position">
                 <div
                   style={{
                     display: "flex",
@@ -452,7 +453,7 @@ const MessageBox = ({ selectTab }) => {
                     placeholder="Enter your Current Position"
                   />
                 </Form.Control>
-              </Form.Field>
+              </Form.Field> */}
 
               <Form.Field className="FormField" name="question">
                 <div

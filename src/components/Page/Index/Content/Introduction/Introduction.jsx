@@ -36,10 +36,10 @@ const Introduction = () => {
             >
               <motion.li variants={items}>
                 <div className="flex items-center justify-center text-[14px]">
-                  <span className="max-w-fit px-[16px] py-[8px] rounded-[52px] flex items-center gap-2 justify-center text-[#FF7003] border border-[#FF700347]">
-                    {" "}
+                  <Link href='/' className="max-w-fit px-[16px] py-[8px] rounded-[52px] flex items-center gap-2 justify-center text-[#FF7003] border border-[#FF700347]">
+
                     <FiPhone /> <p>123-456-7890</p>
-                  </span>
+                  </Link>
                 </div>
               </motion.li>
               <motion.li variants={items}>
@@ -81,7 +81,7 @@ const Introduction = () => {
                         "linear-gradient(180deg, #D15A00 0%, #924104 134.15%)",
                     }}
                   >
-                    Book a free Call
+                    Book an Appointment
                   </Link>
                   <Link href="/contact-us?action=message">Contact Us</Link>
                 </div>

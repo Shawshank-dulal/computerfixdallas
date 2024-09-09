@@ -15,7 +15,7 @@ const Blogs = async() => {
           <Link key={index}  href={`/blogs/${item.attributes.slug}`}>
           <div className=" flex flex-wrap sm:flex-nowrap gap-4">
             <div
-              className="min-w-[255px] min-h-[174px]  relative bg-no-repeat bg-cover rounded-[18px]"
+              className="min-w-[255px] h-[174px]  relative bg-no-repeat bg-cover rounded-[18px]"
               style={{
                 backgroundImage: `url(${config.api}${item.attributes.image.data.attributes.url})`,
               }}
@@ -27,7 +27,7 @@ const Blogs = async() => {
               </div>
             </div>
             <div className="">
-              <p className="  font-bold text-[20px] text-[#fff]">
+              <p className="  font-bold text-[20px] text-[#fff] dallas_services_title">
               {item.attributes.title}
               </p>
               <p className="text-[#9c9a99] dallas_services_description text-[16px] mt-[4px]">
