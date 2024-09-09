@@ -22,7 +22,8 @@ export async function GET(request) {
     const blogs = await response.json();
     console.log("blogs list:", blogs);
 
-    return NextResponse.json({ blogs });
+    return NextResponse.json({ blogs }, { next: { revalidate: 500 }});
+
   } catch (error) {
     console.error("Error fetching data:", error.message);
 

@@ -3,7 +3,7 @@ import React from 'react'
 
 const page = ({params}) => {
   const blogslug=params.slug
-  console.log("Blogs",blogslug)
+  console.log("Blogs title:",blogslug)
   return (
     <div>
         <BlogDetails blogslug={blogslug}/>
