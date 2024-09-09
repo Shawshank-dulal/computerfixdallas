@@ -38,7 +38,7 @@ const Introduction = () => {
                 <div className="flex items-center justify-center text-[14px]">
                   <Link href='/' className="max-w-fit px-[16px] py-[8px] rounded-[52px] flex items-center gap-2 justify-center text-[#FF7003] border border-[#FF700347]">
 
-                    <FiPhone /> <p>123-456-7890</p>
+                    <FiPhone /> <p>+1 469-353-9236</p>
                   </Link>
                 </div>
               </motion.li>
