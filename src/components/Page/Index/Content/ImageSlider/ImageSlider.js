@@ -11,7 +11,8 @@ const ImageSlider = async() => {
 
   return (
     <div className="">
-      <Marquee  className="">
+      {data ? <>
+        <Marquee  className="">
         {data && data.map((item, index) => {
           return <Image className="mx-3 hover:scale-110 transition-all" key={index} width={200} height={200} src={`${config.api}${item.attributes.image.data.attributes.url}`} alt="sliderImage" />;
         })}
@@ -21,7 +22,7 @@ const ImageSlider = async() => {
         {data && data.map((item, index) => {
           return <Image className="mx-3 hover:scale-110 transition-all" key={index} width={200} height={200} src={`${config.api}${item.attributes.image.data.attributes.url}`} alt="sliderImage" />;
         })}
-      </Marquee>
+      </Marquee></> : 'No data'}
     </div>
   );
 };
