@@ -15,9 +15,7 @@ const Specification = async() => {
   const servicesData = await fetchServices();
   const services=servicesData?.services?.data
 
-  if(!tabcategories || !services){
-    <p>No data</p>
-  }
+
   return (
     <div className="main_container inside_sidespace  py-20">
       {tabcategories && services ?

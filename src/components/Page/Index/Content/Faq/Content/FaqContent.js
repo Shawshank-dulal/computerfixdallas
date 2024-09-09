@@ -8,7 +8,7 @@ import { fetchfaqs } from '@/utils/faqs';
 const FaqContent = async() => {
   const faqsData=await fetchfaqs()
   const allFaqs=faqsData?.faqs?.data
-  console.log('new data',faqsData)
+  // console.log('new data',faqsData)
 
 
   return (
@@ -16,15 +16,15 @@ const FaqContent = async() => {
     {allFaqs && allFaqs.map((item,index)=>{
       return(
        
-        <Accordion.Item key={index} className="AccordionItem" value={`item-${item.id}`}>
+        <Accordion.Item key={index} className="AccordionItem" value={`item-${item?.id}`}>
         <Accordion.Trigger className="AccordionTrigger text-[16px] md:text-[18px]">
-          {item.attributes.question}
+          {item?.attributes?.question}
         <div className='FaAngleDown'><FaAngleDown className="text-[14px] FaAngleDown"/></div>
          </Accordion.Trigger>
         
         <Accordion.Content className="AccordionContent text-[15px] md:text-[16px]"> 
         <div className="AccordionContentText text-[#FFE7D4]">
-           {item.attributes.answer}
+           {item?.attributes?.answer}
           </div>
           </Accordion.Content>
     

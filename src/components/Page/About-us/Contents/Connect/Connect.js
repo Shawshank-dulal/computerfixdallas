@@ -6,7 +6,7 @@ import React from 'react'
 const Connect = async() => {
   const data=await fetchAboutConnect()
   const fetchData=data?.connect?.data
-  console.log("Connect for about",fetchData)
+  // console.log("Connect for about",fetchData)
   return (
     <div>
     {data ?       <div className="relative isolate -z-10">

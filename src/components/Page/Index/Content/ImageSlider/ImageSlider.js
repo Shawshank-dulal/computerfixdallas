@@ -8,9 +8,7 @@ const ImageSlider = async() => {
   const fetchData=await fetchHomeSlider()
   const data=fetchData?.homeslider?.data
 
-  if(!data){
-    <p>No data</p>
-  }
+
   return (
     <div className="">
       <Marquee  className="">
