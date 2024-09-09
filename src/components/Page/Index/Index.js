@@ -15,11 +15,11 @@ const Index = () => {
     <Introduction/>
     <ImageSlider/>
     <Services/>
-    <Specification/>
+    {/* <Specification/>
     <Why/>
     <Process/>
-    {/* <Insights/> */}
-    <Faq/>
+    <Insights/>
+    <Faq/> */}
    </div>
   );
 };
