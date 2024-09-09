@@ -13,8 +13,8 @@ const Index = () => {
   return (
    <div>
     <Introduction/>
-    {/* <ImageSlider/>
-    <Services/>
+    <ImageSlider/>
+    {/* <Services/>
     <Specification/>
     <Why/>
     <Process/>
