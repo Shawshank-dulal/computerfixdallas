@@ -3,7 +3,7 @@ export const fetchHomeSlider = async () => {
       const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/sliders`, {
         headers: {
           'Content-Type': 'application/json'
-        }, next:{revalidate:50}
+        }, next:{revalidate:5}
       });
       const data = await res.json();
       console.log(data);
