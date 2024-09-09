@@ -13,13 +13,13 @@ const Index = () => {
   return (
    <div>
     <Introduction/>
-    <ImageSlider/>
+    {/* <ImageSlider/>
     <Services/>
     <Specification/>
     <Why/>
     <Process/>
     <Insights/>
-    <Faq/>
+    <Faq/> */}
    </div>
   );
 };
