@@ -1,7 +1,8 @@
-import Image from "next/image";
+
 import './style.css'
-import ServiceDetail from "@/components/SplideSlider/ServiceDetail";
+
 import Introduction from "./Introduction/Introduction";
+import ServiceList from "./ServiceList/ServiceList";
 const Why = () => {
 
   return (
@@ -12,7 +13,8 @@ const Why = () => {
  <Introduction/>
   </div>
   <div className="side_padding">
-    <ServiceDetail/>
+
+    <ServiceList/>
   </div>
    </div>
   )
