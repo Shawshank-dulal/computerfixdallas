@@ -10,9 +10,7 @@ const FaqContent = async() => {
   const allFaqs=faqsData?.faqs?.data
   console.log('new data',faqsData)
 
-  if(!allFaqs){
-    <p>No data</p>
-  }
+
   return (
     <Accordion.Root className="AccordionRoot  mt-[1.5rem] md:mt-[2rem]" type="single" defaultValue="item-1" collapsible>
     {allFaqs && allFaqs.map((item,index)=>{
