@@ -5,7 +5,7 @@ import React from 'react'
 const ServiceList = async() => {
     const whydata=await fetchWhyContents()
     const info=whydata?.whycontents?.data
-    console.log('Why content Details:',info)
+    // console.log('Why content Details:',info)
   return (
     <div className='flex gap-4 lg:gap-6 flex-wrap mt-16'>
       {info && info.map((item, index) => {
@@ -21,9 +21,9 @@ const ServiceList = async() => {
           >
             <div className=" bg-[#100600d5] text-[16px] h-full px-[15px] py-[11px] m-2 rounded-[8px]">
               <p className="  font-medium text-[#FF6E00]">
-              {item.attributes.title || ''}
+              {item?.attributes?.title || ''}
               </p>
-              <p> {item.attributes.summary || ''}</p>
+              <p> {item?.attributes?.summary || ''}</p>
             </div>
           </div>
         </div>
