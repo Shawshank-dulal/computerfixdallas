@@ -5,6 +5,7 @@ export const fetchfaqs = async () => {
           'Content-Type': 'application/json'
         }
       });
+      
       const data = await res.json();
       console.log(data);
       return data;

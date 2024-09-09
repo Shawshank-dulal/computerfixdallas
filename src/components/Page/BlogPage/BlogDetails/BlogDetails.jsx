@@ -9,7 +9,7 @@ import { fetchblogs } from "@/utils/blogs";
 const BlogDetails = async ({blogslug}) => {
   const fetchData = await fetchblogs();
   const data = fetchData?.blogs?.data;
-
+  
   return (
     <div>
       {data && data
