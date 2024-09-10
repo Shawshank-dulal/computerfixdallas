@@ -10,7 +10,7 @@ const Blogs = async() => {
 
   return (
     <div className="grid lg:grid-cols-2 gap-5 gap-y-10 mt-10">
-      {data && data.map((item, index) => {
+      {data && data.slice(-4).map((item, index) => {
         return (
           <Link key={index}  href={`/blogs/${item?.attributes?.slug}`}>
           <div className=" flex flex-wrap sm:flex-nowrap gap-4">
