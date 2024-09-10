@@ -113,14 +113,14 @@ const MessageBox = ({ selectTab }) => {
             </div>
             <div className="flex items-center gap-2 mt-2">
               <MdOutlinePhoneInTalk className="text-[18px] text-[#FF7003]" />
-              <p>+1 469-353-9236</p>
+              <a href="tel:+1-469-353-9236">+1 469-353-9236</a>
             </div>
             <div className="flex items-center gap-2 mt-2 ">
               <MdOutlineLocationOn className="text-[20px] text-[#FF7003]" />
               <Link
                 className="lg:max-w-[290px]"
                 target="_blank"
-                href="https://maps.app.goo.gl/av3ZSq2PMVLZfdsX7"
+                href="https://maps.app.goo.gl/zxCfJ6jsY2mgF4GX6"
               >
                 4925 Greenville Ave, Suite 200 Dallas Texas, 75206
               </Link>
