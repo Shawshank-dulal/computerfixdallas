@@ -11,18 +11,18 @@ export async function GET(request) {
     };
 
     const response = await fetch(
-      `${config.api}/api/services?populate=*`,
+      `${config.api}/api/servicemessage?populate=*`,
       reqOptions
     );
 
     if (!response.ok) {
-      throw new Error(`Failed to fetch services: ${response.statusText}`);
+      throw new Error(`Failed to fetch servicemessage: ${response.statusText}`);
     }
 
-    const services = await response.json();
-    console.log("Services list:", services);
+    const servicemessage = await response.json();
+    console.log("servicemessage list:", servicemessage);
 
-    return NextResponse.json({ services });
+    return NextResponse.json({ servicemessage });
   } catch (error) {
     console.error("Error fetching data:", error.message);
 

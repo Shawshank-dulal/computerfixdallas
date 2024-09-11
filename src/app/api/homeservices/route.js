@@ -11,18 +11,18 @@ export async function GET(request) {
     };
 
     const response = await fetch(
-      `${config.api}/api/services?populate=*`,
+      `${config.api}/api/homeservices?populate=*`,
       reqOptions
     );
 
     if (!response.ok) {
-      throw new Error(`Failed to fetch services: ${response.statusText}`);
+      throw new Error(`Failed to fetch homeservices: ${response.statusText}`);
     }
 
-    const services = await response.json();
-    console.log("Services list:", services);
+    const homeservices = await response.json();
+    console.log("homeservices list:", homeservices);
 
-    return NextResponse.json({ services });
+    return NextResponse.json({ homeservices });
   } catch (error) {
     console.error("Error fetching data:", error.message);
 

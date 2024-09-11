@@ -13,7 +13,7 @@ import {
 import { FiPhone } from "react-icons/fi";
 import Image from "next/image";
 import Link from "next/link";
-const Introduction = () => {
+const Introduction = ({newData}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
@@ -36,15 +36,15 @@ const Introduction = () => {
             >
               <motion.li variants={items}>
                 <div className="flex items-center justify-center text-[14px]">
-                  <span className="max-w-fit px-[16px] py-[8px] rounded-[52px] flex items-center gap-2 justify-center text-[#FF7003] border border-[#FF700347]">
-                    {" "}
-                    <FiPhone /> <p>123-456-7890</p>
-                  </span>
+                  <Link href="tel:+14693539236" className="max-w-fit px-[16px] py-[8px] rounded-[52px] flex items-center gap-2 justify-center text-[#FF7003] border border-[#FF700347]">
+
+                    <FiPhone /> <p>+{newData.attributes.phone_number}</p>
+                  </Link>
                 </div>
               </motion.li>
               <motion.li variants={items}>
                 <p className="font-medium mt-[16px] max-w-[632px] leading-[2.98rem] text-[32px] sm:text-[48px] tracking-tight">
-                  Premier Computer Repair Services in Dallas
+                {newData.attributes.title}
                 </p>
               </motion.li>
             </motion.ul>
@@ -57,11 +57,7 @@ const Introduction = () => {
             >
               <motion.li variants={items}>
                 <p className="mt-4 text-[17px] max-w-[522px] text-[#FFDCBF]">
-                  Experience unparalleled expertise and swift service for all
-                  your computer repair needs. Our seasoned technicians are
-                  committed to getting your devices up and running efficiently
-                  and affordably, ensuring minimal downtime and maximum
-                  satisfaction.
+                {newData.attributes.description}
                 </p>
               </motion.li>
             </motion.ul>
@@ -81,7 +77,7 @@ const Introduction = () => {
                         "linear-gradient(180deg, #D15A00 0%, #924104 134.15%)",
                     }}
                   >
-                    Book a free Call
+                    Book an Appointment
                   </Link>
                   <Link href="/contact-us?action=message">Contact Us</Link>
                 </div>

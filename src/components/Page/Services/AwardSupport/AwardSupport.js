@@ -1,7 +1,12 @@
+import config from "@/config";
+import { fetchservicemessage } from "@/utils/servicemessage";
 import Image from "next/image";
 import React from "react";
 
-const AwardSupport = () => {
+const AwardSupport = async() => {
+  const fetchData=await fetchservicemessage()
+  const data=fetchData?.servicemessage?.data
+  console.log("New tab data",data)
   return (
     <div>
 
@@ -11,23 +16,18 @@ const AwardSupport = () => {
             <Image
               width={350}
               height={350}
-              src="/images/user/1.png"
+              src= {`${config.api}${data?.attributes?.image?.data?.attributes?.url}`}
               alt="image"
             />
             <div className="flex flex-col gap-2">
               <p className="text-[#ffff] text-[16px] font-semibold">
-                You Break, We Fix
+                {data?.attributes?.slogan}
               </p>
               <p className="text-[#ffff] text-[28px] font-semibold">
-                We're here to help
+              {data?.attributes?.title}
               </p>
               <p className="text-[#ffff] text-[16px] font-medium">
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                Id dolor praesent donec est. Odio penatibus risus viverra tellus
-                varius sit neque erat velit. Faucibus commodo massa rhoncus,
-                volutpat. Dignissim sed eget risus enim. Mattis mauris semper
-                sed amet vitae sed turpis id.
+              {data?.attributes?.description}
               </p>
               {/* <div className="mt-2">
                 <button className="font-semibold border border-[#ffff] text-[#ffff] px-4 py-1 rounded-[4px]">

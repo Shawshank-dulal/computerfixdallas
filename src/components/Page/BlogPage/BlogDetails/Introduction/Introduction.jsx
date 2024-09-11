@@ -54,11 +54,11 @@ const Introduction = ({data}) => {
             </motion.li>
             <motion.li variants={items}>
               <p className="font-medium mt-[16px] max-w-[632px] leading-[2.98rem] text-[32px] sm:text-[48px] tracking-tight">
-              {data.attributes.title}
+              {data?.attributes?.title}
               </p>
             </motion.li>
             <motion.li variants={items}>
-            <Image className="mt-6" width={911} height={496} src={`${config.api}${data.attributes.image.data.attributes.url}`} alt="blog_details"/>
+            <Image className="mt-6" width={911} height={496} src={`${config.api}${data?.attributes?.image?.data?.attributes?.url}`} alt="blog_details"/>
             </motion.li>
           </motion.ul>
 

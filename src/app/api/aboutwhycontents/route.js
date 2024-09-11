@@ -7,11 +7,11 @@ export async function GET(request) {
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
       },
-      next: { revalidate: 50 }, // Revalidate the cache every 50 seconds
+      next: { revalidate: 5 }, // Revalidate the cache every 50 seconds
     };
 
     const response = await fetch(
-      `${config.api}/api/aboutwhycontents?populate=*`,
+      `${config.api}/api/aboutwhycontents`,
       reqOptions
     );
 
@@ -20,6 +20,7 @@ export async function GET(request) {
     }
 
     const aboutwhy = await response.json();
+    
     console.log("aboutwhy list:", aboutwhy);
 
     return NextResponse.json({ aboutwhy });

@@ -3,7 +3,7 @@ export const fetchAboutConnect = async () => {
       const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/connect`, {
         headers: {
           'Content-Type': 'application/json'
-        }
+        }, next:{revalidate:5}
       });
       const data = await res.json();
       console.log(data);

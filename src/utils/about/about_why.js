@@ -3,7 +3,7 @@ export const fetchAboutWhy = async () => {
       const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/aboutwhycontents`, {
         headers: {
           'Content-Type': 'application/json'
-        }
+        }, next:{revalidate:5}
       });
       const data = await res.json();
       console.log(data);
@@ -12,3 +12,4 @@ export const fetchAboutWhy = async () => {
       console.error("Failed to fetch AboutWhy:", error);
     }
   };
+  
