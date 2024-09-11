@@ -34,12 +34,12 @@ const ServiceItems = async () => {
         alt="gradient image"
       />
 
-      {data && data.map((item, index) => {
+{data.length > 0 && data.map((item, index) => {
         return (
           <div key={index} className=" flex flex-col gap-2">
-            <Image width={50} height={50} src={`${config.api}${item.attributes.image.data.attributes.url}`} alt={item.attributes.title} />
-            <p>{item.attributes.title}</p>
-            <p className="text-[#b4b2b3]">{item.attributes.summary}</p>
+            <Image width={50} height={50} src={`${config.api}${item?.attributes?.image?.data?.attributes?.url}`} alt={item?.attributes?.title} />
+            <p>{item?.attributes?.title}</p>
+            <p className="text-[#b4b2b3]">{item?.attributes?.summary}</p>
             <p></p>
           </div>
         );
