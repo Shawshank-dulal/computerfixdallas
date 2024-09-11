@@ -13,7 +13,7 @@ import IntroMain from "./Content/Introduction/IntroMain";
 const Index = () => {
   return (
    <div>
-    {/* <IntroMain/> */}
+    <IntroMain/>
     {/* <Introduction/> */}
     <ImageSlider/>
     <Services/>
