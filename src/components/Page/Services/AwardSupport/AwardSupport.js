@@ -6,13 +6,15 @@ import React from "react";
 const AwardSupport = async() => {
   const fetchData=await fetchservicemessage()
   const data=fetchData?.servicemessage?.data
-  console.log("New tab data",data)
+  console.log("New tab data message",data)
+
+
   return (
     <div>
 
-      <div class="mx-auto mt-32 max-w-7xl sm:mt-40 sm:px-6 lg:px-8 ">
-        <div class="relative isolate overflow-hidden bg-[#332e2e13]  px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
-        <div className="flex justify-between gap-10 items-center flex-wrap md:flex-nowrap">
+      <div className="mx-auto mt-32 max-w-7xl sm:mt-40 sm:px-6 lg:px-8 ">
+        <div className="relative isolate overflow-hidden bg-[#332e2e13]  px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
+        {data ? <div className="flex justify-between gap-10 items-center flex-wrap md:flex-nowrap">
             <Image
               width={350}
               height={350}
@@ -35,7 +37,7 @@ const AwardSupport = async() => {
                 </button>
               </div> */}
             </div>
-          </div>
+          </div> : 'No data'}
           <div
             class="absolute -top-24 right-0 -z-10 transform-gpu blur-3xl"
             aria-hidden="true"

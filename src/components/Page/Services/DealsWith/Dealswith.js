@@ -15,14 +15,14 @@ const Dealswith = async() => {
 
   const servicesData = await fetchServices();
   const services=servicesData?.services?.data
-  console.log("New tab Service",services[0].attributes?.tabcategory?.data)
+  // console.log("New tab Service",services)
 
   return (
 
 <>
 
 {tabcategories.length > 0 && services.length > 0 ?
-  <Tabs.Root className="main_container inside_sidespace TabsRoot22 mt-8 md:mt-4 " defaultValue={tabcategories[0].attributes?.title}>
+  <Tabs.Root className="main_container inside_sidespace TabsRoot22 mt-8 md:mt-4 " defaultValue={tabcategories[0]?.attributes?.title}>
     <Tabs.List className="TabsList22 mb-24" aria-label="Manage your account">
     {tabcategories && tabcategories.map((item,index)=>{
         return(
@@ -39,39 +39,34 @@ const Dealswith = async() => {
     <Tabs.Content key={index5} className="TabsContent22" value={item5?.attributes?.title}>
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  align-middle place-content-between gap-[32px] gap-y-[60px]'>
 
-      {services && services.filter(item3=>item3?.attributes?.tabcategory?.data?.attributes?.title === item5.attributes.title).map((item2,index)=>{
+      {services && services.filter(item3=>item3?.attributes?.tabcategory?.data?.attributes?.title === item5?.attributes?.title).map((item2,index)=>{
       return(
-        // <div key={index} className='flex flex-col items-center'>
-        //     <Image width={50} height={50} src={`${config.api}${item2?.attributes?.image?.data?.attributes?.url}`} alt='specific'/>
-        //     <p className='text-[14px] mt-[16px] text-[#FFE7D4]'>{item2?.attributes?.title}</p>
-        //     {/* {item2.attributes.tabcategory.data === null ? "no data" : item2.attributes.tabcategory.data.attributes.title}          */}
-        // </div>
         <div key={index} className="flex flex-col ">
         <div className="w-[50px] h-[50px]">
           <Image
             width={50}
             height={50}
-            src={`${config.api}${item2.attributes.image.data.attributes.url}`}
+            src={`${config.api}${item2?.attributes?.image?.data?.attributes?.url}`}
             alt="specific"
           />
         </div>
         <div className="inline-flex items-center gap-[10px] mt-[19px]">
           <p className="text-[14px]   text-[#fff]">
-            {item2.attributes.title}
+            {item2?.attributes?.title}
           </p>
-          {item2.attributes.discount != 0 ? (
+          {item2?.attributes?.discount != 0 ? (
             <span className="font-bold uppercase tracking-[0.8px] text-[10px] px-[8px] py-[4px] bg-[#3C9E00] rounded-[16px]">
-              {item2.attributes.discount || ""}% OFF
+              {item2?.attributes?.discount || ""}% OFF
             </span>
           ) : (
             ""
           )}
         </div>
         <div className="text-[#b6b3b2] dallas_services_description mt-[12px] text-[14px] tracking-[0.28px]">
-        <p>  {item2.attributes.summary}</p>
+        <p>  {item2?.attributes?.summary}</p>
         </div>
         <Link
-          href={`/services/contact-us/${item2.attributes.slug}`}
+          href={`/services/contact-us/${item2?.attributes?.slug}`}
           className="text-[#FF7003] mt-[12px] font-medium text-[12px] tracking-[0.96px] uppercase"
         >
           Book Now
