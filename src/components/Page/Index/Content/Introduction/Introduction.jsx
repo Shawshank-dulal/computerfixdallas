@@ -38,13 +38,13 @@ const Introduction = ({newData}) => {
                 <div className="flex items-center justify-center text-[14px]">
                   <Link href="tel:+14693539236" className="max-w-fit px-[16px] py-[8px] rounded-[52px] flex items-center gap-2 justify-center text-[#FF7003] border border-[#FF700347]">
 
-                    <FiPhone /> <p>+{newData.attributes.phone_number}</p>
+                    <FiPhone /> <p>+{newData?.attributes?.phone_number}</p>
                   </Link>
                 </div>
               </motion.li>
               <motion.li variants={items}>
                 <p className="font-medium mt-[16px] max-w-[632px] leading-[2.98rem] text-[32px] sm:text-[48px] tracking-tight">
-                {newData.attributes.title}
+                {newData?.attributes?.title}
                 </p>
               </motion.li>
             </motion.ul>
@@ -57,7 +57,7 @@ const Introduction = ({newData}) => {
             >
               <motion.li variants={items}>
                 <p className="mt-4 text-[17px] max-w-[522px] text-[#FFDCBF]">
-                {newData.attributes.description}
+                {newData?.attributes?.description}
                 </p>
               </motion.li>
             </motion.ul>
