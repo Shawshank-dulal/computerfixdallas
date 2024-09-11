@@ -7,12 +7,14 @@ import Process from "./Content/Process/Process";
 import Insights from "./Content/Insights/Insights";
 import Faq from "./Content/Faq/Faq";
 import ImageSlider from "./Content/ImageSlider/ImageSlider";
+import IntroMain from "./Content/Introduction/IntroMain";
 
 
 const Index = () => {
   return (
    <div>
-    <Introduction/>
+    <IntroMain/>
+    {/* <Introduction/> */}
     <ImageSlider/>
     <Services/>
     <Specification/>
