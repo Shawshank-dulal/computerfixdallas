@@ -8,7 +8,6 @@ const IntroMain = async() => {
     console.log(newData)
   return (
     <div>
-      
       <Introduction newData={newData}/>
     </div>
   )
