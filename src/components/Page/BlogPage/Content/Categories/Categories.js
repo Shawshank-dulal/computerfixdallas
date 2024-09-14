@@ -6,7 +6,7 @@ import Blogs from '../BlogItems/Blogs';
 const Categories = () => {
   return (
     <div className='main_container inside_sidespace  py-6'>
-         <Tabs.Root className="TabsRoot2 " defaultValue='all'>
+         {/* <Tabs.Root className="TabsRoot2 " defaultValue='all'>
       <Tabs.List
         className="TabsList2 "
         aria-label="Manage your account"
@@ -38,7 +38,8 @@ const Categories = () => {
       <Tabs.Content className="TabsContent2" value="replacement">
        <p className='text-[32px]'>Coming Soon...</p>
       </Tabs.Content>
-    </Tabs.Root>
+    </Tabs.Root> */}
+       <Blogs/>
     </div>
   )
 }
