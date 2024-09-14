@@ -43,11 +43,14 @@ const Dealswith = async() => {
       {services && services.filter(item3=>item3?.attributes?.tabcategory?.data?.attributes?.title === item5?.attributes?.title).map((item2,index)=>{
       return(
         <div key={index} className="flex flex-col ">
-        <div className="w-[50px] h-[50px]">
+            <Link
+          href={`/services/contact-us/${item2?.attributes?.slug}`}
+        >
+        <div className="w-[65px] h-[65px]">
           <Image
-            width={50}
-            height={50}
-            src={`${config.api}${item2?.attributes?.image?.data?.attributes?.url}`}
+            width={65}
+            height={65}
+            src={`${config.api}${item2?.attributes?.icon?.data?.attributes?.url}`}
             alt="specific"
           />
         </div>
@@ -66,12 +69,12 @@ const Dealswith = async() => {
         <div className="text-[#b6b3b2] dallas_services_description mt-[12px] text-[14px] tracking-[0.28px]">
         <p>  {item2?.attributes?.summary}</p>
         </div>
-        <Link
+        <div
           href={`/services/contact-us/${item2?.attributes?.slug}`}
           className="text-[#FF7003] mt-[12px] font-medium text-[12px] tracking-[0.96px] uppercase"
         >
           Book Now
-        </Link>
+        </div></Link>
       </div>
       
       )

@@ -176,7 +176,7 @@ text-wrap: wrap;
 .react-tel-input .form-control:focus {
   /* border-color: #ffff; */
   box-shadow: none !important;
-  border-bottom: 1px solid #ffff !important;
+  border: 1px solid #ffff !important;
 }
 
 
@@ -204,7 +204,7 @@ text-wrap: wrap;
   -webkit-transition: all 100ms;
   transition: all 100ms;
   background-color: black;
-  border-color: #2a2a2c !important;
+  border-color: #522300 !important;
   border-radius: 4px;
   border-style: solid;
   border-width: 1px;
@@ -237,11 +237,11 @@ text-wrap: wrap;
   -webkit-transition: all 100ms;
   transition: all 100ms;
   background-color: black;
-  border-color: #FF7003 !important;
+  border-color: #522300 !important;
   border-radius: 4px;
   border-style: solid;
   border-width: 1px;
-  box-shadow: 0 0 0 1px #FF7003 !important;
+  box-shadow: 0 0 0 1px #522300 !important;
   box-sizing: border-box;
   color: white;
   padding: 0.2rem 0 !important;

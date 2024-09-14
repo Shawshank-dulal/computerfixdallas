@@ -12,14 +12,13 @@ import "react-phone-input-2/lib/material.css";
 import Loading from "@/components/Page/ContactUs/content/Loading";
 import { ComputerSpec } from "@/db/Spec";
 
-const ContactForm = ({serviceSlug}) => {
+const ContactForm = ({serviceSlug,servicesData2}) => {
     const [loading, setLoading] = useState(false); // Add loading state
     const [formData, setFormData] = useState({
       fullName: "",
       email: "",
       phoneNumber: "",
-      company: "",
-      position: "",
+      issue: "",
       message: "",
      
     });
@@ -57,12 +56,10 @@ const ContactForm = ({serviceSlug}) => {
           // Reset the formData fields
           setFormData({
             fullName: "",
-            phoneNumber: "",
             email: "",
-            company: "",
-            position: "",
+            phoneNumber: "",
+            issue: "",
             message: "",
-            service: "",
           });
           await new Promise((resolve) => setTimeout(resolve, 1000));
         }
@@ -164,8 +161,10 @@ const ContactForm = ({serviceSlug}) => {
               </Form.Field>
 
 
-              {ComputerSpec.filter(item=>item.slug === serviceSlug).map((item2,index2)=>{
-            return(
+              {servicesData2
+        .filter((item) => item.attributes.slug === serviceSlug)
+        .map((item2, index2) => {
+          return (
                 <div key={index2} className="flex flex-col ">
                  <Form.Field className="FormField1" name="Product Type">
                 <div
@@ -185,7 +184,7 @@ const ContactForm = ({serviceSlug}) => {
                 </div>
                 <Form.Control asChild>
                   <input
-                    value={item2.title}
+                    value={item2.attributes.title}
                     name="fullName"
                     onChange={handleChange}
                     className="Input1"
@@ -202,35 +201,7 @@ const ContactForm = ({serviceSlug}) => {
 
              
 
-              <Form.Field className="FormField1" name="Your issue">
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "baseline",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <Form.Label className="FormLabel1">Issues</Form.Label>
-                  <Form.Message className="FormMessage1" match="valueMissing">
-                    Please enter your Issues
-                  </Form.Message>
-                  <Form.Message className="FormMessage1" match="typeMismatch">
-                    Please provide a valid Issues
-                  </Form.Message>
-                </div>
-                <Form.Control asChild>
-                  <input
-                    value={formData.fullName}
-                    name="fullName"
-                    onChange={handleChange}
-                    className="Input1"
-                    type="text"
-                    required
-                    placeholder="Enter your Issues"
-                  />
-                </Form.Control>
-              </Form.Field>
-
+             
               <Form.Field className="FormField1" name="question">
                 <div
                   style={{

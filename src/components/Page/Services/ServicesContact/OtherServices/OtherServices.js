@@ -23,6 +23,9 @@ const OtherServices = async () => {
         {lastThreeSpecs.map((item, index) => {
           return (
             <div key={index} className="flex flex-col ">
+                 <Link
+                href={`/services/contact-us/${item.attributes.slug}`}
+              >
               <div className="w-[50px] h-[50px]">
                 <Image
                   width={50}
@@ -46,12 +49,12 @@ const OtherServices = async () => {
               <div className="text-[#b6b3b2] dallas_services_description mt-[12px] text-[14px] tracking-[0.28px]">
                 <p> {item.attributes.summary}</p>
               </div>
-              <Link
+              <div
                 href={`/services/contact-us/${item.attributes.slug}`}
                 className="text-[#FF7003] mt-[12px] font-medium text-[12px] tracking-[0.96px] uppercase"
               >
                 Book Now
-              </Link>
+              </div> </Link>
             </div>
           );
         })}

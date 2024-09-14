@@ -1,20 +1,19 @@
-"use client";
 import React from "react";
 import "./contactus.css";
 import Image from "next/image";
 import MessageBox from "./content/MessageBox";
-import { useSearchParams } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
 import Introduction from "./content/Introduction/Introduction";
-const ContactUs = () => {
-  const searchParams = useSearchParams();
-  const paramsData = searchParams.get("action");
-  console.log("title", paramsData);
+import { fetchServices } from "@/utils/services";
+
+const ContactUs = async() => {
+  const servicesData = await fetchServices();
+  const services=servicesData?.services?.data
   return (
 
       <div className="main_container inside_sidespace ">
         <Introduction/>
-        <MessageBox />
+        <MessageBox servicesData={services}/>
         
         <Toaster
           position="bottom-right"

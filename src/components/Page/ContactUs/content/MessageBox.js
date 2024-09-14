@@ -1,9 +1,10 @@
+"use client";
 import React, { useState } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import * as Form from "@radix-ui/react-form";
 import Image from "next/image";
 import Calendar from "./Calendar";
-
+import Select from "react-select";
 import {
   MdOutlineLocationOn,
   MdOutlineMailOutline,
@@ -18,14 +19,13 @@ import "react-phone-input-2/lib/material.css";
 import Loading from "./Loading";
 
 import emailjs from "@emailjs/browser";
-const MessageBox = ({ selectTab }) => {
+const MessageBox = ({ servicesData }) => {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phoneNumber: "",
-    company: "",
-    // position: "",
+    services: [],
     message: "",
   });
 
@@ -40,6 +40,15 @@ const MessageBox = ({ selectTab }) => {
       phoneNumber: value,
     }));
   };
+
+  const handleServiceChange = (selectedOptions) => {
+    const selectedValues = selectedOptions.map(option => option.value);
+    setFormData(prevData => ({
+      ...prevData,
+      services: selectedValues
+    }));
+  };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -76,6 +85,35 @@ const MessageBox = ({ selectTab }) => {
     }
   };
 
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      backgroundColor: "black",
+      color: "white",
+    }),
+    menu: (provided) => ({
+      ...provided,
+      backgroundColor: "white",
+    }),
+    multiValue: (provided) => ({
+      ...provided,
+      backgroundColor: "#2E2E2E",
+    }),
+    multiValueLabel: (provided) => ({
+      ...provided,
+      color: "white",
+    }),
+    singleValue: (provided) => ({
+      ...provided,
+      color: "white",
+    }),
+  };
+
+  const options = servicesData.map(item => ({
+    label: item?.attributes?.title,
+    value: item?.attributes?.title
+  }));
+  
   return (
  <div className="flex justify-between flex-wrap gap-5 md:flex-nowrap">
  
@@ -105,7 +143,7 @@ const MessageBox = ({ selectTab }) => {
               <Link
                 className="lg:max-w-[290px]"
                 target="_blank"
-                href="https://maps.app.goo.gl/zxCfJ6jsY2mgF4GX6"
+                href="https://maps.app.goo.gl/ig4oZvtC9JhquJUs8?g_st=com.google.maps.preview.copy"
               >
                 4925 Greenville Ave, Suite 200 Dallas Texas, 75206
               </Link>
@@ -205,7 +243,7 @@ const MessageBox = ({ selectTab }) => {
             />
           </Form.Field>
 
-          <Form.Field className="FormField" name="services">
+          {/* <Form.Field className="FormField" name="services">
                 <div
                   style={{
                     display: "flex",
@@ -225,43 +263,31 @@ const MessageBox = ({ selectTab }) => {
                   <input
                     value={formData.services}
                     name="services"
-                    onChange={handleChange}
+                    onChange={handleServiceChange}
                     className="Input"
                     type="text"
                     required
-                    placeholder="Enter your Current services"
+                    placeholder="Enter your Services"
                   />
                 </Form.Control>
-              </Form.Field>
+              </Form.Field> */}
+ <div>
+                <label>Select the services you need</label>
+                <Select
+  placeholder="Select the services"
+  value={options.filter(option =>
+    formData.services.includes(option.value)
+  )}
+  styles={customStyles}
+  className="mt-3 border-[#FF7003] rounded-[16px] bg-black text-black"
+  name="service"
+  isMulti
+  options={options}
+  onChange={handleServiceChange}
+/>
 
-              <Form.Field className="FormField" name="Sub-services">
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "baseline",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <Form.Label className="FormLabel">Sub-Services</Form.Label>
-                  <Form.Message className="FormMessage" match="valueMissing">
-                    Please enter your services
-                  </Form.Message>
-                  <Form.Message className="FormMessage" match="typeMismatch">
-                    Please provide a valid name
-                  </Form.Message>
-                </div>
-                <Form.Control asChild>
-                  <input
-                    value={formData.services}
-                    name="services"
-                    onChange={handleChange}
-                    className="Input"
-                    type="text"
-                    required
-                    placeholder="Enter your Current Sub-services"
-                  />
-                </Form.Control>
-              </Form.Field>
+              </div>
+            
 
           <Form.Field className="FormField" name="question">
             <div

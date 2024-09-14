@@ -20,7 +20,7 @@ const TypeDetails = async ({ serviceSlug }) => {
               <Image
                 width={50}
                 height={50}
-                src={`${config.api}${item2.attributes.image.data.attributes.url}`}
+                src={`${config.api}${item2.attributes.icon.data.attributes.url}`}
                 alt="specific"
               />
               <div className="inline-flex items-center gap-[10px] mt-[19px]">
