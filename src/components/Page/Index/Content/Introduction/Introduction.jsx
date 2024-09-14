@@ -70,7 +70,7 @@ const Introduction = ({newData}) => {
               <motion.li variants={items}>
                 <div className="mt-6 flex gap-6 items-center text-[16px]">
                   <Link
-                    href="/contact-us?action=call"
+                    href="/get-free-estimation"
                     className="rounded-[52px] px-[20px] py-[10px]"
                     style={{
                       background:
@@ -79,7 +79,7 @@ const Introduction = ({newData}) => {
                   >
                     Book an Appointment
                   </Link>
-                  <Link href="/contact-us?action=message">Contact Us</Link>
+                  <Link href="/contact-us">Contact Us</Link>
                 </div>
               </motion.li>
             </motion.ul>
