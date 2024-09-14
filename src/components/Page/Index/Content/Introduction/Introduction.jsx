@@ -70,7 +70,7 @@ const Introduction = ({newData}) => {
               <motion.li variants={items}>
                 <div className="mt-6 flex gap-6 items-center text-[16px]">
                   <Link
-                    href="/get-free-estimation"
+                    href="/book-an-appointment"
                     className="rounded-[52px] px-[20px] py-[10px]"
                     style={{
                       background:

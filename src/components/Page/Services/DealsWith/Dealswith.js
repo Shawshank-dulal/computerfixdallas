@@ -23,8 +23,8 @@ const Dealswith = async() => {
 <>
 
 {tabcategories.length > 0 && services.length > 0 ?
-  <Tabs.Root className="main_container inside_sidespace TabsRoot22 mt-8 md:mt-4 " defaultValue={tabcategories[0]?.attributes?.title}>
-    <Tabs.List className="TabsList22 mb-24" aria-label="Manage your account">
+  <Tabs.Root className="main_container inside_sidespace TabsRoot22 mt-4 md:mt-4 " defaultValue={tabcategories[0]?.attributes?.title}>
+    <Tabs.List className="TabsList22 mb-10 md:mb-20" aria-label="Manage your account">
     {tabcategories && tabcategories.map((item,index)=>{
         return(
           <Tabs.Trigger key={index} className="TabsTrigger22" value={item?.attributes?.title}>
@@ -38,7 +38,7 @@ const Dealswith = async() => {
     {tabcategories && tabcategories.map((item5,index5)=>{
         return(
     <Tabs.Content key={index5} className="TabsContent22" value={item5?.attributes?.title}>
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  align-middle place-content-between gap-[32px] gap-y-[60px]'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  align-middle place-content-between gap-[32px] md:gap-y-[60px]'>
 
       {services && services.filter(item3=>item3?.attributes?.tabcategory?.data?.attributes?.title === item5?.attributes?.title).map((item2,index)=>{
       return(

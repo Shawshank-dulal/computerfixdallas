@@ -35,7 +35,7 @@ const Navbar = () => {
           <Link href="/contact-us" className={`py-2 px-3   text-white ${pathname == '/contact-us' ? 'border-b-2 border-[#FF7003]' :''}`}>Contact</Link>
 
         <div className="">
-        <Link href="/get-free-estimation" className="py-2 px-3 text-[14px] rounded-[52px] border border-[#FF70030D] text-white bg-[#D15A001F]">Book An Appointment</Link>
+        <Link href="/book-an-appointment" className="py-2 px-3 text-[14px] rounded-[52px] border border-[#FF70030D] text-white bg-[#D15A001F]">Book An Appointment</Link>
 
         </div>
         
@@ -57,7 +57,7 @@ const Navbar = () => {
           <Link href="/blogs" onClick={toggleMenu}  className="py-2 px-3   block text-white">Repair Guide</Link>
           <Link href="/about-us" onClick={toggleMenu} className="py-2 px-3   block text-white">About Us</Link>
           <Link href="/contact-us" onClick={toggleMenu} className="py-2 px-3   block text-white">Contact</Link>
-          <Link href="/get-free-estimation" onClick={toggleMenu} className="max-w-fit py-2 px-3 rounded-[2px] book_a_call_btn border border-[#FF700357] text-white">GET FREE ESTIMATION</Link>
+          <Link href="/book-an-appointment" onClick={toggleMenu} className="max-w-fit py-2 px-3 rounded-[2px] book_a_call_btn border border-[#FF700357] text-white">Book An Appointment</Link>
     </div>
      
   </nav>
