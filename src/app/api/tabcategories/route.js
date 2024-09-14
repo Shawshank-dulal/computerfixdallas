@@ -11,7 +11,7 @@ export async function GET(request) {
     };
 
     const response = await fetch(
-      `${config.api}/api/tabcategories`,
+      `${config.api}/api/tabcategories?populate=*`,
       reqOptions
     );
 

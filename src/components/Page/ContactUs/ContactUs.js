@@ -14,7 +14,8 @@ const ContactUs = () => {
 
       <div className="main_container inside_sidespace ">
         <Introduction/>
-        <MessageBox selectTab={paramsData} />
+        <MessageBox />
+        
         <Toaster
           position="bottom-right"
           toastOptions={{

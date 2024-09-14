@@ -1,4 +1,5 @@
-export const fetchTabCategroies = async () => {
+
+  export const fetchTabCategoriesData = async () => {
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/tabcategories`, {
         headers: {
@@ -12,3 +13,6 @@ export const fetchTabCategroies = async () => {
       console.error("Failed to fetch tabcategories:", error);
     }
   };
+
+
+

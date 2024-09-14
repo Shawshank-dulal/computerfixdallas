@@ -2,19 +2,20 @@ import React from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import "./style.css";
 import ComputerTab from "./ContentTab/ComputerTab";
-import { fetchTabCategroies } from "@/utils/tabcategories";
+
 import { fetchServices } from "@/utils/services";
 import Image from "next/image";
 import config from "@/config";
+import { fetchTabCategoriesData } from "@/utils/tabcategories";
 
 const Specification = async() => {
-  const tabcategoriesData=await fetchTabCategroies()
+  const tabcategoriesData=await fetchTabCategoriesData()
   const tabcategories=tabcategoriesData?.tabcategories?.data
-  console.log("New tab data",tabcategories)
+  // console.log("New tab data",tabcategories)
 
   const servicesData = await fetchServices();
   const services=servicesData?.services?.data
-  console.log("New tab Service",services[0].attributes?.tabcategory?.data)
+  // console.log("New tab Service",services[0].attributes?.tabcategory?.data)
 
   return (
     <div className="main_container inside_sidespace  py-20">

@@ -77,23 +77,8 @@ const MessageBox = ({ selectTab }) => {
   };
 
   return (
-    <Tabs.Root className="TabsRoot4 " defaultValue={`${selectTab}`}>
-      <Tabs.List
-        className="TabsList4 text-[24px] md:text-[32px]"
-        aria-label="Manage your account"
-      >
-        <Tabs.Trigger className="TabsTrigger4 " value="message">
-          Message
-        </Tabs.Trigger>
-        <Tabs.Trigger className="TabsTrigger4" value="call">
-          Book an Appointment
-        </Tabs.Trigger>
-      </Tabs.List>
-
-      <Tabs.Content
-        className="TabsContent4 flex justify-between flex-wrap gap-5 md:flex-nowrap"
-        value="message"
-      >
+ <div className="flex justify-between flex-wrap gap-5 md:flex-nowrap">
+ 
         <div className="">
           <span className="text-[28px] font-semibold uppercase">
             Get in touch
@@ -128,180 +113,7 @@ const MessageBox = ({ selectTab }) => {
           </div>
         </div>
 
-        {/* <Form.Root className="FormRoot max-w-[720px] md:max-w-[480px] mt-8 md:mt-0" onSubmit={handleSubmit}>
-              <Form.Field className="FormField" name="Your full name">
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "baseline",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <Form.Message className="FormMessage" match="valueMissing">
-                    Please enter your full name
-                  </Form.Message>
-                  <Form.Message className="FormMessage" match="typeMismatch">
-                    Please provide a valid full name
-                  </Form.Message>
-                </div>
-                <Form.Control asChild>
-                  <input
-                    value={formData.fullName}
-                    name="fullName"
-                    onChange={handleChange}
-                    className="Input"
-                    type="text"
-                    required
-                    placeholder="Enter your Full Name"
-                  />
-                </Form.Control>
-              </Form.Field>
-
-              <Form.Field className="FormField" name="email">
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "baseline",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <Form.Message className="FormMessage" match="valueMissing">
-                    Please enter your email
-                  </Form.Message>
-                  <Form.Message className="FormMessage" match="typeMismatch">
-                    Please provide a valid email
-                  </Form.Message>
-                </div>
-                <Form.Control asChild>
-                  <input
-                    value={formData.email}
-                    name="email"
-                    onChange={handleChange}
-                    className="Input"
-                    type="email"
-                    required
-                    placeholder="Enter your Email"
-                  />
-                </Form.Control>
-              </Form.Field>
-
-              <Form.Field className="FormField" name="phonenumber">
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "baseline",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <Form.Message className="FormMessage" match="valueMissing">
-                    Enter the Phone Number
-                  </Form.Message>
-                  <Form.Message className="FormMessage" match="typeMismatch">
-                    Please provide a valid number
-                  </Form.Message>
-                </div>
-
-                <PhoneInput
-                  country={"us"}
-                  value={formData.phoneNumber}
-                  name="phoneNumber"
-                  onChange={handleChangePhone}
-                  className="text-black bg-black"
-                />
-              </Form.Field>
-
-              <Form.Field className="FormField" name="Product Type">
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "baseline",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <Form.Message className="FormMessage" match="valueMissing">
-                    Please enter your Product Type
-                  </Form.Message>
-                  <Form.Message className="FormMessage" match="typeMismatch">
-                    Please provide a valid Product Type
-                  </Form.Message>
-                </div>
-                <Form.Control asChild>
-                  <input
-                    value={formData.fullName}
-                    name="fullName"
-                    onChange={handleChange}
-                    className="Input"
-                    type="text"
-                    required
-                    placeholder="Enter your Product Type"
-                  />
-                </Form.Control>
-              </Form.Field>
-
-              <Form.Field className="FormField" name="Your Service Type">
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "baseline",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <Form.Message className="FormMessage" match="valueMissing">
-                    Please enter your Service Type
-                  </Form.Message>
-                  <Form.Message className="FormMessage" match="typeMismatch">
-                    Please provide a valid Service Type
-                  </Form.Message>
-                </div>
-                <Form.Control asChild>
-                  <input
-                    value={formData.fullName}
-                    name="fullName"
-                    onChange={handleChange}
-                    className="Input"
-                    type="text"
-                    required
-                    placeholder="Enter your Service Type"
-                  />
-                </Form.Control>
-              </Form.Field>
-
-              <Form.Field className="FormField" name="question">
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "baseline",
-                    justifyContent: "space-between",
-                  }}
-                >
-             
-                  <Form.Message className="FormMessage" match="valueMissing">
-                    Please enter a message
-                  </Form.Message>
-                </div>
-                <Form.Control asChild>
-                  <textarea placeholder="Your Message or Feedback"
-                    value={formData.message}
-                    name="message"
-                    onChange={handleChange}
-                    className="Textarea"
-                    required
-                  />
-                </Form.Control>
-              </Form.Field>
-
-              <Form.Submit asChild>
-                <button
-                 type="submit"
-                 className="text-[#fff] cursor-pointer text-[14px] font-semibold w-full text-center py-2 rounded-[6px] mt-[4px]"
-                 style={{
-                   background:
-                     "linear-gradient(0deg, rgba(217, 217, 217, 0.01), rgba(217, 217, 217, 0.01)),linear-gradient(180deg, #D15A00 0%, #924104 134.15%)",
-                 }}>
-                  Send Message
-                </button>
-              </Form.Submit>
-            </Form.Root> */}
+       
 
         <Form.Root
           onSubmit={handleSubmit}
@@ -336,35 +148,7 @@ const MessageBox = ({ selectTab }) => {
             </Form.Control>
           </Form.Field>
 
-          <Form.Field className="FormField" name="Company Name">
-            <div
-              style={{
-                display: "flex",
-                alignItems: "baseline",
-                justifyContent: "space-between",
-              }}
-            >
-              <Form.Label className="FormLabel">Company Name</Form.Label>
-              <Form.Message className="FormMessage" match="valueMissing">
-                Please enter your Company
-              </Form.Message>
-              <Form.Message className="FormMessage" match="typeMismatch">
-                Please provide a valid name
-              </Form.Message>
-            </div>
-            <Form.Control asChild>
-              <input
-                value={formData.company}
-                name="company"
-                onChange={handleChange}
-                className="Input"
-                type="text"
-                required
-                placeholder="Enter your Company Name"
-              />
-            </Form.Control>
-          </Form.Field>
-
+        
           <Form.Field className="FormField" name="Work Email">
             <div
               style={{
@@ -421,7 +205,7 @@ const MessageBox = ({ selectTab }) => {
             />
           </Form.Field>
 
-          {/* <Form.Field className="FormField" name="Position">
+          <Form.Field className="FormField" name="services">
                 <div
                   style={{
                     display: "flex",
@@ -429,9 +213,9 @@ const MessageBox = ({ selectTab }) => {
                     justifyContent: "space-between",
                   }}
                 >
-                  <Form.Label className="FormLabel">Your Position</Form.Label>
+                  <Form.Label className="FormLabel">Services</Form.Label>
                   <Form.Message className="FormMessage" match="valueMissing">
-                    Please enter your position
+                    Please enter your services
                   </Form.Message>
                   <Form.Message className="FormMessage" match="typeMismatch">
                     Please provide a valid name
@@ -439,16 +223,285 @@ const MessageBox = ({ selectTab }) => {
                 </div>
                 <Form.Control asChild>
                   <input
-                    value={formData.position}
-                    name="position"
+                    value={formData.services}
+                    name="services"
                     onChange={handleChange}
                     className="Input"
                     type="text"
                     required
-                    placeholder="Enter your Current Position"
+                    placeholder="Enter your Current services"
                   />
                 </Form.Control>
-              </Form.Field> */}
+              </Form.Field>
+
+              <Form.Field className="FormField" name="Sub-services">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "baseline",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Form.Label className="FormLabel">Sub-Services</Form.Label>
+                  <Form.Message className="FormMessage" match="valueMissing">
+                    Please enter your services
+                  </Form.Message>
+                  <Form.Message className="FormMessage" match="typeMismatch">
+                    Please provide a valid name
+                  </Form.Message>
+                </div>
+                <Form.Control asChild>
+                  <input
+                    value={formData.services}
+                    name="services"
+                    onChange={handleChange}
+                    className="Input"
+                    type="text"
+                    required
+                    placeholder="Enter your Current Sub-services"
+                  />
+                </Form.Control>
+              </Form.Field>
+
+          <Form.Field className="FormField" name="question">
+            <div
+              style={{
+                display: "flex",
+                alignItems: "baseline",
+                justifyContent: "space-between",
+              }}
+            >
+              <Form.Label className="FormLabel">Message or Comment</Form.Label>
+              <Form.Message className="FormMessage" match="valueMissing">
+                Please enter a message
+              </Form.Message>
+            </div>
+            <Form.Control asChild>
+              <textarea
+                value={formData.message}
+                name="message"
+                onChange={handleChange}
+                className="Textarea"
+                required
+              />
+            </Form.Control>
+          </Form.Field>
+
+          <Form.Submit asChild>
+            <button
+              type="submit"
+              className="text-[#fff] cursor-pointer text-[14px] font-semibold w-full text-center py-2 rounded-[6px] mt-[4px]"
+              style={{
+                background:
+                  "linear-gradient(0deg, rgba(217, 217, 217, 0.01), rgba(217, 217, 217, 0.01)),linear-gradient(180deg, #D15A00 0%, #924104 134.15%)",
+              }}
+              disabled={loading}
+            >
+              {!loading ? "Send Message" : "Loading ..."}
+            </button>
+          </Form.Submit>
+        </Form.Root>
+
+     {/* <Tabs.Root className="TabsRoot4 " defaultValue={`${selectTab}`}>
+      <Tabs.List
+        className="TabsList4 text-[24px] md:text-[32px]"
+        aria-label="Manage your account"
+      >
+        <Tabs.Trigger className="TabsTrigger4 " value="message">
+          Message
+        </Tabs.Trigger>
+        <Tabs.Trigger className="TabsTrigger4" value="call">
+          Book an Appointment
+        </Tabs.Trigger>
+      </Tabs.List>
+
+      <Tabs.Content
+        className="TabsContent4 flex justify-between flex-wrap gap-5 md:flex-nowrap"
+        value="message"
+      >
+        <div className="">
+          <span className="text-[28px] font-semibold uppercase">
+            Get in touch
+          </span>
+          <p className="text-[#afafaf] my-3 text-[14px] max-w-[385px]">
+            We'd love to hear from you! Whether you have questions, feedback, or
+            just want to say hello, feel free to reach out. Contact us via
+            email, phone, or through our social media channels. Our team is here
+            to assist you and will get back to you as soon as possible.
+          </p>
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-2 mt-2  ">
+              <MdOutlineMailOutline className="text-[18px] text-[#FF7003]" />
+              <Link href="mailto:computerfixdallas@gmail.com">
+                Send an email
+              </Link>
+            </div>
+            <div className="flex items-center gap-2 mt-2">
+              <MdOutlinePhoneInTalk className="text-[18px] text-[#FF7003]" />
+              <a href="tel:+1-469-353-9236">+1 469-353-9236</a>
+            </div>
+            <div className="flex items-center gap-2 mt-2 ">
+              <MdOutlineLocationOn className="text-[20px] text-[#FF7003]" />
+              <Link
+                className="lg:max-w-[290px]"
+                target="_blank"
+                href="https://maps.app.goo.gl/zxCfJ6jsY2mgF4GX6"
+              >
+                4925 Greenville Ave, Suite 200 Dallas Texas, 75206
+              </Link>
+            </div>
+          </div>
+        </div>
+
+       
+
+        <Form.Root
+          onSubmit={handleSubmit}
+          className="FormRoot max-w-[720px] md:max-w-[480px] mt-8 md:mt-0"
+        >
+          <Form.Field className="FormField" name="Full Name">
+            <div
+              style={{
+                display: "flex",
+                alignItems: "baseline",
+                justifyContent: "space-between",
+              }}
+            >
+              <Form.Label className="FormLabel">Full Name</Form.Label>
+              <Form.Message className="FormMessage" match="valueMissing">
+                Please enter your full name
+              </Form.Message>
+              <Form.Message className="FormMessage" match="typeMismatch">
+                Please provide a valid full name
+              </Form.Message>
+            </div>
+            <Form.Control asChild>
+              <input
+                value={formData.fullName}
+                name="fullName"
+                onChange={handleChange}
+                className="Input"
+                type="text"
+                required
+                placeholder="Enter your Full Name"
+              />
+            </Form.Control>
+          </Form.Field>
+
+        
+          <Form.Field className="FormField" name="Work Email">
+            <div
+              style={{
+                display: "flex",
+                alignItems: "baseline",
+                justifyContent: "space-between",
+              }}
+            >
+              <Form.Label className="FormLabel">Work Email</Form.Label>
+              <Form.Message className="FormMessage" match="valueMissing">
+                Please enter your email
+              </Form.Message>
+              <Form.Message className="FormMessage" match="typeMismatch">
+                Please provide a valid email
+              </Form.Message>
+            </div>
+            <Form.Control asChild>
+              <input
+                value={formData.email}
+                name="email"
+                onChange={handleChange}
+                className="Input"
+                type="email"
+                required
+                placeholder="Enter your Email"
+              />
+            </Form.Control>
+          </Form.Field>
+
+          <Form.Field className="FormField" name="Phone Number">
+            <div
+              style={{
+                display: "flex",
+                alignItems: "baseline",
+                justifyContent: "space-between",
+              }}
+            >
+              <Form.Label className="FormLabel"> Phone Number</Form.Label>
+              <Form.Message className="FormMessage" match="valueMissing">
+                Enter the Phone Number
+              </Form.Message>
+              <Form.Message className="FormMessage" match="typeMismatch">
+                Please provide a valid number
+              </Form.Message>
+            </div>
+
+            <PhoneInput
+              country={"us"}
+              onlyCountries={["us"]}
+              value={formData.phoneNumber}
+              name="phoneNumber"
+              onChange={handleChangePhone}
+              className="text-black bg-black"
+            />
+          </Form.Field>
+
+          <Form.Field className="FormField" name="services">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "baseline",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Form.Label className="FormLabel">Services</Form.Label>
+                  <Form.Message className="FormMessage" match="valueMissing">
+                    Please enter your services
+                  </Form.Message>
+                  <Form.Message className="FormMessage" match="typeMismatch">
+                    Please provide a valid name
+                  </Form.Message>
+                </div>
+                <Form.Control asChild>
+                  <input
+                    value={formData.services}
+                    name="services"
+                    onChange={handleChange}
+                    className="Input"
+                    type="text"
+                    required
+                    placeholder="Enter your Current services"
+                  />
+                </Form.Control>
+              </Form.Field>
+
+              <Form.Field className="FormField" name="Sub-services">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "baseline",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Form.Label className="FormLabel">Sub-Services</Form.Label>
+                  <Form.Message className="FormMessage" match="valueMissing">
+                    Please enter your services
+                  </Form.Message>
+                  <Form.Message className="FormMessage" match="typeMismatch">
+                    Please provide a valid name
+                  </Form.Message>
+                </div>
+                <Form.Control asChild>
+                  <input
+                    value={formData.services}
+                    name="services"
+                    onChange={handleChange}
+                    className="Input"
+                    type="text"
+                    required
+                    placeholder="Enter your Current Sub-services"
+                  />
+                </Form.Control>
+              </Form.Field>
 
           <Form.Field className="FormField" name="question">
             <div
@@ -493,7 +546,8 @@ const MessageBox = ({ selectTab }) => {
       <Tabs.Content className="TabsContent4" value="call">
         <Calendar />
       </Tabs.Content>
-    </Tabs.Root>
+    </Tabs.Root> */}
+ </div>
   );
 };
 
