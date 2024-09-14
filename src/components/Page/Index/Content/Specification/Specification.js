@@ -40,7 +40,7 @@ const Specification = async() => {
           {services && services.filter(item3=>item3?.attributes?.tabcategory?.data?.attributes?.title === item5.attributes.title).map((item2,index)=>{
           return(
             <div key={index} className='flex flex-col items-center'>
-                <Image width={50} height={50} src={`${config.api}${item2?.attributes?.image?.data?.attributes?.url}`} alt='specific'/>
+                <Image width={50} height={50} src={`${config.api}${item2?.attributes?.icon?.data?.attributes?.url}`} alt='specific'/>
                 <p className='text-[14px] mt-[16px] text-[#FFE7D4]'>{item2?.attributes?.title}</p>
                 {/* {item2.attributes.tabcategory.data === null ? "no data" : item2.attributes.tabcategory.data.attributes.title}          */}
             </div>
