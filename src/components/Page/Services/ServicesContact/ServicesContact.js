@@ -5,23 +5,39 @@ import Faq from "../../Index/Content/Faq/Faq";
 import OtherServices from "./OtherServices/OtherServices";
 import { fetchServices } from "@/utils/services";
 import config from "@/config";
+import Image from "next/image";
 
 const ServicesContact = async({serviceSlug}) => {
   const servicesData = await fetchServices();
-  const services = servicesData.services.data;
+  const services = servicesData?.services?.data;
+
+  if(!services){
+    <p>No data</p>
+  }
   return (
     <div>
         {services
         .filter((item) => item.attributes.slug === serviceSlug)
         .map((item2, index2) => {
           return (
-      <div
+  <div>
+       <div
         className=" w-full bg-no-repeat bg-center drop-shadow-2xl  bg-cover h-[500px] z-[-100] overflow-hidden"
         style={{
-          backgroundImage: `url(${config.api}${item2.attributes.image.data.attributes.url})`,
-          boxShadow: "rgba(0, 0, 0, 0.65) 0px -220px 26px -8px inset"
+          backgroundImage: `url(${config.api}${item2.attributes?.image?.data?.attributes?.url})`,
+          boxShadow: "rgba(0, 0, 0, 0.65) 0px 0px 86px 88px inset"
         }}
       ></div>
+
+      {/* <Image className="h-[500px]  object-cover image-box-shadow" priority={true} 
+    
+      width={5000} height={500}
+      style={{ boxShadow: "rgba(0, 0, 0, 0.65) 0px 0px 86px 88px inset" }} 
+
+      src={`${config.api}${item2.attributes?.image?.data?.attributes?.url}`}/>
+     */}
+
+  </div>
     );
   })}
       <div className="main_container inside_sidespace ">

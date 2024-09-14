@@ -7,7 +7,7 @@ import React from "react";
 
 const OtherServices = async () => {
   const servicesData = await fetchServices();
-  const services = servicesData.services.data;
+  const services = servicesData?.services?.data;
   console.log(servicesData.services);
   const lastThreeSpecs = services.slice(-3);
 
@@ -20,7 +20,7 @@ const OtherServices = async () => {
         Recommended Services
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  align-middle place-content-between gap-[32px] gap-y-[60px]">
-        {lastThreeSpecs.map((item, index) => {
+        {services && lastThreeSpecs.map((item, index) => {
           return (
             <div key={index} className="flex flex-col ">
                  <Link
