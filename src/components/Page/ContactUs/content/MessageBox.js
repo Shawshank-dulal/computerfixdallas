@@ -216,7 +216,7 @@ const MessageBox = ({ servicesData }) => {
             </Form.Control>
           </Form.Field>
 
-          <Form.Field className="FormField" name="Phone Number">
+          <Form.Field className="FormField formfield_phone" name="Phone Number">
             <div
               style={{
                 display: "flex",
@@ -271,7 +271,7 @@ const MessageBox = ({ servicesData }) => {
                   />
                 </Form.Control>
               </Form.Field> */}
- <div>
+ <div className="formfield_select">
                 <label>Select the services you need</label>
                 <Select
   placeholder="Select the services"
