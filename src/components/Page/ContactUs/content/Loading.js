@@ -13,6 +13,7 @@ const Loading = () => {
       >
         <div className="bg-[#26292c] w-[220px] h-[15px] rounded-[4px] animate-pulse"></div>
    
+   
       </div>
       <div>
         <div className='mt-3 bg-[#26292c] w-[250px] md:w-[360px] h-[28px] rounded-[4px] animate-pulse'/>
