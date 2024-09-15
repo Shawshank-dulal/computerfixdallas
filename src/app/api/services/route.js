@@ -2,6 +2,10 @@ import config from "@/config";
 import { NextResponse } from "next/server";
 
 export async function GET(request) {
+  // console.log("Category data",category)
+  console.log("request",request.url) 
+  const url = new URL(request.url);
+  const category = url.searchParams.get('category');
   try {
     const reqOptions = {
       headers: {
@@ -11,14 +15,14 @@ export async function GET(request) {
     };
 
     const response = await fetch(
-      `${config.api}/api/services?populate=*`,
+      `${config.api}/api/services?populate=*&filters[tabcategory][title][$contains]=${category}`,
       reqOptions
     );
 
     if (!response.ok) {
       throw new Error(`Failed to fetch services: ${response.statusText}`);
     }
-
+// GET /api/services?filters[tabcategory][title][$contains]=laptop/computer
     const services = await response.json();
     console.log("Services list:", services);
 
