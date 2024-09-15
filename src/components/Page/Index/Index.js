@@ -14,7 +14,6 @@ const Index = () => {
   return (
    <div>
     <IntroMain/>
-
     <ImageSlider/>
     <Services/>
     <Specification/>
