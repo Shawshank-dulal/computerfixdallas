@@ -1,12 +1,14 @@
 import config from "@/config";
 import { NextResponse } from "next/server";
 
+export const dynamic = 'force-dynamic';  // Ensure this route is dynamic
+
 export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
-    const page = searchParams.get('page')  // Default to page 1
-    const pageSize = searchParams.get('pageSize') ; // Default to 4 items per page
-    console.log("page",page,pageSize)
+    const page = searchParams.get('page') || 1;  // Default to page 1
+    const pageSize = searchParams.get('pageSize') || 4;  // Default to 4 items per page
+
     const reqOptions = {
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
