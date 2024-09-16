@@ -20,28 +20,28 @@ const TypeDetails = async ({ serviceSlug }) => {
               <Image
                 width={50}
                 height={50}
-                src={`${config.api}${item2.attributes.icon.data.attributes.url}`}
+                src={`${config.api}${item2?.attributes?.icon.data?.attributes?.url}`}
                 alt="specific"
               />
               <div className="inline-flex items-center gap-[10px] mt-[19px]">
                 <p className="text-[32px] font-bold tracking-[0.64px]  text-[#fff]">
-                  {item2.attributes.title}
+                  {item2?.attributes?.title}
                 </p>
                 {item2.attributes.discount != 0 ? (
                   <span className="font-bold uppercase tracking-[0.8px] text-[12px] px-[8px] py-[4px] bg-[#3C9E00] rounded-[16px]">
-                    {item2.attributes.discount || ""}% OFF
+                    {item2?.attributes?.discount || ""}% OFF
                   </span>
                 ) : (
                   ""
                 )}
               </div>
               <div className="text-[#ffffff]  mt-[10px] text-[16px] tracking-[0.32px] leading-snug">
-                {item2.attributes.summary}
+                {item2?.attributes?.summary}
               </div>
 
               <div className="text-[#cfcfcf]  mt-[32px] text-[16px] tracking-[0.32px] leading-snug">
-                {item2.attributes.description.map((item3, index3) => {
-                  return <p key={index3}>{item3.children[0].text}</p>;
+                {item22 && item2.attributes.description.map((item3, index3) => {
+                  return <p key={index3}>{item3?.children[0]?.text}</p>;
                 })}
               </div>
             </div>

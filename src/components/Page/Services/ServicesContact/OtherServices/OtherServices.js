@@ -24,33 +24,33 @@ const OtherServices = async () => {
           return (
             <div key={index} className="flex flex-col ">
                  <Link
-                href={`/services/contact-us/${item.attributes.slug}`}
+                href={`/services/contact-us/${item?.attributes?.slug}`}
               >
               <div className="w-[50px] h-[50px]">
                 <Image
                   width={50}
                   height={50}
-                  src={`${config.api}${item.attributes.icon.data.attributes.url}`}
+                  src={`${config.api}${item?.attributes?.icon?.data?.attributes?.url}`}
                   alt="specific"
                 />
               </div>
               <div className="inline-flex items-center gap-[10px] mt-[19px]">
                 <p className="text-[14px]   text-[#fff]">
-                  {item.attributes.title}
+                  {item?.attributes?.title}
                 </p>
-                {item.attributes.discount != 0 ? (
+                {item && item.attributes.discount != 0 ? (
                   <span className="font-bold uppercase tracking-[0.8px] text-[10px] px-[8px] py-[4px] bg-[#3C9E00] rounded-[16px]">
-                    {item.attributes.discount || ""}% OFF
+                    {item?.attributes?.discount || ""}% OFF
                   </span>
                 ) : (
                   ""
                 )}
               </div>
               <div className="text-[#b6b3b2] dallas_services_description mt-[12px] text-[14px] tracking-[0.28px]">
-                <p> {item.attributes.summary}</p>
+                <p> {item?.attributes?.summary}</p>
               </div>
               <div
-                href={`/services/contact-us/${item.attributes.slug}`}
+                href={`/services/contact-us/${item?.attributes?.slug}`}
                 className="text-[#FF7003] mt-[12px] font-medium text-[12px] tracking-[0.96px] uppercase"
               >
                 Book Now
