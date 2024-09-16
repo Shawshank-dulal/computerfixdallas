@@ -279,7 +279,7 @@ const MessageBox = ({ servicesData }) => {
                 <Select
   placeholder="Select the services"
   value={options.filter(option =>
-    formData.services.includes(option.value)
+    formData.services.includes(option?.value)
   )}
   styles={customStyles}
   className="mt-3 border-[#FF7003] rounded-[16px] bg-black text-black"

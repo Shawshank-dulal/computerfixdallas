@@ -4,7 +4,7 @@ const page = () => {
   return (
     <div>
      
-      {/* <ContactUs/> */}
+      <ContactUs/>
    
     </div>
   )
