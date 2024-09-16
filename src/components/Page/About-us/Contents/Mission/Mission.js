@@ -14,13 +14,13 @@ const Mission = async() => {
         <h2 className="text-3xl font-bold tracking-tight text-[#c95701] sm:text-4xl">{items.attributes.title}</h2>
         <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
           <div className="lg:w-full lg:max-w-2xl lg:flex-auto flex flex-col gap-3">
-          {items && items.attributes.description.map((item2, index2) => {
+          {items && items?.attributes?.description.map((item2, index2) => {
   return (
     <div key={index2}>
-      {item2 && item2.children.map((item3, index3) => {
+      {item2 && item2?.children.map((item3, index3) => {
         return (
           <p key={index3} className="text-[18px] leading-8 text-[#fff]">
-            {item3.text}
+            {item3?.text}
           </p>
         );
       })}
@@ -35,11 +35,11 @@ const Mission = async() => {
           </div>
           <div className="lg:flex lg:flex-auto lg:justify-center">
             <dl className="w-64 space-y-8 xl:w-80">
-              {items && items.attributes.records.map((item4,index4)=>{
+              {items && items?.attributes?.records.map((item4,index4)=>{
                 return(
                   <div key={index4} className="flex flex-col-reverse gap-y-4">
-                <dt className="text-base leading-7 text-[#fff]">{item4.title}</dt>
-                <dd className="text-5xl font-semibold tracking-tight text-[#c95701]">{item4.values}</dd>
+                <dt className="text-base leading-7 text-[#fff]">{item4?.title}</dt>
+                <dd className="text-5xl font-semibold tracking-tight text-[#c95701]">{item4?.values}</dd>
               </div>
                 )
               })}
