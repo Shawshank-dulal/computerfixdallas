@@ -3,12 +3,12 @@ import TypeDetails from "./TypeDetails/TypeDetails";
 import ContactForm from "./ContactForm/ContactForm";
 import Faq from "../../Index/Content/Faq/Faq";
 import OtherServices from "./OtherServices/OtherServices";
-import { fetchServices } from "@/utils/services";
+import { fetchServices, fetchServicesPage } from "@/utils/services";
 import config from "@/config";
 import Image from "next/image";
 
 const ServicesContact = async({serviceSlug}) => {
-  const servicesData = await fetchServices();
+  const servicesData = await fetchServicesPage();
   const services = servicesData?.services?.data;
 
   if(!services){
