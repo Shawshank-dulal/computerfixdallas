@@ -40,7 +40,7 @@ const TypeDetails = async ({ serviceSlug }) => {
               </div>
 
               <div className="text-[#cfcfcf]  mt-[32px] text-[16px] tracking-[0.32px] leading-snug">
-                {item22 && item2.attributes.description.map((item3, index3) => {
+                {item2 && item2.attributes.description.map((item3, index3) => {
                   return <p key={index3}>{item3?.children[0]?.text}</p>;
                 })}
               </div>
