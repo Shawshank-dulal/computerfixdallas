@@ -17,7 +17,7 @@ export const fetchblogs = async () => {
   export const fetchblogsPage = async (currentPage, pageSize) => {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_URL}/api/blogs?pagination[page]=${currentPage}&pagination[pageSize]=${pageSize}`,
+        `${process.env.NEXT_PUBLIC_URL}/api/blogs?page=${currentPage}&pageSize=${pageSize}`,
         {
           headers: {
             'Content-Type': 'application/json',

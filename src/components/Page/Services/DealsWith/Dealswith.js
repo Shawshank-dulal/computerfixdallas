@@ -103,7 +103,7 @@ const Dealswith = () => {
           ))}
         </Tabs.Root>
       ) : (
-        "No data"
+        "Loading..."
       )}
     </div>
   );

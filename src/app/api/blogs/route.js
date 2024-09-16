@@ -3,15 +3,19 @@ import { NextResponse } from "next/server";
 
 export async function GET(request) {
   try {
+    const { searchParams } = new URL(request.url);
+    const page = searchParams.get('page')  // Default to page 1
+    const pageSize = searchParams.get('pageSize') ; // Default to 4 items per page
+    console.log("page",page,pageSize)
     const reqOptions = {
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
       },
-      next: { revalidate: 5 }, // Revalidate the cache every 50 seconds
+      next: { revalidate: 5 }, // Revalidate the cache every 5 seconds
     };
 
     const response = await fetch(
-      `${config.api}/api/blogs?populate=*`,
+      `${config.api}/api/blogs?populate=*&pagination[page]=${page}&pagination[pageSize]=${pageSize}`,
       reqOptions
     );
 
