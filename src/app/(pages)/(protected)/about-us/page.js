@@ -5,7 +5,7 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-      <About_us/>
+      {/* <About_us/> */}
     </div>
   )
 }
