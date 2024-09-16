@@ -7,7 +7,7 @@ const page = (props) => {
   return (
     <div>
       
-      <SearchedContent query={query}/>
+      {/* <SearchedContent query={query}/> */}
     </div>
   )
 }

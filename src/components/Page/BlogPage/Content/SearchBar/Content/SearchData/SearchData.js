@@ -62,7 +62,7 @@ const SearchData = ({query}) => {
   }
   return (
    <div >
-        <SearchBar page={page} pageSize={pageSize}/>
+        {/* <SearchBar page={page} pageSize={pageSize}/>
      <div className="main_container inside_sidespace pt-10">
       <div className="grid lg:grid-cols-2 gap-5 gap-y-10">
         {blogsData &&
@@ -99,7 +99,7 @@ const SearchData = ({query}) => {
           })}
       </div>
 
-      {/* Pagination Controls */}
+
       <div className="flex justify-center mt-10">
         <button
           onClick={handlePrevPage}
@@ -127,7 +127,7 @@ const SearchData = ({query}) => {
           Next
         </button>
       </div>
-    </div>
+    </div> */}
    </div>
   );
 };

@@ -6,9 +6,9 @@ import SearchBar from '../SearchBar'
 const SearchedContent = ({query}) => {
   return (
     <div>
-          <Introduction query={query}/>
+          {/* <Introduction query={query}/>
     
-          <SearchData query={query}/>
+          <SearchData query={query}/> */}
     </div>
   )
 }
