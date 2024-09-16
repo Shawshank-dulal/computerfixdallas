@@ -1,12 +1,12 @@
 import config from "@/config";
 import { ComputerSpec } from "@/db/Spec";
-import { fetchServices } from "@/utils/services";
+import { fetchServices, fetchServicesPage } from "@/utils/services";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const OtherServices = async () => {
-  const servicesData = await fetchServices();
+  const servicesData = await fetchServicesPage();
   const services = servicesData?.services?.data;
   console.log(servicesData.services);
   const lastThreeSpecs = services.slice(-3);
@@ -30,7 +30,7 @@ const OtherServices = async () => {
                 <Image
                   width={50}
                   height={50}
-                  src={`${config.api}${item.attributes.image.data.attributes.url}`}
+                  src={`${config.api}${item.attributes.icon.data.attributes.url}`}
                   alt="specific"
                 />
               </div>
