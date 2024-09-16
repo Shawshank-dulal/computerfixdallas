@@ -1,11 +1,12 @@
 "use client"; // Client-side fetching
 import config from "@/config";
 import { useEffect, useState } from "react";
-import { fetchblogsPage } from "@/utils/blogs";
+import { fetchblogsPage, fetchSearchedBlogs } from "@/utils/blogs";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import SearchBar from "../../SearchBar";
 
-const Blogs = () => {
+const SearchData = ({query}) => {
   const [blogsData, setBlogsData] = useState([]);
   const [pagination, setPagination] = useState({});
   const [page, setPage] = useState(1); // Default page is 1
@@ -19,11 +20,11 @@ const Blogs = () => {
     setLoading(true);
     setError(null); // Reset error state before fetching
     try {
-      const fetchedData = await fetchblogsPage(currentPage, pageSize);
+      const fetchedData = await fetchSearchedBlogs(currentPage, pageSize,query);
       setBlogsData(fetchedData.blogs || []);
       setPagination(fetchedData.pagination || {});
       router.push(
-        `/blogs?page=${currentPage}&pageSize=${pageSize}`,
+        `/search?page=${currentPage}&pageSize=${pageSize}&query=${query}`,
         undefined,
         { shallow: true }
       );
@@ -60,7 +61,9 @@ const Blogs = () => {
     return <p>{error}</p>;
   }
   return (
-    <div>
+   <div >
+        <SearchBar page={page} pageSize={pageSize}/>
+     <div className="main_container inside_sidespace pt-10">
       <div className="grid lg:grid-cols-2 gap-5 gap-y-10">
         {blogsData &&
           blogsData.map((item, index) => {
@@ -125,7 +128,8 @@ const Blogs = () => {
         </button>
       </div>
     </div>
+   </div>
   );
 };
 
-export default Blogs;
+export default SearchData;

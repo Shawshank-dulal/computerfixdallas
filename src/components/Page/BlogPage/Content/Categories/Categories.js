@@ -5,7 +5,7 @@ import Blogs from '../BlogItems/Blogs';
 
 const Categories = () => {
   return (
-    <div className='main_container inside_sidespace  py-6'>
+    <div className='main_container inside_sidespace  pt-10 pb-6'>
          {/* <Tabs.Root className="TabsRoot2 " defaultValue='all'>
       <Tabs.List
         className="TabsList2 "
