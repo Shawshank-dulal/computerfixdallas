@@ -4,10 +4,10 @@ import Image from "next/image";
 import MessageBox from "./content/MessageBox";
 import toast, { Toaster } from "react-hot-toast";
 import Introduction from "./content/Introduction/Introduction";
-import { fetchServices } from "@/utils/services";
+import { fetchServices, fetchServicesPage } from "@/utils/services";
 
 const ContactUs = async() => {
-  const servicesData = await fetchServices();
+  const servicesData = await fetchServicesPage();
   const services=servicesData?.services?.data
   return (
 
