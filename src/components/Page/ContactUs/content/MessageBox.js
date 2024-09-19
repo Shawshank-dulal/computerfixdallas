@@ -67,10 +67,10 @@ const MessageBox = ({ servicesData }) => {
           fullName: "",
           phoneNumber: "",
           email: "",
-          company: "",
-          // position: "",
+          services: [],
           message: "",
         });
+        console.log("formData",formData)
         setLoading(false);
         toast.success(
           "Thank you for reaching out! We will get back to you shortly."
@@ -155,7 +155,7 @@ const MessageBox = ({ servicesData }) => {
 
        
 
-        <Form.Root
+        <Form.Root method="POST"
           onSubmit={handleSubmit}
           className="FormRoot max-w-[720px] md:max-w-[480px] mt-8 md:mt-0"
         >
