@@ -1,9 +1,9 @@
 import BlogDetails from '@/components/Page/BlogPage/BlogDetails/BlogDetails'
 import React from 'react'
 
-const page = ({params}) => {
-  const blogslug=params.slug
-  console.log("Blogs title:",blogslug)
+const page = (props) => {
+  const blogslug=props.searchParams.id
+  console.log("Blogs id:",blogslug)
   return (
     <div>
         <BlogDetails blogslug={blogslug}/>

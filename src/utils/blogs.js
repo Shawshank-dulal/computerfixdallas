@@ -1,6 +1,6 @@
 export const fetchblogs = async () => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/blogs`,{
+      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/blogdetails`,{
         headers: {
           'Content-Type': 'application/json'
         }, next:{revalidate:5}

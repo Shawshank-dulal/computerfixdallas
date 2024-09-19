@@ -162,7 +162,7 @@ const ContactForm = ({serviceSlug,servicesData2}) => {
 
 
               {servicesData2
-        .filter((item) => item.attributes.slug === serviceSlug)
+        .filter((item) => item?.id == serviceSlug)
         .map((item2, index2) => {
           return (
                 <div key={index2} className="flex flex-col ">

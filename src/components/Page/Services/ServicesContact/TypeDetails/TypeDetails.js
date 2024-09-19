@@ -13,7 +13,7 @@ const TypeDetails = async ({ serviceSlug }) => {
   return (
     <div className="relative top-[-12.5rem] md:max-w-[550px]">
       {services
-        .filter((item) => item.attributes.slug === serviceSlug)
+        .filter((item) => item?.id == serviceSlug)
         .map((item2, index2) => {
           return (
             <div key={index2} className="flex flex-col ">

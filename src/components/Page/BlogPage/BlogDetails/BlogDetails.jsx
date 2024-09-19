@@ -11,13 +11,13 @@ import { fetchblogs } from "@/utils/blogs";
 const BlogDetails = async ({blogslug}) => {
   const fetchData = await fetchblogs();
   const data = fetchData?.blogs?.data;
-
+  console.log("Number blog",blogslug,data)
 
   
   return (
     <div>
       {data && data
-        .filter((item) => item.attributes.slug === blogslug)
+        .filter((item) => item?.id == blogslug)
         .map((item2, index2) => {
           return (
             <div key={index2}>

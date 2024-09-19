@@ -24,7 +24,7 @@ const OtherServices = async () => {
           return (
             <div key={index} className="flex flex-col ">
                  <Link
-                href={`/services/contact-us/${item?.attributes?.slug}`}
+                href={`/services/contact-us/${item?.attributes?.slug}?id=${item?.id}`}
               >
               <div className="w-[50px] h-[50px]">
                 <Image

@@ -10,14 +10,14 @@ import Image from "next/image";
 const ServicesContact = async({serviceSlug}) => {
   const servicesData = await fetchServicesPage();
   const services = servicesData?.services?.data;
-
+  console.log("Service types data",serviceSlug,services[0])
   if(!services){
     <p>No data</p>
   }
   return (
     <div>
         {services
-        .filter((item) => item.attributes.slug === serviceSlug)
+        .filter((item) => item?.id == serviceSlug)
         .map((item2, index2) => {
           return (
   <div>
@@ -29,13 +29,7 @@ const ServicesContact = async({serviceSlug}) => {
         }}
       ></div>
 
-      {/* <Image className="h-[500px]  object-cover image-box-shadow" priority={true} 
-    
-      width={5000} height={500}
-      style={{ boxShadow: "rgba(0, 0, 0, 0.65) 0px 0px 86px 88px inset" }} 
 
-      src={`${config.api}${item2.attributes?.image?.data?.attributes?.url}`}/>
-     */}
 
   </div>
     );
