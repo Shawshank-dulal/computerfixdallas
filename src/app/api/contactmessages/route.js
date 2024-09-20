@@ -3,20 +3,19 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
-    const reqOptions = {
+    const body = await request.json();
+
+    const response = await fetch(`${config.api}/api/contactmessages`, {
+      method: "POST",
       headers: {
+        "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
       },
-      next: { revalidate: 5 }, // Revalidate the cache every 50 seconds
-    };
-
-    const response = await fetch(
-      `${config.api}/api/formdatas`,
-      reqOptions
-    );
+      body: JSON.stringify(body),
+    });
 
     if (!response.ok) {
-      throw new Error(`Failed to fetch formdatas: ${response.statusText}`);
+      throw new Error(`Failed to add formdatas: ${response.status} ${response.statusText}`);
     }
 
     const formdatas = await response.json();
@@ -27,7 +26,7 @@ export async function POST(request) {
     console.error("Error fetching data:", error.message);
 
     return NextResponse.json(
-      { error: "Failed to fetch data" },
+      { error: "Failed to add data", details: error.message },
       { status: 500 }
     );
   }
