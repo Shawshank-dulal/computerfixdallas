@@ -3,10 +3,12 @@ import './style.css'
 const BlogContent = ({data}) => {
   return (
     <div className='main_container blog_container_content inside_sidespace'>
-        <p>{data && data?.attributes?.description}</p>
+      {data?.attributes?.content  ? 
+     <div>
+         <p>{data?.attributes?.description && data?.attributes?.description}</p>
     <div className='mt-5'>
-    {data && data?.attributes?.content.map((item3, index3) => {
-                  return <p key={index3}>{item3.children[0].text}</p>;
+    {data?.attributes?.content && data?.attributes?.content.map((item3, index3) => {
+                  return <p key={index3}>{item3?.children[0]?.text}</p>;
                 })}
     </div>
 
@@ -15,10 +17,12 @@ const BlogContent = ({data}) => {
 
 </div>
    <div className='mt-5'>
-   {data && data?.attributes?.end_description.map((item4, index4) => {
-                  return <p key={index4}>{item4.children[0].text}</p>;
+   {data?.attributes?.end_description && data?.attributes?.end_description.map((item4, index4) => {
+                  return <p key={index4}>{item4?.children[0]?.text}</p>;
                 })}
    </div>
+     </div>
+   :''}
     </div>
   )
 }
