@@ -139,7 +139,6 @@ const MessageBox = ({ servicesData }) => {
   //   }
   // };
   
-
   const customStyles = {
     control: (provided) => ({
       ...provided,
