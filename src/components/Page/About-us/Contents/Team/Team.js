@@ -6,7 +6,7 @@ import React from "react";
 const Team = async() => {
   const data=await fetchAboutMessage()
   const items=data?.message?.data
-  console.log("Message for about",items)
+  // console.log("Message for about",items)
   return (
     <div className="py-20">
     

@@ -76,7 +76,7 @@ const Blogs = () => {
                     >
                       <div className="max-h-fit flex justify-end">
                         <p className="bg-[#100600d5] font-medium text-[#FF6E00] text-[12px] px-[6px] py-[3px] m-2 rounded-[8px]">
-                          {item?.attributes?.category} {item?.id}
+                          {item?.attributes?.category}
                         </p>
                       </div>
                     </div>

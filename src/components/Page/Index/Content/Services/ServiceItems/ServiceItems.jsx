@@ -6,7 +6,7 @@ import config from "@/config";
 const ServiceItems = async () => {
   const fetcheData=await fetchhomeservices()
   const data=fetcheData?.homeservices?.data
-  console.log('new datas',data)
+  // console.log('new datas',data)
   return (
     <div className="relative grid  sm:grid-cols-2 md:grid-cols-3 place-content-between gap-6 gap-y-12 mt-14">
       <Image

@@ -4,7 +4,7 @@ import React from 'react'
 const WhyContent = async() => {
   const data=await fetchAboutWhy()
   const items=data?.aboutwhy?.data
-  console.log("Why for about",items)
+  // console.log("Why for about",items)
   return (
     <div>
      
