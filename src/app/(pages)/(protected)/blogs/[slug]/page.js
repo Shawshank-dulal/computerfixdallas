@@ -9,7 +9,7 @@ const page = async(props) => {
   console.log("POST details blog:",post)
   return (
     <div>
-        <BlogDetails blogslug={blogslug}/>
+        {/* <BlogDetails blogslug={blogslug}/> */}
     </div>
   )
 }
@@ -37,7 +37,7 @@ export async function generateMetadata(props){
 
       images:
         {
-          url: `${config.api}${data?.attributes?.image?.data?.attributes?.url}`, // Must be an absolute URL
+          url: `${config.api}${post?.attributes?.image?.data?.attributes?.url}`, // Must be an absolute URL
           width: 200,
           height: 200,
           alt: post.attributes.title,
