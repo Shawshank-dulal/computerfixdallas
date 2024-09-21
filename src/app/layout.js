@@ -16,7 +16,7 @@ export const metadata = {
   keywords: [
     "Computer Fix Dallas"
   ],
-  authors: [{ name: "Computer Fix Dallas", url: "https://Computerfixdallas.vercel.app/" }],
+  authors: [{ name: "Computer Fix Dallas", url: "https://www.computerfixdallas.com/" }],
   creator: "Computer Fix Dallas",
   publisher: "Computer Fix Dallas",
   formatDetection: {
@@ -24,7 +24,7 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://Computerfixdallas.vercel.app/"),
+  metadataBase: new URL("https://www.computerfixdallas.com/"),
   alternates: {
     canonical: "/",
     languages: {
@@ -36,10 +36,10 @@ export const metadata = {
     title: "Computer Fix Dallas",
     description:
       "Experience unparalleled expertise and swift service for all your computer repair needs. Our seasoned technicians are committed to getting your devices up and running efficiently and affordably, ensuring minimal downtime and maximum satisfaction.",
-    url: "https://Computerfixdallas.vercel.app/",
+    url: "https://www.computerfixdallas.com/",
     siteName: "Computer Fix Dallas",
     images: {
-      url: "https://Computerfixdallas.vercel.app/theme.png",
+      url: "https://www.computerfixdallas.com/theme.png",
       width: 200,
       height: 200,
       alt: "Computer Fix Dallass",
@@ -54,14 +54,14 @@ export const metadata = {
       "Experience unparalleled expertise and swift service for all your computer repair needs. Our seasoned technicians are committed to getting your devices up and running efficiently and affordably, ensuring minimal downtime and maximum satisfaction.",
     creator: "Computer Fix Dallas",
     images: {
-      url: "https://Computerfixdallas.vercel.app/theme.png",
+      url: "https://www.computerfixdallas.com/theme.png",
       alt: "Computer Fix Dallas",
     },
   },
   icons: {
     icon: [
       { url: "/favicon.png" },
-      new URL("/favicon.png", "https://Computerfixdallas.vercel.app/"),
+      new URL("/favicon.png", "https://www.computerfixdallas.com/"),
       { url: "/favicon.png", media: "(prefers-color-scheme: dark)" },
     ],
     shortcut: ["/favicon.png"],
@@ -88,8 +88,8 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-  archives: ["https://Computerfixdallas.vercel.app/"],
-  bookmarks: ["https://Computerfixdallas.vercel.app/"],
+  archives: ["https://www.computerfixdallas.com/"],
+  bookmarks: ["https://www.computerfixdallas.com/"],
   category: "technology",
   itunes: {
     appId: "myAppStoreID",
@@ -108,7 +108,7 @@ export const metadata = {
   },
   appLinks: {
     ios: {
-      url: "https://Computerfixdallas.vercel.app/ios",
+      url: "https://www.computerfixdallas.com/ios",
       app_store_id: "app_store_id",
     },
     android: {
@@ -116,7 +116,7 @@ export const metadata = {
       app_name: "app_name_android",
     },
     web: {
-      url: "https://Computerfixdallas.vercel.app/web",
+      url: "https://www.computerfixdallas.com/web",
       should_fallback: true,
     },
   },
