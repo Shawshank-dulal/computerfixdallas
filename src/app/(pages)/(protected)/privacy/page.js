@@ -19,7 +19,7 @@ export async function generateMetadata(){
     title: "Privacy",
     description: "We may collect personal information such as your name, contact details, and device information when you use our services. This information helps us provide accurate diagnostics and solutions for your computer repair needs.",
     // image: imageUrl,
-    url: `${process.env.NEXT_PUBLIC_CLOUDPRO_URL}/blog`,
+    url: `${process.env.NEXT_PUBLIC_URL}/blog`,
     openGraph: {
       title: "Privacy",
       description: "We may collect personal information such as your name, contact details, and device information when you use our services. This information helps us provide accurate diagnostics and solutions for your computer repair needs.",
@@ -33,7 +33,7 @@ export async function generateMetadata(){
       ],
       locale: "en_US",
       type: "website",
-      url: `${process.env.NEXT_PUBLIC_CLOUDPRO_URL}/blog`,
+      url: `${process.env.NEXT_PUBLIC_URL}/blog`,
     },
     twitter: {
       card: "summary_large_image",

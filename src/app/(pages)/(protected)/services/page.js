@@ -18,7 +18,7 @@ export async function generateMetadata(){
     title: "Privacy",
     description: "At Computerfixdallas, we offer a comprehensive range of computer repair and IT support services designed to meet all your tech needs. Whether you're facing hardware malfunctions or software issues, our expert technicians are here to help with fast, reliable solutions.",
     // image: imageUrl,
-    url: `${process.env.NEXT_PUBLIC_CLOUDPRO_URL}/blog`,
+    url: `${process.env.NEXT_PUBLIC_URL}/blog`,
     openGraph: {
       title: "Privacy",
       description: "At Computerfixdallas, we offer a comprehensive range of computer repair and IT support services designed to meet all your tech needs. Whether you're facing hardware malfunctions or software issues, our expert technicians are here to help with fast, reliable solutions.",
@@ -32,7 +32,7 @@ export async function generateMetadata(){
       ],
       locale: "en_US",
       type: "website",
-      url: `${process.env.NEXT_PUBLIC_CLOUDPRO_URL}/blog`,
+      url: `${process.env.NEXT_PUBLIC_URL}/blog`,
     },
     twitter: {
       card: "summary_large_image",

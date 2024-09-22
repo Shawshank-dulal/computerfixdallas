@@ -19,7 +19,7 @@ export async function generateMetadata(){
     title: "Contact Us",
     description: "At Computerfixdallas, we’re here to assist you with all your computer repair and tech needs. Whether you have questions about our services, need troubleshooting help, or want to schedule a repair, we’re just a message or phone call away!",
     // image: imageUrl,
-    url: `${process.env.NEXT_PUBLIC_CLOUDPRO_URL}/blog`,
+    url: `${process.env.NEXT_PUBLIC_URL}/blog`,
     openGraph: {
       title: "Contact Us",
       description: "At Computerfixdallas, we’re here to assist you with all your computer repair and tech needs. Whether you have questions about our services, need troubleshooting help, or want to schedule a repair, we’re just a message or phone call away!",
@@ -33,7 +33,7 @@ export async function generateMetadata(){
       ],
       locale: "en_US",
       type: "website",
-      url: `${process.env.NEXT_PUBLIC_CLOUDPRO_URL}/blog`,
+      url: `${process.env.NEXT_PUBLIC_URL}/blog`,
     },
     twitter: {
       card: "summary_large_image",
