@@ -34,11 +34,12 @@ export async function generateMetadata({ params, searchParams }){
     title: post.attributes.title,
     description: `${post.attributes.description} ${post.attributes?.keywords}`,
     // image:`${config.api}${data?.attributes?.image?.data?.attributes?.url}`,
+    keywords: [post?.attributes?.keywords],
     openGraph: {
       title: post.attributes.title,
       description:
         `${post.attributes.description} ${post.attributes?.keywords}`,
-
+      keywords: `${post.attributes.description} ${post.attributes?.keywords}`,
       images:
         {
           url: `${config.api}${post?.attributes?.image?.data?.attributes?.url}`, // Must be an absolute URL

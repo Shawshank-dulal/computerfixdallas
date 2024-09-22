@@ -16,10 +16,7 @@ const ServicesContact = async({serviceId}) => {
   }
   return (
     <div>
-        {/* {services
-        .filter((item) => item?.id == serviceId)
-        .map((item2, index2) => {
-          return ( */}
+
   <div>
        <div
         className=" w-full bg-no-repeat bg-center drop-shadow-2xl  bg-cover h-[500px] z-[-100] overflow-hidden"
@@ -32,8 +29,7 @@ const ServicesContact = async({serviceId}) => {
 
 
   </div>
-    {/* );
-  })} */}
+
       <div className="main_container inside_sidespace ">
      <div className="flex justify-between flex-wrap md:flex-nowrap gap-2 md:gap-8">
      <TypeDetails serviceId={services}/>
