@@ -32,12 +32,12 @@ export async function generateMetadata({ params, searchParams }){
   const canonicalUrl = `${process.env.NEXT_PUBLIC_URL}/services/${serviceSlug}?id:${serviceId}`;
   return {
     title: post.attributes.title,
-    description: post.attributes?.summary && post.attributes.keywords,
+    description:  `${post.attributes?.summary} ${post.attributes?.keywords}`,
     // image:`${config.api}${data?.attributes?.image?.data?.attributes?.url}`,
     openGraph: {
       title: post.attributes.title,
       description:
-        post.attributes?.summary && post.attributes.keywords,
+         `${post.attributes?.summary} ${post.attributes?.keywords}`,
 
       images:
         {
@@ -55,7 +55,7 @@ export async function generateMetadata({ params, searchParams }){
       card: post.attributes.title,
       title: post.attributes.title,
       description:
-      post.attributes?.summary && post.attributes.keywords,
+       `${post.attributes?.summary} ${post.attributes?.keywords}`,
       creator: post.attributes.title,
       images: {
         url: `${config.api}${post?.attributes?.image?.data?.attributes?.url}`, // Must be an absolute URL
