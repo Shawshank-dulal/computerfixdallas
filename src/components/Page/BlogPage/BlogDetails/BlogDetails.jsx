@@ -4,30 +4,26 @@ import BlogContent from "./BlogContent/BlogContent";
 import Newsletter from "../../Newsletter/Newsletter";
 import Blogs from "../../Index/Content/Insights/Content/Blogs";
 import BlogTemp from "../../BlogTemp/BlogTemp";
-import { fetchblogs } from "@/utils/blogs";
+import { fetchblogs, fetchSingleblog } from "@/utils/blogs";
 
 
 
 const BlogDetails = async ({blogslug}) => {
-  const fetchData = await fetchblogs();
+  const fetchData = await fetchSingleblog(blogslug);
   const data = fetchData?.blogs?.data;
   console.log("Number blog",blogslug,data)
 
   
   return (
     <div>
-      {data && data
-        .filter((item) => item?.id == blogslug)
-        .map((item2, index2) => {
-          return (
-            <div key={index2}>
-              <Introduction data={item2} />
-              <BlogContent data={item2} />
+ 
+            <div>
+              <Introduction data={data} />
+              <BlogContent data={data} />
               <Newsletter />
               <BlogTemp />
             </div>
-          );
-        })}
+   
     </div>
   );
 };

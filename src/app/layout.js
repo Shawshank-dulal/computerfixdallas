@@ -5,20 +5,20 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: {
-    template: "%s | Computer Fix Dallas",
-    default: "Computer Fix Dallas",
+    template: "%s | COMPUTER FIX DALLAS - ONSITE APPLE MAC GAMING PC iPHONE REPAIR DATA RECOVERY",
+    default: "COMPUTER FIX DALLAS - ONSITE APPLE MAC GAMING PC iPHONE REPAIR DATA RECOVERY",
   },
   description:
     "Experience unparalleled expertise and swift service for all your computer repair needs. Our seasoned technicians are committed to getting your devices up and running efficiently and affordably, ensuring minimal downtime and maximum satisfaction.",
-  generator: "Computer Fix Dallas",
-  applicationName: "Computer Fix Dallas",
+  generator: "COMPUTER FIX DALLAS - ONSITE APPLE MAC GAMING PC iPHONE REPAIR DATA RECOVERY",
+  applicationName: "COMPUTER FIX DALLAS - ONSITE APPLE MAC GAMING PC iPHONE REPAIR DATA RECOVERY",
   referrer: "origin-when-cross-origin",
   keywords: [
-    "Computer Fix Dallas"
+    "COMPUTER FIX DALLAS - ONSITE APPLE MAC GAMING PC iPHONE REPAIR DATA RECOVERY"
   ],
-  authors: [{ name: "Computer Fix Dallas", url: "https://www.computerfixdallas.com/" }],
-  creator: "Computer Fix Dallas",
-  publisher: "Computer Fix Dallas",
+  authors: [{ name: "COMPUTER FIX DALLAS - ONSITE APPLE MAC GAMING PC iPHONE REPAIR DATA RECOVERY", url: "https://www.computerfixdallas.com/" }],
+  creator: "COMPUTER FIX DALLAS - ONSITE APPLE MAC GAMING PC iPHONE REPAIR DATA RECOVERY",
+  publisher: "COMPUTER FIX DALLAS - ONSITE APPLE MAC GAMING PC iPHONE REPAIR DATA RECOVERY",
   formatDetection: {
     email: false,
     address: false,
@@ -33,11 +33,11 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Computer Fix Dallas",
+    title: "COMPUTER FIX DALLAS - ONSITE APPLE MAC GAMING PC iPHONE REPAIR DATA RECOVERY",
     description:
       "Experience unparalleled expertise and swift service for all your computer repair needs. Our seasoned technicians are committed to getting your devices up and running efficiently and affordably, ensuring minimal downtime and maximum satisfaction.",
     url: "https://www.computerfixdallas.com/",
-    siteName: "Computer Fix Dallas",
+    siteName: "COMPUTER FIX DALLAS - ONSITE APPLE MAC GAMING PC iPHONE REPAIR DATA RECOVERY",
     images: {
       url: "https://www.computerfixdallas.com/theme.png",
       width: 200,
@@ -48,14 +48,14 @@ export const metadata = {
     type: "website",
   },
   twitter: {
-    card: "Computer Fix Dallas",
-    title: "Computer Fix Dallas",
+    card: "COMPUTER FIX DALLAS - ONSITE APPLE MAC GAMING PC iPHONE REPAIR DATA RECOVERY",
+    title: "COMPUTER FIX DALLAS - ONSITE APPLE MAC GAMING PC iPHONE REPAIR DATA RECOVERY",
     description:
       "Experience unparalleled expertise and swift service for all your computer repair needs. Our seasoned technicians are committed to getting your devices up and running efficiently and affordably, ensuring minimal downtime and maximum satisfaction.",
-    creator: "Computer Fix Dallas",
+    creator: "COMPUTER FIX DALLAS - ONSITE APPLE MAC GAMING PC iPHONE REPAIR DATA RECOVERY",
     images: {
       url: "https://www.computerfixdallas.com/theme.png",
-      alt: "Computer Fix Dallas",
+      alt: "COMPUTER FIX DALLAS - ONSITE APPLE MAC GAMING PC iPHONE REPAIR DATA RECOVERY",
     },
   },
   icons: {

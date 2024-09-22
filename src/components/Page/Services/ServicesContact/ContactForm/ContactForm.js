@@ -12,7 +12,7 @@ import "react-phone-input-2/lib/material.css";
 import Loading from "@/components/Page/ContactUs/content/Loading";
 import { ComputerSpec } from "@/db/Spec";
 
-const ContactForm = ({serviceSlug,servicesData2}) => {
+const ContactForm = ({serviceId,servicesData2}) => {
     const [loading, setLoading] = useState(false); // Add loading state
     const [formData, setFormData] = useState({
       fullName: "",
@@ -161,11 +161,8 @@ const ContactForm = ({serviceSlug,servicesData2}) => {
               </Form.Field>
 
 
-              {servicesData2
-        .filter((item) => item?.id == serviceSlug)
-        .map((item2, index2) => {
-          return (
-                <div key={index2} className="flex flex-col ">
+    
+                <div  className="flex flex-col ">
                  <Form.Field className="FormField1" name="Product Type">
                 <div
                   style={{
@@ -184,7 +181,7 @@ const ContactForm = ({serviceSlug,servicesData2}) => {
                 </div>
                 <Form.Control asChild>
                   <input
-                    value={item2.attributes.title}
+                    value={serviceId?.attributes?.title}
                     name="fullName"
                     onChange={handleChange}
                     className="Input1"
@@ -196,8 +193,7 @@ const ContactForm = ({serviceSlug,servicesData2}) => {
               </Form.Field>
                
               </div>
-            )
-        })}
+  
 
              
 

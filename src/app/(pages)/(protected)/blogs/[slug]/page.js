@@ -15,7 +15,6 @@ const page = async (props) => {
 
 export default page;
 
-
 export async function generateMetadata({ params, searchParams }){
   const blogId = searchParams.id;
   const blogslug = params.slug;
