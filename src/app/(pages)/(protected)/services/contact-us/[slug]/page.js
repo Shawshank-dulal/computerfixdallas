@@ -15,7 +15,6 @@ const page = (props) => {
 
 export default page
 
-
 export async function generateMetadata({ params, searchParams }){
   const serviceId = searchParams.id;
   const serviceSlug=params.slug
