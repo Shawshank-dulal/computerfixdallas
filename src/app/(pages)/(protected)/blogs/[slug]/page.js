@@ -9,7 +9,7 @@ const page = async (props) => {
   const post = await fetchSingleblog(props.searchParams.id);
   console.log("POST details blog:", post);
   return <div>
-    {/* <BlogDetails blogslug={blogslug}/> */}
+    <BlogDetails blogslug={blogslug}/>
     </div>;
 };
 
