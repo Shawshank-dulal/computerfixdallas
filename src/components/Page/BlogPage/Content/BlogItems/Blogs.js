@@ -66,8 +66,8 @@ const Blogs = () => {
           blogsData.map((item, index) => {
             return (
               <div key={index}>
-                {/* <Link href={`/blogs/${item?.attributes?.slug}?id=${item?.id}`}> */}
-                <Link href={`/blogs/${item?.id}`}>
+                {/* <Link href={`/blogs/${item?.attributes?.slug}/${item?.id}`}> */}
+                {/* <Link href={`/blogs/${item?.id}`}> */}
                   <div className="flex flex-wrap sm:flex-nowrap gap-4">
                     <div
                       className="min-w-[255px] h-[174px] relative bg-no-repeat bg-cover rounded-[18px]"
