@@ -31,21 +31,21 @@ export async function generateMetadata({ params, searchParams }){
 
   const canonicalUrl = `${process.env.NEXT_PUBLIC_URL}/blogs/${blogslug}?id:${blogId}`;
   return {
-    title: post.attributes.title,
-    description: `${post.attributes.description} ${post.attributes?.keywords}`,
+    title: post?.attributes?.title,
+    description: `${post?.attributes?.description} ${post.attributes?.keywords}`,
     // image:`${config.api}${data?.attributes?.image?.data?.attributes?.url}`,
     keywords: [post?.attributes?.keywords],
     openGraph: {
-      title: post.attributes.title,
+      title: post?.attributes?.title,
       description:
-        `${post.attributes.description} ${post.attributes?.keywords}`,
-      keywords: `${post.attributes.description} ${post.attributes?.keywords}`,
+        `${post?.attributes?.description} ${post.attributes?.keywords}`,
+      keywords: `${post?.attributes?.description} ${post.attributes?.keywords}`,
       images:
         {
           url: `${config.api}${post?.attributes?.image?.data?.attributes?.url}`, // Must be an absolute URL
           width: 200,
           height: 200,
-          alt: post.attributes.title,
+          alt: post?.attributes?.title,
         },
       locale: "en_US",
       type: "website",
@@ -53,14 +53,14 @@ export async function generateMetadata({ params, searchParams }){
     },
 
     twitter: {
-      card: post.attributes.title,
-      title: post.attributes.title,
+      card: post?.attributes?.title,
+      title: post?.attributes?.title,
       description:
-      `${post.attributes.description} ${post.attributes?.keywords}`,
-      creator: post.attributes.title,
+      `${post?.attributes?.description} ${post.attributes?.keywords}`,
+      creator: post?.attributes?.title,
       images: {
         url: `${config.api}${post?.attributes?.image?.data?.attributes?.url}`, // Must be an absolute URL
-        alt: post.attributes.title,
+        alt: post?.attributes?.title,
       },
     },
   }

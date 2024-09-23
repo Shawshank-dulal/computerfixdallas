@@ -49,7 +49,7 @@ const Introduction = ({data}) => {
           >
               <motion.li variants={items}>
               <div className="flex items-center justify-center text-[14px]">
-             <span className="max-w-fit px-[16px] py-[8px] rounded-[52px] flex items-center gap-2 justify-center text-[#FF7003] border border-[#FF700347]">   <p>{formatDate(data.attributes.created_data)}</p></span>
+             <span className="max-w-fit px-[16px] py-[8px] rounded-[52px] flex items-center gap-2 justify-center text-[#FF7003] border border-[#FF700347]">   <p>{formatDate(data?.attributes?.created_data)}</p></span>
               </div>
             </motion.li>
             <motion.li variants={items}>
