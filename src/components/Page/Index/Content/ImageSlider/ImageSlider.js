@@ -14,13 +14,13 @@ const ImageSlider = async() => {
       {data ? <>
         <Marquee  className="">
         {data && data.map((item, index) => {
-          return <Image className="mx-3 hover:scale-110 transition-all" key={index} width={200} height={200} src={`${config.api}${item.attributes.image.data.attributes.url}`} alt="sliderImage" />;
+          return <Image className="mx-3 hover:scale-110 transition-all rounded-[4px]" key={index} width={200} height={200} src={`${config.api}${item.attributes.image.data.attributes.url}`} alt="sliderImage" />;
         })}
       </Marquee>
 
       <Marquee direction="right" className="my-10">
         {data && data.map((item, index) => {
-          return <Image className="mx-3 hover:scale-110 transition-all" key={index} width={200} height={200} src={`${config.api}${item.attributes.image.data.attributes.url}`} alt="sliderImage" />;
+          return <Image className="mx-3 hover:scale-110 transition-all rounded-[4px]" key={index} width={200} height={200} src={`${config.api}${item.attributes.image.data.attributes.url}`} alt="sliderImage" />;
         })}
       </Marquee></> : 'No data'}
     </div>
