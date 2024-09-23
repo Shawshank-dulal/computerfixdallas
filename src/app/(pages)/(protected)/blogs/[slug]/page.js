@@ -4,9 +4,10 @@ import { fetchSingleblog } from "@/utils/blogs";
 import React from "react";
 
 const page = async (props) => {
-  const blogslug = props.searchParams.id;
+  // const blogslug = props.searchParams.id;
+  const blogslug = props?.params?.slug;
   // console.log("Blogs id:",blogslug)
-  const post = await fetchSingleblog(props.searchParams.id);
+  const post = await fetchSingleblog(blogslug);
   console.log("POST details blog:", post);
   return <div>
     <BlogDetails blogslug={blogslug}/>
@@ -18,8 +19,8 @@ export default page;
 export async function generateMetadata({ params, searchParams }){
   const blogId = searchParams.id;
   const blogslug = params.slug;
-  const postData = await fetchSingleblog(blogId);
-  const post=postData.blogs.data
+  const postData = await fetchSingleblog(blogslug);
+  const post=postData?.blogs?.data
 
     // Log values to the server console for debugging
     console.log("Blog ID:", blogId);
@@ -29,7 +30,7 @@ export async function generateMetadata({ params, searchParams }){
     return {}
   }
 
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_URL}/blogs/${blogslug}?id:${blogId}`;
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_URL}/blogs/${blogslug}`;
   return {
     title: post?.attributes?.title,
     description: `${post?.attributes?.description} ${post.attributes?.keywords}`,
