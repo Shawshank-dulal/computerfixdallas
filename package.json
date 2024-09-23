@@ -2,14 +2,13 @@
   "name": "computerdallas",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
+
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postbuild": "npm run sitemap",
-    "sitemap": "next-sitemap"
+    "lint": "next lint"
+
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.0",
