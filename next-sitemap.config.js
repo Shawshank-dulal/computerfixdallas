@@ -13,7 +13,7 @@ const NEXT_SSG_FILES = [
 ];
  
 // extend the configuration
-const config = {
+const configs = {
   siteUrl: SITE_URL,
   generateRobotsTxt: true,
   robotsTxtOptions: {
@@ -26,4 +26,4 @@ const config = {
   },
 };
 
-export default config;
+export default configs;
