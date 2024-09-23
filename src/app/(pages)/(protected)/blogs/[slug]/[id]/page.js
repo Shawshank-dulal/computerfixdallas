@@ -6,20 +6,22 @@ import React from "react";
 const page = async (props) => {
   // const blogslug = props.searchParams.id;
   const blogslug = props?.params?.slug;
-  // console.log("Blogs id:",blogslug)
-  const post = await fetchSingleblog(blogslug);
+  const blogId = props?.params?.id;
+  console.log("Blogs slug:",blogslug)
+  console.log("Blogs id:",blogId)
+  const post = await fetchSingleblog(blogId);
   console.log("POST details blog:", post);
   return <div>
-    <BlogDetails blogslug={blogslug}/>
+    <BlogDetails blogslug={blogId}/>
     </div>;
 };
 
 export default page;
 
-export async function generateMetadata({ params, searchParams }){
-  const blogId = searchParams.id;
-  const blogslug = params.slug;
-  const postData = await fetchSingleblog(blogslug);
+export async function generateMetadata(props){
+  const blogslug = props?.params?.slug;
+  const blogId = props?.params?.id;
+  const postData = await fetchSingleblog(blogId);
   const post=postData?.blogs?.data
 
     // Log values to the server console for debugging
@@ -30,7 +32,7 @@ export async function generateMetadata({ params, searchParams }){
     return {}
   }
 
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_URL}/blogs/${blogslug}`;
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_URL}/blogs/${blogslug}/${blogId}`;
   return {
     title: post?.attributes?.title,
     description: `${post?.attributes?.description} ${post.attributes?.keywords}`,
