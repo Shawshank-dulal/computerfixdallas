@@ -60,19 +60,19 @@ export const metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.png" },
-      new URL("/favicon.png", "https://www.computerfixdallas.com/"),
-      { url: "/favicon.png", media: "(prefers-color-scheme: dark)" },
+      { url: "/favicon.ico" },
+      new URL("/favicon.ico", "https://www.computerfixdallas.com/"),
+      { url: "/favicon.ico", media: "(prefers-color-scheme: dark)" },
     ],
-    shortcut: ["/favicon.png"],
+    shortcut: ["/favicon.ico"],
     apple: [
-      { url: "/favicon.png" },
-      { url: "/favicon.png", sizes: "180x180", type: "image/png" },
+      { url: "/favicon.ico" },
+      { url: "/favicon.ico", sizes: "180x180", type: "image/png" },
     ],
     other: [
       {
         rel: "apple-touch-icon-precomposed",
-        url: "/favicon.png",
+        url: "/favicon.ico",
       },
     ],
   },
@@ -99,9 +99,9 @@ export const metadata = {
     title: "Apple Web App",
     statusBarStyle: "black-translucent",
     startupImage: [
-      "/favicon.png",
+      "/favicon.ico",
       {
-        url: "/favicon.png",
+        url: "/favicon.ico",
         media: "(device-width: 768px) and (device-height: 1024px)",
       },
     ],

@@ -21,7 +21,7 @@ const TypeDetails = async ({ serviceId }) => {
                   {serviceId?.attributes?.title}
                 </p>
                 {serviceId?.attributes?.discount != 0 ? (
-                  <span className="font-bold uppercase tracking-[0.8px] text-[12px] px-[8px] py-[4px] bg-[#3C9E00] rounded-[16px]">
+                  <span className="font-bold text-nowrap uppercase tracking-[0.8px] text-[12px] px-[8px] py-[4px] bg-[#3C9E00] rounded-[16px]">
                     {serviceId?.attributes?.discount || ""}% OFF
                   </span>
                 ) : (

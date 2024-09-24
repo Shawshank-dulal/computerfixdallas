@@ -5,13 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const OtherServices = async () => {
+const OtherServices = async ({servicesOther}) => {
   const servicesData = await fetchServicesPage();
   const services = servicesData?.services?.data;
-  console.log(servicesData.services);
+  // console.log(servicesData.services);
   const lastThreeSpecs = services.slice(-3);
+// console.log("New service detail item",servicesOther.attributes?.tabcategory.data.attributes.title)
+console.log("All service detail item",services[3].attributes?.tabcategory?.data?.attributes?.title)
 
-  if(!services){
+if(!services){
     <p>No data</p>
   }
   return (
@@ -20,11 +22,50 @@ const OtherServices = async () => {
         Recommended Services
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  align-middle place-content-between gap-[32px] gap-y-[60px]">
-        {services && lastThreeSpecs.map((item, index) => {
+        {services.filter(items=>items.attributes?.tabcategory?.data?.attributes?.title === servicesOther.attributes?.tabcategory.data.attributes.title).slice(-3).map((item,index)=>{
+          return(
+            <div key={index} className="flex flex-col ">
+            <Link
+           href={`/services/contact-us/${item?.attributes?.slug}/${item?.id}`}
+         >
+         <div className="w-[50px] h-[50px]">
+           <Image
+             width={50}
+             height={50}
+             src={`${config.api}${item?.attributes?.icon?.data?.attributes?.url}`}
+             alt="specific"
+           />
+         </div>
+         <div className="inline-flex items-center gap-[10px] mt-[19px]">
+           <p className="text-[14px]   text-[#fff]">
+             {item?.attributes?.title}
+           </p>
+           {item && item.attributes.discount != 0 ? (
+             <span className="font-bold uppercase tracking-[0.8px] text-[10px] px-[8px] py-[4px] bg-[#3C9E00] rounded-[16px]">
+               {item?.attributes?.discount || ""}% OFF 
+             </span>
+           ) : (
+             ""
+           )}
+         </div>
+         <div className="text-[#b6b3b2] dallas_services_description mt-[12px] text-[14px] tracking-[0.28px]">
+           <p> {item?.attributes?.summary}</p>
+         </div>
+         <div
+           href={`/services/contact-us/${item?.attributes?.slug}`}
+           className="text-[#FF7003] mt-[12px] font-medium text-[12px] tracking-[0.96px] uppercase"
+         >
+           Book Now
+         </div> </Link>
+       </div>
+          )
+        })}
+
+        {/* {services && lastThreeSpecs.map((item, index) => {
           return (
             <div key={index} className="flex flex-col ">
                  <Link
-                href={`/services/contact-us/${item?.attributes?.slug}?id=${item?.id}`}
+                href={`/services/contact-us/${item?.attributes?.slug}/${item?.id}`}
               >
               <div className="w-[50px] h-[50px]">
                 <Image
@@ -40,7 +81,7 @@ const OtherServices = async () => {
                 </p>
                 {item && item.attributes.discount != 0 ? (
                   <span className="font-bold uppercase tracking-[0.8px] text-[10px] px-[8px] py-[4px] bg-[#3C9E00] rounded-[16px]">
-                    {item?.attributes?.discount || ""}% OFF
+                    {item?.attributes?.discount || ""}% OFF 
                   </span>
                 ) : (
                   ""
@@ -57,7 +98,7 @@ const OtherServices = async () => {
               </div> </Link>
             </div>
           );
-        })}
+        })} */}
       </div>
     </div>
   );

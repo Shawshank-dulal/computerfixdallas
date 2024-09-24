@@ -65,7 +65,7 @@ const Dealswith = () => {
                   .map((service, index) => (
                     <div key={index} className="flex flex-col ">
                     <Link
-                  href={`/services/contact-us/${service?.attributes?.slug}?id=${service?.id}`}
+                  href={`/services/contact-us/${service?.attributes?.slug}/${service?.id}`}
                 >
                 <div className="w-[65px] h-[65px]">
                   <Image

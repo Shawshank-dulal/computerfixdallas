@@ -10,7 +10,7 @@ import Image from "next/image";
 const ServicesContact = async({serviceId}) => {
   const servicesData = await fetchSingleService(serviceId);
   const services = servicesData?.services?.data;
-  console.log("Service types data",services)
+  // console.log("Service types data",services)
   if(!services){
     <p>No data</p>
   }
@@ -36,7 +36,7 @@ const ServicesContact = async({serviceId}) => {
      <ContactForm servicesData2={services} serviceId={services}/>
    
      </div>
-     <OtherServices/>
+     <OtherServices servicesOther={services}/>
      <Faq/>
       </div>
     </div>

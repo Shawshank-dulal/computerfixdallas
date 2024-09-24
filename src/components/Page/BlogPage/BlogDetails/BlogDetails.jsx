@@ -8,10 +8,10 @@ import { fetchblogs, fetchSingleblog } from "@/utils/blogs";
 
 
 
-const BlogDetails = async ({blogslug}) => {
+const BlogDetails = async ({blogslug,post}) => {
   const fetchData = await fetchSingleblog(blogslug);
   const data = fetchData?.blogs?.data;
-  console.log("Number blog",blogslug,data)
+  // console.log("Number blog",blogslug,data)
 
   
   return (
@@ -21,7 +21,7 @@ const BlogDetails = async ({blogslug}) => {
               <Introduction data={data} />
               <BlogContent data={data} />
               <Newsletter />
-              <BlogTemp />
+              <BlogTemp post={post}/>
             </div>
    
     </div>

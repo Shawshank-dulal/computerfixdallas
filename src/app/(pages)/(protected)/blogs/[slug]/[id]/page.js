@@ -10,9 +10,9 @@ const page = async (props) => {
   console.log("Blogs slug:",blogslug)
   console.log("Blogs id:",blogId)
   const post = await fetchSingleblog(blogId);
-  console.log("POST details blog:", post);
+  // console.log("POST details blog:", post);
   return <div>
-    <BlogDetails blogslug={blogId}/>
+    <BlogDetails blogslug={blogId} post={post}/>
     </div>;
 };
 

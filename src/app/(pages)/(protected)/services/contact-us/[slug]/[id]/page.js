@@ -4,7 +4,8 @@ import { fetchSingleService } from '@/utils/services'
 import React from 'react'
 
 const page = (props) => {
-      const serviceId=props.searchParams.id
+      const serviceSlug=props.params.slug
+      const serviceId=props.params.id
       console.log("data",serviceId)
   return (
     <div>
@@ -15,9 +16,9 @@ const page = (props) => {
 
 export default page
 
-export async function generateMetadata({ params, searchParams }){
-  const serviceId = searchParams.id;
-  const serviceSlug=params.slug
+export async function generateMetadata(props){
+  const serviceSlug=props.params.slug
+  const serviceId=props.params.id
   const postData = await fetchSingleService(serviceId);
   const post=postData?.services?.data
 
@@ -29,7 +30,7 @@ export async function generateMetadata({ params, searchParams }){
     return {}
   }
 
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_URL}/services/${serviceSlug}?id:${serviceId}`;
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_URL}/services/${serviceSlug}/${serviceId}`;
   return {
     title: post?.attributes?.title,
     description:  `${post?.attributes?.summary} ${post?.attributes?.keywords}`,
