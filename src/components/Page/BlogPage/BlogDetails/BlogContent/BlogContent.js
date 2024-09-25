@@ -4,7 +4,6 @@ import Link from 'next/link';
 const BlogContent = ({data}) => {
   return (
     <div className='main_container  strapi_content_body blog_container_content  inside_sidespace'>
-    
     {data?.attributes?.content && data.attributes.content.map((item3, index3) => {
   return (
     <span key={index3}>
@@ -12,7 +11,7 @@ const BlogContent = ({data}) => {
                            <h1> {item3?.children.map((item20,index20)=>{
                            return  <div key={index20}>
                               {   item20.type == "link" ? 
-                                <Link className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
+                                <Link target='__blank' className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
                                 : <span>{item20?.text}</span>}
                                </div>
                             
@@ -22,7 +21,7 @@ const BlogContent = ({data}) => {
                             {item3?.children.map((item20,index20)=>{
                            return  <div key={index20}>
                               {   item20.type == "link" ? 
-                                <Link className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
+                                <Link target='__blank' className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
                                 : <span>{item20?.text}</span>}
                                </div>
                             
@@ -32,7 +31,7 @@ const BlogContent = ({data}) => {
                            <h3> {item3?.children.map((item20,index20)=>{
                            return  <div key={index20}>
                               {   item20.type == "link" ? 
-                                <Link className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
+                                <Link target='__blank' className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
                                 : <span>{item20?.text}</span>}
                                </div>
                             
@@ -41,7 +40,7 @@ const BlogContent = ({data}) => {
                            <h4> {item3?.children.map((item20,index20)=>{
                            return  <div key={index20}>
                               {   item20.type == "link" ? 
-                                <Link className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
+                                <Link target='__blank' className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
                                 : <span>{item20?.text}</span>}
                                </div>
                             
@@ -50,7 +49,7 @@ const BlogContent = ({data}) => {
                            <h5> {item3?.children.map((item20,index20)=>{
                            return  <div key={index20}>
                               {   item20.type == "link" ? 
-                                <Link className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
+                                <Link target='__blank' className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
                                 : <span>{item20?.text}</span>}
                                </div>
                             
@@ -59,7 +58,7 @@ const BlogContent = ({data}) => {
                            <h6> {item3?.children.map((item20,index20)=>{
                            return  <div key={index20}>
                               {   item20.type == "link" ? 
-                                <Link className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
+                                <Link target='__blank' className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
                                 : <span>{item20?.text}</span>}
                                </div>
                             
