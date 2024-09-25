@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.css'
 import Link from 'next/link';
+import Image from 'next/image';
 const BlogContent = ({data}) => {
   return (
     <div className='main_container  strapi_content_body blog_container_content  inside_sidespace'>
@@ -70,7 +71,7 @@ const BlogContent = ({data}) => {
               if (child?.italic) return <i key={childIndex}>{child?.text}</i>;
               if (child?.underline) return <u key={childIndex}>{child?.text}</u>;
               if (child?.strikethrough) return <s key={childIndex}>{child?.text}</s>;
-              return <span key={childIndex}>{child?.text}</span>;
+              return <span key={childIndex} dangerouslySetInnerHTML={{__html:child?.text}}></span>;
             }
             if (child?.type === 'link') {
               return (
@@ -82,7 +83,9 @@ const BlogContent = ({data}) => {
             return null;
           })}
         </p>
-      ) : item3?.type === 'list' && item3?.format === 'unordered' ? (
+      ) : item3?.type =='image' ? 
+      <Image width={1000} height={1000} src={item3.image.url || item3.image.formats.medium.url} alt='blog_image'/>
+      : item3?.type === 'list' && item3?.format === 'unordered' ? (
         <ul key={item3?.id}>
           {item3?.children?.map((listItem, itemIndex) => (
             <li key={itemIndex}>
