@@ -3,23 +3,67 @@ import './style.css'
 import Link from 'next/link';
 const BlogContent = ({data}) => {
   return (
-    <div className='main_container strapi_content_body blog_container_content inside_sidespace'>
+    <div className='main_container  strapi_content_body blog_container_content  inside_sidespace'>
     
     {data?.attributes?.content && data.attributes.content.map((item3, index3) => {
   return (
     <span key={index3}>
        {item3?.type=='heading' && item3?.level == 1 ? 
-                           <h1>{item3?.children[0]?.text}</h1> :
+                           <h1> {item3?.children.map((item20,index20)=>{
+                           return  <div key={index20}>
+                              {   item20.type == "link" ? 
+                                <Link className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
+                                : <span>{item20?.text}</span>}
+                               </div>
+                            
+                            })}</h1> :
                            item3?.type=='heading' && item3?.level == 2 ? 
-                           <h2>{item3?.children[0]?.text}</h2> :
+                           <h2>
+                            {item3?.children.map((item20,index20)=>{
+                           return  <div key={index20}>
+                              {   item20.type == "link" ? 
+                                <Link className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
+                                : <span>{item20?.text}</span>}
+                               </div>
+                            
+                            })}
+                           </h2> :
                            item3?.type=='heading' && item3?.level == 3 ? 
-                           <h3>{item3?.children[0]?.text}</h3> :
+                           <h3> {item3?.children.map((item20,index20)=>{
+                           return  <div key={index20}>
+                              {   item20.type == "link" ? 
+                                <Link className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
+                                : <span>{item20?.text}</span>}
+                               </div>
+                            
+                            })}</h3> :
                            item3?.type=='heading' && item3?.level == 4 ? 
-                           <h4>{item3?.children[0]?.text}</h4> :
+                           <h4> {item3?.children.map((item20,index20)=>{
+                           return  <div key={index20}>
+                              {   item20.type == "link" ? 
+                                <Link className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
+                                : <span>{item20?.text}</span>}
+                               </div>
+                            
+                            })}</h4> :
                            item3?.type=='heading' && item3?.level == 5 ? 
-                           <h5>{item3?.children[0]?.text}</h5> :
+                           <h5> {item3?.children.map((item20,index20)=>{
+                           return  <div key={index20}>
+                              {   item20.type == "link" ? 
+                                <Link className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
+                                : <span>{item20?.text}</span>}
+                               </div>
+                            
+                            })}</h5> :
                            item3?.type=='heading' && item3?.level == 6 ? 
-                           <h6>{item3?.children[0]?.text}</h6>  : item3?.type === 'paragraph' ? (
+                           <h6> {item3?.children.map((item20,index20)=>{
+                           return  <div key={index20}>
+                              {   item20.type == "link" ? 
+                                <Link className={`${item20?.children[0]?.bold ? 'font-semibold' : item20?.children[0]?.bold ? "italic" : ''}`} href={item20?.url}>{item20?.children[0]?.text}</Link>
+                                : <span>{item20?.text}</span>}
+                               </div>
+                            
+                            })}</h6>  : item3?.type === 'paragraph' ? (
         <p className='py-1'>
           {item3?.children?.map((child, childIndex) => {
             if (child?.type === 'text') {
