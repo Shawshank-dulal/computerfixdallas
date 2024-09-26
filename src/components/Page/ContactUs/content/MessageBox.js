@@ -208,6 +208,11 @@ const MessageBox = ({ servicesData }) => {
         </div>
         <iframe
           src={process.env.NEXT_PUBLIC_GMAPS_EMBED}
+          width="400"
+          height="250"
+          style={{ border: "0" }}
+          className="rounded-[4px] mt-6"
+          allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
