@@ -3,11 +3,12 @@ import React, { useState } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import * as Form from "@radix-ui/react-form";
 
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 
 // Dynamically import react-select with no SSR
-const Select = dynamic(() => import('react-select'), { ssr: false });
-
+const Select = dynamic(() => import("react-select"), { ssr: false });
+const GMAPS_URL = process.env.NEXT_PUBLIC_GMAPS;
+const ADDRESS = process.env.NEXT_PUBLIC_ADDRESS;
 import {
   MdOutlineLocationOn,
   MdOutlineMailOutline,
@@ -66,22 +67,25 @@ const MessageBox = ({ servicesData }) => {
 
       if (res.status === 200) {
         // Reset the formData fields
-        const strapiData = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/contactmessages`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          next: { revalidate: 5 },
-          body: JSON.stringify({
-            data: {
-              fullname: formData.fullName,
-              email: formData.email,
-              phone_number: formData.phoneNumber,
-              message: formData.message,
-              services: formData.services, // Pass the array of services selected
+        const strapiData = await fetch(
+          `${process.env.NEXT_PUBLIC_URL}/api/contactmessages`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
             },
-          }),
-        });
+            next: { revalidate: 5 },
+            body: JSON.stringify({
+              data: {
+                fullname: formData.fullName,
+                email: formData.email,
+                phone_number: formData.phoneNumber,
+                message: formData.message,
+                services: formData.services, // Pass the array of services selected
+              },
+            }),
+          }
+        );
         setFormData({
           fullName: "",
           phoneNumber: "",
@@ -106,7 +110,7 @@ const MessageBox = ({ servicesData }) => {
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
   //   setLoading(true);
-    
+
   //   try {
   //     const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/contactmessages`, {
   //       method: "POST",
@@ -122,7 +126,7 @@ const MessageBox = ({ servicesData }) => {
   //         },
   //       }),
   //     });
-      
+
   //     const result = await response.json();
   //     console.log("new result",result)
   //     if (response.ok) {
@@ -130,7 +134,7 @@ const MessageBox = ({ servicesData }) => {
   //     } else {
   //       toast.error("Failed to send message. Please try again.");
   //     }
-  
+
   //   } catch (error) {
   //     console.log("Error:", error);
   //     toast.error("Please try again.");
@@ -138,7 +142,7 @@ const MessageBox = ({ servicesData }) => {
   //     setLoading(false);
   //   }
   // };
-  
+
   const customStyles = {
     control: (provided) => ({
       ...provided,
@@ -167,12 +171,12 @@ const MessageBox = ({ servicesData }) => {
     label: item?.attributes?.title,
     value: item?.attributes?.title,
   }));
-  
+
   // Then, use a Set to filter out duplicate values
-  options = options.filter((option, index, self) => 
-    index === self.findIndex((o) => o.value === option.value)
+  options = options.filter(
+    (option, index, self) =>
+      index === self.findIndex((o) => o.value === option.value)
   );
-  
 
   return (
     <div className="flex justify-between flex-wrap gap-5 md:flex-nowrap">
@@ -197,22 +201,13 @@ const MessageBox = ({ servicesData }) => {
           </div>
           <div className="flex items-center gap-2 mt-2 ">
             <MdOutlineLocationOn className="text-[20px] text-[#FF7003]" />
-            <Link
-              className="lg:max-w-[290px]"
-              target="_blank"
-              href="https://maps.app.goo.gl/ig4oZvtC9JhquJUs8?g_st=com.google.maps.preview.copy"
-            >
-              4925 Greenville Ave, Suite 200 Dallas Texas, 75206
+            <Link className="lg:max-w-[290px]" target="_blank" href={GMAPS_URL}>
+              {ADDRESS}
             </Link>
           </div>
         </div>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.979094055555!2d-96.77022520000001!3d32.8458052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e9f383375a19d%3A0x75fd3b21b72e938e!2sComputerFixDallas%20-%20Apple%20Mac%20Gaming%20PC%20Laptop%20iPhone%20iPad%20Repair%20and%20Data%20Recovery!5e0!3m2!1sen!2sus!4v1726328721439!5m2!1sen!2sus"
-          width="400"
-          height="250"
-          style={{ border: "0" }}
-          className="rounded-[4px] mt-6"
-          allowFullScreen=""
+          src={process.env.NEXT_PUBLIC_GMAPS_EMBED}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
