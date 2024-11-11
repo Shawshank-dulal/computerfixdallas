@@ -1,6 +1,6 @@
 # computer-fix-dallas
 
-This is the private repo for computer fix dallas
+This is the private repo for computer fix Dallas
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
