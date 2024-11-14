@@ -54,6 +54,7 @@ export async function GET() {
     }
     // console.log(blogsData, blogsDataArray);
     console.log('serivces',servicesDataArray.length,'blogs',blogsDataArray.length)
+    const staticPages = ['/','/blogs','/services','/contact','/about','/privacy-policy','/terms-of-service','/sitemap.xml']
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -68,7 +69,7 @@ export async function GET() {
         ${servicesDataArray.map(({ id, attributes }) => {
             return `
         <url>
-            <loc>${`${process.env.NEXT_PUBLIC_URL}/services/${attributes.slug}/${id}`}</loc>
+            <loc>${`${process.env.NEXT_PUBLIC_URL}/services/contact-us/${attributes.slug}/${id}`}</loc>
             <lastmod>${new Date(attributes.createdAt).toISOString()}</lastmod>
         </url>
         `;
